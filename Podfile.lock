@@ -1,0 +1,26 @@
+PODS:
+  - Charts (3.0.5):
+    - Charts/Core (= 3.0.5)
+  - Charts/Core (3.0.5)
+  - IQKeyboardManagerSwift (6.2.0)
+  - SwiftSocket (2.0.2)
+
+DEPENDENCIES:
+  - Charts
+  - IQKeyboardManagerSwift
+  - SwiftSocket
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Charts
+    - IQKeyboardManagerSwift
+    - SwiftSocket
+
+SPEC CHECKSUMS:
+  Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
+
+PODFILE CHECKSUM: 09d86a892486cdd5b0a6ae4af16022653e94c772
+
+COCOAPODS: 1.5.3
