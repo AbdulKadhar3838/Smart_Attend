@@ -20,4 +20,6 @@ struct ScarpResponseList : Codable {
     var DeviceID : Int
     var ScrapCount : String
     var PartNumber : String
+    var Description :String
+    
 }

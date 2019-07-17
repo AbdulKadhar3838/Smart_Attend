@@ -29,7 +29,7 @@ class PartListVC: UIViewController{
     func callingViewDidload() {
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        toSetNavigationImagenTitle(titleString:"Part List", isHamMenu: true)
+        toSetNavigationImagenTitle(titleString:"Part Number Database", isHamMenu: true)
         let barButton = UIBarButtonItem()
         barButton.title = ""
         navigationItem.backBarButtonItem = barButton
@@ -219,12 +219,13 @@ extension PartListVC:UITableViewDelegate,UITableViewDataSource {
         if let array = createPartListModel.arrayList{
             cell.lblGroupId.text = array[indexPath.row].groupID
             cell.lblPartNo.text = array[indexPath.row].partNo
+            print( array[indexPath.row].partNo)
             cell.lblCavity.text = "\(array[indexPath.row].cavity ?? 0)"
             cell.lblCycleTime.text = array[indexPath.row].cycleTime
             cell.lblDescription.text = array[indexPath.row].description
         }
         
-        cell.btnSpacer.setImage(#imageLiteral(resourceName: "RightAngle"), for: .normal)
+        cell.btnSpacer.setImage(#imageLiteral(resourceName: "SA-1"), for: .normal)
         cell.contentView.backgroundColor = UIColor.white
         cell.layoutMargins = UIEdgeInsets.zero
         return cell

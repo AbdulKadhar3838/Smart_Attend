@@ -103,7 +103,7 @@ class TcpConnectionVC: UIViewController {
         //Picker Config
         pickerView.delegate = self
         txtfdDeviceName.inputView = pickerView
-        txtfdDeviceName.addSubview(self.rightViewTwo(fortextfield: txtfdDeviceName,imagename: "DropDownInvert"))
+        txtfdDeviceName.addSubview(self.rightViewTwo(fortextfield: txtfdDeviceName,imagename: "Tick"))
         addDoneButtonOnKeyboard(txtfd: txtfdDeviceName, selector: #selector(doneFortxtfdDeviceName), title: "Done")
         
         arrayPicker = arrayGlobalMachineName

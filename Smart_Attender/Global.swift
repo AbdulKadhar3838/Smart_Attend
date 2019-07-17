@@ -20,6 +20,7 @@ var arrayGlobalDeviceIDwtfMachineName:[Int64] = []
 var isDashboardHomePage = true
 
 
+
 class Global: NSObject {
     // MARK: - Machinestatus Enum
     enum machine_status:Int{

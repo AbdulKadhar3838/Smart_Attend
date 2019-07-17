@@ -58,6 +58,16 @@ class QuickReportVC: UIViewController,UITextFieldDelegate,ChartViewDelegate {
         let barButton = UIBarButtonItem(customView: logoBtn)
         self.navigationItem.rightBarButtonItem = barButton
         
+        
+        let button2 = UIButton(type: .custom)
+        button2.setImage(UIImage (named: "settingsbig"), for: .normal)
+        button2.frame = CGRect(x: 0.0, y: 0.0, width: 30.0, height: 30.0)
+        button2.addTarget(self, action: #selector(self.logoClickedSettings), for: .touchUpInside)
+        
+        let barButtonItem2 = UIBarButtonItem(customView: button2)
+        self.navigationItem.rightBarButtonItems = [barButton, barButtonItem2]
+      
+        
     }
     
     func callingViewDidload() {
@@ -112,9 +122,9 @@ class QuickReportVC: UIViewController,UITextFieldDelegate,ChartViewDelegate {
         addDoneButtonOnKeyboard(txtfd: txtfdFromDate, selector: #selector(doneButtonFromDate),title: "Next")
         addDoneButtonOnKeyboard(txtfd: txtfdToDate, selector: #selector(doneButtonToDate),title: "Done")
         
-        self.txtfdFromDate.addSubview(self.leftviewTwo(fortextfield: self.txtfdFromDate,imagename: "Calendar"))
-        self.txtfdToDate.addSubview(self.leftviewTwo(fortextfield: self.txtfdToDate,imagename: "Calendar"))
-        self.txtfdDropDown.addSubview(self.rightViewTwo(fortextfield: self.txtfdDropDown,imagename: "DropDownInvert"))
+        self.txtfdFromDate.addSubview(self.leftviewTwo(fortextfield: self.txtfdFromDate,imagename: "calendar-1"))
+        self.txtfdToDate.addSubview(self.leftviewTwo(fortextfield: self.txtfdToDate,imagename: "calendar-1"))
+        self.txtfdDropDown.addSubview(self.rightViewTwo(fortextfield: self.txtfdDropDown,imagename: "Tick"))
         
         
         

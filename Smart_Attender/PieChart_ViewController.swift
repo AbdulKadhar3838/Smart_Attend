@@ -346,7 +346,8 @@ class PieChart_ViewController: UIViewController,ChartViewDelegate,UITableViewDel
                         self.Load_data()
                         
                         //Dashboard Detailed View
-                        if let hourlyResponse = dict.value(forKey: "HourlyResponse") as? NSDictionary {
+                        if let hourlyResponse = dict.value(forKey: "HourlyResponse") as? NSDictionary
+                        {
                             if let avgCycle = hourlyResponse.value(forKey: "HourSingleCycle") as? String {
                                 self.lblAvgCycle.text = avgCycle
                             }
@@ -410,10 +411,13 @@ class PieChart_ViewController: UIViewController,ChartViewDelegate,UITableViewDel
                 }
             }
             self.setDataCount(count: self.chartdata_Array.count, data: self.chartdata_Array)
+            print(self.chartdata_Array)
             
             let temp_dict:NSDictionary=self.server_data[0] as! NSDictionary
             let chartdata=(temp_dict.value(forKey: "value") as! NSString).doubleValue
             var title:String=temp_dict.value(forKey: "label") as! String
+             currentShotdownId = temp_dict.value(forKey: "CurrentShutdownMasterID") as? Int ?? 0
+            print("CurrentShutdownMasterID :  \(currentShotdownId) ")
             if title.contains(" ") {
                title = title.replacingOccurrences(of: " ", with: " \n")
             }
@@ -764,10 +768,10 @@ class PieChart_ViewController: UIViewController,ChartViewDelegate,UITableViewDel
         let temp:NSDictionary=self.server_data[highlighted] as! NSDictionary
         var title:String=temp.value(forKey: "label") as? String ?? "" //For Btn Title
         
-        self.linechart_Button1.setTitle("HighLow", for: .normal)
-        self.linechart_Button2.setTitle("Hourly Incident", for: .normal)
-        self.btnEfficiencyChart.setTitle("Efficiency Chart", for: .normal)
-        self.btnBarChart.setTitle("Bar Chart", for: .normal)
+        self.linechart_Button1.setTitle("Input Analysis", for: .normal)
+        self.linechart_Button2.setTitle("Incident Analysis", for: .normal)
+        self.btnEfficiencyChart.setTitle("Target Analysis", for: .normal)
+        self.btnBarChart.setTitle("Timeline Analysis", for: .normal)
 
         let runtime:Double=(temp.value(forKey: "value") as? NSString ?? "").doubleValue
         

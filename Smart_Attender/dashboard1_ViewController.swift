@@ -16,6 +16,7 @@ class dashboard1_ViewController: UIViewController,UITableViewDelegate,UITableVie
     @IBOutlet weak var nodata_labl: UILabel!
     @IBOutlet weak var logoHeightConstraint: NSLayoutConstraint!
     var machineNameArray:NSMutableArray=[]
+    
    
     // MARK: - Lifecycle Method
     override func viewDidLoad() {
@@ -23,7 +24,7 @@ class dashboard1_ViewController: UIViewController,UITableViewDelegate,UITableVie
         // Do any additional setup after loading the view.
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
-        toSetNavigationImagenTitle(titleString:"Notification", isHamMenu: true)
+        toSetNavigationImagenTitle(titleString:"Incident Notifications", isHamMenu: true)
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.reload_dashbrd), name: .reload_notific, object: nil)
@@ -175,7 +176,7 @@ class dashboard1_ViewController: UIViewController,UITableViewDelegate,UITableVie
     }
    
     func post_notificinfo(indexpath: IndexPath,view: UITableView) {
-        let data_array:NSDictionary=machineNameArray.object(at: indexpath.row) as! NSDictionary
+        let data_array:NSDictionary = machineNameArray.object(at: indexpath.row) as! NSDictionary
         let notific_id:NSNumber=data_array.value(forKey: "NotificationID") as? NSNumber ?? 0
         self.startloader(msg: "Loading.... ")
         let postdict:NSMutableDictionary=["NotificationID":notific_id]
@@ -275,4 +276,5 @@ class dashboard1_ViewController: UIViewController,UITableViewDelegate,UITableVie
         print(indexPath.row)
         self.post_notificinfo(indexpath: indexPath,view: tableView)
     }
+    
 }

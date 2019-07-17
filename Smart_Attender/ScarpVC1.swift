@@ -96,6 +96,10 @@ class ScarpVC1: UIViewController {
         selectedIndex = sender.tag
        txtScrapEnter.text = arraytextfield[sender.tag]
         cell.btnPartNo.backgroundColor = UIColor.init(netHex: 0x459E87)
+        
+        cell.descriptionLbl.backgroundColor = UIColor.init(netHex: 0x459E87)
+
+        
         cell.btnPartNo.setTitleColor(UIColor.white, for: .normal)
         cell.btnPartNo.layer.borderColor = cell.btnPartNo.backgroundColor?.cgColor
        // tblScarp.reloadData()
@@ -197,6 +201,10 @@ extension ScarpVC1 :UITableViewDelegate,UITableViewDataSource{
         cell.btnPartNo.addTarget(self, action: #selector(self.partNoSelection(_:)), for: .touchUpInside)
         let list = arrayScarpList[indexPath.row]
         cell.btnPartNo.setTitle(list.PartNumber, for: .normal)
+        print(list.Description)
+        cell.descriptionLbl.text = list.Description
+        cell.descriptionLbl.backgroundColor = UIColor.init(netHex: 0x459E87)
+
         cell.btnPartNo.tag = indexPath.row
         
         if indexPath.row == selectedIndex{
@@ -212,9 +220,9 @@ extension ScarpVC1 :UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if  (Global.IS.IPAD || Global.IS.IPAD_PRO) {
-             return 60
+             return 80
         } else {
-             return 40
+             return 60
         }
         
     }
@@ -259,10 +267,13 @@ extension ScarpVC1 {
                     if(dict["IsSuccess"] != nil)
                     {
                         let success = dict["IsSuccess"] as? Bool ?? false
+                        
                         if (success)
                         {
                             guard let responseData = try? JSONSerialization.data(withJSONObject: dict, options: []) ,
                                 let model = try? JSONDecoder().decode(ScarpResponseModel.self, from: responseData) else { return }
+                            
+                            
                             self.arrayScarpList.removeAll()
                             self.arrayScarpList = model.lstPart
                             

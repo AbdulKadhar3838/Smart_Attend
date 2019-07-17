@@ -21,7 +21,9 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
     @IBOutlet weak var viewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var logoHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var dropdownHeightConstraint: NSLayoutConstraint!
-    
+    var badgeLbl = UILabel()
+    var Notificationcount:Int?
+
     
     
     // MARK: - Variables
@@ -33,6 +35,8 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
     let reuseIdentifier = "Dashboard2_CollectionViewCell"
     var dashcurrentOrientation:String = ""
     var dashpieflatOrientation:String = ""
+    var Downtime:Bool!
+    var NotificationData:String?
     
     
     // TODO: - Need to Cache KDCircularProgress
@@ -41,8 +45,9 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
     // MARK: - Lifecycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "IBMPlexSerif-Bold", size: 15)! ,NSAttributedStringKey.foregroundColor: UIColor.white ]
+        self.initView()
+        self.NotificationCountApi()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "IBMPlexSans-SemiBold", size: 20)! ,NSAttributedStringKey.foregroundColor: UIColor.white ]
         
     }
     
@@ -69,7 +74,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
     
    override func viewWillAppear(_ animated: Bool) {
        // self.newUpdateAvailable()
-         initView()
+         //initView()
         isDashboardHomePage = true
     
     }
@@ -136,7 +141,58 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         if UIDevice.current.orientation.isLandscape {
             circleCount = 3.0
         }
-      //  toSetNavigationImagenTitle(titleString:"Dashboard", isHamMenu: false)
+//        let logoBtn = UIButton(type: UIButton.ButtonType.custom)
+//        logoBtn.setImage(UIImage(named: "Battery_icon"), for: .normal)
+//        logoBtn.addTarget(self, action: #selector(self.logoClicked1) , for: .touchUpInside)
+//        logoBtn.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+//        let barButton = UIBarButtonItem(customView: logoBtn)
+//        self.navigationItem.rightBarButtonItem = barButton
+        
+        let cusV = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
+        cusV.backgroundColor = UIColor.clear
+        
+        // notification image
+        
+        let img = UIImageView.init(frame: CGRect.init(x: cusV.center.x-30, y: cusV.center.y-15, width: 30, height: 30))
+        img.image = UIImage.init(named: "Battery_icon")
+        img.tintColor = UIColor.white
+        cusV.addSubview(img)
+        
+        // badge counter round
+        let roundV = UIView.init(frame: CGRect.init(x: img.frame.origin.x+10, y:img.frame.origin.y-5, width: 35, height: 17.00))
+        roundV.layer.cornerRadius = 8
+        roundV.layer.masksToBounds = true
+        roundV.backgroundColor = UIColor.red
+        
+      self.badgeLbl = UILabel.init(frame: CGRect.init(x:7, y: 0, width: 20, height: 15.00))
+       // self.badgeLbl = UILabel()
+        badgeLbl.font = UIFont.init(name: "IBMPlexSans-SemiBold", size: 10)
+        badgeLbl.textAlignment = .center
+        badgeLbl.textColor = UIColor.white
+        badgeLbl.center = CGPoint(x: roundV.center.x, y: badgeLbl.center.y)
+
+       // badgeLbl.center = roundV.center
+        
+        roundV.addSubview(badgeLbl)
+        
+        
+        cusV.addSubview(roundV)
+        
+        //btn action
+        let btnName = UIButton()
+        btnName.frame = cusV.bounds
+        btnName.addTarget(self, action: #selector(self.logoClicked1), for: .touchUpInside)
+        btnName.setTitle("", for: .normal)
+        cusV.addSubview(btnName)
+        
+        self.view.bringSubview(toFront: btnName)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: cusV)
+        
+        
+        
+        
+        
+        
       
 
        
@@ -161,6 +217,10 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
     override func viewWillDisappear(_ animated: Bool) {
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
         appdelegate.shouldRotate = true
+        //self.dismiss(animated: true, completion: nil)
+       // removeAnimate()
+
+        
     }
     override func viewDidDisappear(_ animated: Bool) {
         timer.invalidate()
@@ -196,7 +256,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
     {
         if !ifLoading()
         {
-            defalts.setValue(forhours, forKey: "hours_selected")
+            defalts.setValue(forhours, forKey: "hours_selected") //customer_id
             self.nodata_view.isHidden=true
             machineNameArray.removeAllObjects()
             self.startloader(msg: "Loading.... ")
@@ -211,6 +271,14 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
                         if (success)
                         {
                             let data:NSArray=dict.value(forKey: "Response") as? NSArray ?? []
+                            var boolDowntime:Bool = false
+                            
+                            let booldata = dict["DownTimeFlag"] as? Bool
+                            print(booldata ?? false)
+                            
+                          
+                            self.Downtime = booldata
+                            print(self.Downtime)
                             self.machineNameArray=data.mutableCopy() as? NSMutableArray ?? []
                             if self.machineNameArray.count > 0
                             {
@@ -258,6 +326,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         {
             Global.server.Get(path: "Dashboard/DeviceList/\(customer_id!)/\(forhours)", jsonObj: nil, completionHandler: { (success,failure,noConnection) in
                 self.stoploader()
+                // Global.server.Get(path: "Dashboard/DeviceList/\(customer_id!)/\(forhours)", jsonOb
                 if(failure == nil && noConnection == nil)
                 {
                     let dict:NSDictionary=success as! NSDictionary
@@ -304,6 +373,43 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         {
             print("Already Loading")
         }
+    }
+    func NotificationCountApi(){
+        //let jsonURL = "http://smartattend.colanonline.net/service/api/Dashboard/NotificationCountByDeviceID/131"
+        let jsonURL = (BaseApi + "Dashboard/NotificationCount/" + account_id)
+        print(jsonURL)
+        let url = URL(string: jsonURL)
+        
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            guard error == nil else{
+                return
+            }
+            guard let dd = data else{
+                return
+            }
+            
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:Any]
+                {
+                    self.Notificationcount = json["NotifyCount"] as? Int
+                    print("Json Response :",json)
+                    if self.Notificationcount ?? 0 >= 99 {
+                        DispatchQueue.main.async {
+                            
+                            self.badgeLbl.text = "99+"
+                        }
+                    }
+                    
+                    print("Count :",self.Notificationcount!)
+                   //let arr = String(self.NotificationData!)
+                }
+                
+            }
+            catch {
+                print("Error is : \n\(error)")
+            }
+            }.resume()
+        
     }
     // MARK: - Button Actions
     @IBAction func retry_butn(_ sender: AnyObject) {
@@ -383,13 +489,21 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         var statuscolor:UIColor!
         
         let downtimeDurationID = data_array.value(forKey: "DowntimeDurationID") as? NSNumber ?? 0
-        if downtimeDurationID == 2 {
-            cell.imgvwDown.image = #imageLiteral(resourceName: "sortDown")
-            cell.lblDowntimeDuration.textColor = UIColor.init(netHex: 0xC82E30)
-        } else {
-            cell.imgvwDown.image = #imageLiteral(resourceName: "sortUp")
-            cell.lblDowntimeDuration.textColor = UIColor.init(netHex: 0x51C747)
+        if Downtime == true {
+            if downtimeDurationID == 2 {
+                cell.imgvwDown.image = #imageLiteral(resourceName: "sortDown")
+                cell.lblDowntimeDuration.textColor = UIColor.init(netHex: 0xC82E30)
+            } else {
+                cell.imgvwDown.image = #imageLiteral(resourceName: "sortUp")
+                cell.lblDowntimeDuration.textColor = UIColor.init(netHex: 0x51C747)
+            }
+            
+            
         }
+        else{
+            cell.lblDowntimeDuration.isHidden = true
+        }
+        
         
         let Alarmstatus:NSNumber=data_array.value(forKey: "Alarm") as? NSNumber ?? 0
         
@@ -406,7 +520,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
             if status == 0 { //Not Running
                 if isPlanned == 0 && !isCommunicating {
                     
-                    statuscolor = UIColor.init(netHex: 0xfe3636)
+                    statuscolor = UIColor.init(netHex: 0xf05254)
                     cell.machine_statuslbl.text =  "STOPPED" //red
                     if  let descriptionId:Int=data_array.value(forKey: "DescriptionID") as? Int {
                         if descriptionId > 3 && descriptionId != 10{
@@ -432,23 +546,23 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
                 } else {
                     if isCommunicating {
                         cell.machine_statuslbl.text =  "COMM ERROR" //blue
-                        statuscolor = UIColor.init(netHex: 0x137AC4)
+                        statuscolor = UIColor.init(netHex: 0x00b9f2)
                     }
                 }
                 
             } else { //Running
                 if isCommunicating {
                     cell.machine_statuslbl.text =  "COMM ERROR" //blue
-                    statuscolor = UIColor.init(netHex: 0x137AC4)
+                    statuscolor = UIColor.init(netHex: 0x00b9f2)
                 } else if Alarmstatus == 1 {
                     cell.machine_statuslbl.text =  "ALARM" //yellow
-                    statuscolor = UIColor.init(netHex: 0xefa028)
+                    statuscolor = UIColor.init(netHex: 0xfaa61a)
                     if  let description:String = data_array.value(forKey: "Description") as? String {
                         cell.machine_statuslbl.text = description.uppercased()
                     }
                 } else {
                     cell.machine_statuslbl.text =  "RUNNING" //green
-                    statuscolor = UIColor.init(netHex: 0x79bd69)
+                    statuscolor = UIColor.init(netHex: 0x36B54A)
                 }
             }
             

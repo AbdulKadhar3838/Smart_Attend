@@ -88,7 +88,7 @@ class EfficiencyChartViewController: UIViewController{
         self.LineChart.delegate = self
         let screenTitle:String = defalts.value(forKey: "Device_Name") as? String ?? ""
         
-        toSetNavigationImagenTitle(titleString:"\(screenTitle) - Overall Efficiency", isHamMenu: false) // Set title for Navigation Title
+        toSetNavigationImagenTitle(titleString:"\(screenTitle) - Target Analysis", isHamMenu: false) // Set title for Navigation Title
 
         self.lblPercentage.transform=CGAffineTransform(rotationAngle: -CGFloat.pi/2)
        // self.lblPercentage.frame.origin.x=3 // set Percentage lable align vertically to chart
@@ -123,7 +123,7 @@ class EfficiencyChartViewController: UIViewController{
     }
     
     func chartDatainitialization() {
-        chartColor = "#67b7dc"
+        chartColor = "#23238E"
         chartLegend = "Legend"
         yAxisArray = arrayResponseList.map({($0.value) ?? "0"})
         let xAxisArray = arrayResponseList.map({($0.period)})

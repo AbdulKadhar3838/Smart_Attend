@@ -60,7 +60,7 @@ class UpdateUserVC: UIViewController ,UIImagePickerControllerDelegate ,UINavigat
         self.title = "UPDATE ACCOUNT"
         
         let logoBtn = UIButton(type: .system)
-        logoBtn.setImage(#imageLiteral(resourceName: "LogoWhite"), for: .normal)
+        logoBtn.setImage(#imageLiteral(resourceName: "Dashboard"), for: .normal)
         logoBtn.addTarget(self, action: #selector(self.logoClicked(_:)) , for: .touchUpInside)
         logoBtn.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
         logoBtn.imageView?.contentMode = .scaleAspectFit
@@ -119,7 +119,7 @@ class UpdateUserVC: UIViewController ,UIImagePickerControllerDelegate ,UINavigat
                 self.anycolorborder(forview: textfield, radius: 4,color: UIColor.lightGray)
             }
             
-            self.anycolorborder(forview: self.btnCreate, radius: 4,color: theme_color)
+            self.anycolorborder(forview: self.btnCreate, radius: 4,color: Yellow_color)
             self.anycolorborder(forview: self.btnResetPassword, radius: 4,color: theme_color)
             
             
@@ -127,8 +127,8 @@ class UpdateUserVC: UIViewController ,UIImagePickerControllerDelegate ,UINavigat
             self.btnProfile.layer.cornerRadius = self.btnProfile.bounds.size.height/2
             self.btnProfile.clipsToBounds = true
             
-            self.txtfdFromDate.addSubview(self.rightView(fortextfield: self.txtfdFromDate,imagename: "Calendar"))
-            self.txtfdToDate.addSubview(self.rightView(fortextfield: self.txtfdToDate,imagename: "Calendar"))
+            self.txtfdFromDate.addSubview(self.rightView(fortextfield: self.txtfdFromDate,imagename: "calendar-1"))
+            self.txtfdToDate.addSubview(self.rightView(fortextfield: self.txtfdToDate,imagename: "calendar-1"))
         }
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:
             #selector(self.keyboardDismiss))

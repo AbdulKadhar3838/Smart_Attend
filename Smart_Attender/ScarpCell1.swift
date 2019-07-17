@@ -11,6 +11,12 @@ import UIKit
 class ScarpCell: UITableViewCell {
 
     @IBOutlet weak var btnPartNo: UIButton!
+    
+    @IBOutlet var descriptionLbl: UILabel!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

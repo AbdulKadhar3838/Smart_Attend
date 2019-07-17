@@ -14,8 +14,9 @@ class SlideMenu_ViewController: UIViewController,UITableViewDelegate,UITableView
     
     
     
-    var arrayMenuName = ["Device Dashboard","Incident Notification","Part No. Database","Part Assign","Quick Report","User Settings","Planned Shutdown Settings","Wifi Configuration","Reset Password","Logout"]
-    var arrayMenuImage:[UIImage] = [#imageLiteral(resourceName: "Dashboard"),#imageLiteral(resourceName: "notification-1"),#imageLiteral(resourceName: "partList-1"),#imageLiteral(resourceName: "partAssign"),#imageLiteral(resourceName: "quickreport-1"),#imageLiteral(resourceName: "User"),#imageLiteral(resourceName: "Settings"),#imageLiteral(resourceName: "wifi-1"),#imageLiteral(resourceName: "resetPassword"),#imageLiteral(resourceName: "logoutt")]
+    var arrayMenuName = ["Device Dashboard","Incident Notifications","Part No. Database","Part Assign","Quick Report","User Settings","Planned Shutdown Settings","Wifi Configuration","Reset Password","Logout"]
+    var arrayMenuImage:[UIImage] = [#imageLiteral(resourceName: "Dashboard"),#imageLiteral(resourceName: "notification (1)"),#imageLiteral(resourceName: "Part list"),#imageLiteral(resourceName: "Part Asign"),#imageLiteral(resourceName: "growth"),#imageLiteral(resourceName: "Userrr"),#imageLiteral(resourceName: "settings-1"),#imageLiteral(resourceName: "Wifiii"),#imageLiteral(resourceName: "key"),#imageLiteral(resourceName: "logout")]
+    var selectedMenuImg:[UIImage] = [#imageLiteral(resourceName: "Dashboard"),#imageLiteral(resourceName: "notification-1"),#imageLiteral(resourceName: "partList-1"),#imageLiteral(resourceName: "partAssign"),#imageLiteral(resourceName: "quickreport-1"),#imageLiteral(resourceName: "User"),#imageLiteral(resourceName: "Settings"),#imageLiteral(resourceName: "wifi-1"),#imageLiteral(resourceName: "key (1)"),#imageLiteral(resourceName: "logoutt")]
     var arrayViewController:[String] = ["dashboard2_ViewController","dashboard1_ViewController","PartListVC","PartAssignListVC","QuickReportVC","UserListVC","PlannedShutdownVC","HotspotConfigVC","ResetPswd_ViewController","Login_ViewController"]
     
     // MARK: - View Life Cycle
@@ -118,8 +119,10 @@ class SlideMenu_ViewController: UIViewController,UITableViewDelegate,UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         isDashboardHomePage = indexPath.row == 0 ? true : false
-        
+
         if let cell = tableView.cellForRow(at: indexPath) as? MenuTableViewCell {
+            cell.imgvwIcon.image = selectedMenuImg[indexPath.row]
+            
             if cell.lblTitle.text == "Logout" {
                 dfualts.setValue(nil, forKey: AccountID)
                 self.Loggout()

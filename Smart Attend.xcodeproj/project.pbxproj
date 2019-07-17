@@ -86,10 +86,20 @@
 		72A2D1E71E07EAD3006E76AE /* LineChart_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A2D1E61E07EAD3006E76AE /* LineChart_ViewController.swift */; };
 		72D537D11E04483500F986A3 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D537D01E04483500F986A3 /* MenuTableViewCell.swift */; };
 		72F72FD61E4E0ADA0059E8CC /* Popup_MachinedetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F72FD51E4E0ADA0059E8CC /* Popup_MachinedetailsViewController.swift */; };
+		7805095B22C4A6F400BC4DE7 /* IBMPlexSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7805095A22C4A6F300BC4DE7 /* IBMPlexSans-SemiBold.otf */; };
 		7819A36022BA57A70057546B /* IBMPlexSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7819A35E22BA57A50057546B /* IBMPlexSans-Medium.otf */; };
 		7819A36122BA57A70057546B /* IBMPlexSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7819A35F22BA57A70057546B /* IBMPlexSans-Regular.otf */; };
 		781BC54F22BB5B2600B1B14A /* IBMPlexSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 781BC54E22BB5B2500B1B14A /* IBMPlexSans-Bold.otf */; };
+		7820D09922CCCF0F00539328 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820D09822CCCF0E00539328 /* CustomCell.swift */; };
+		7820D09B22CCD00500539328 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820D09A22CCD00500539328 /* PopUpViewController.swift */; };
+		783BD08222CF6FB400668A3F /* PopupModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BD08122CF6FB400668A3F /* PopupModelClass.swift */; };
 		7898E62722B90A18009226AD /* IBMPlexSerif-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7898E62622B90A18009226AD /* IBMPlexSerif-Bold.otf */; };
+		78CB479522D476E500BEB700 /* QuickSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB479422D476E500BEB700 /* QuickSettingViewController.swift */; };
+		78CB479722D4975B00BEB700 /* QuickPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB479622D4975B00BEB700 /* QuickPopUpTableViewCell.swift */; };
+		78CB479922D498DA00BEB700 /* QuickPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB479822D498DA00BEB700 /* QuickPopup.swift */; };
+		78CB479B22D49DE300BEB700 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB479A22D49DE300BEB700 /* ConnectionManager.swift */; };
+		78CB479D22D49DEC00BEB700 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB479C22D49DEC00BEB700 /* WebServices.swift */; };
+		78CB479F22D4B07D00BEB700 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB479E22D4B07C00BEB700 /* ReachabilityManager.swift */; };
 		952570F31EB0BAB000F6EE65 /* ChartFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952570F21EB0BAB000F6EE65 /* ChartFormatter.swift */; };
 		95552C7E1EA746510081F4E6 /* HighLowGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95552C7D1EA746510081F4E6 /* HighLowGraphView.swift */; };
 		95552C801EA7C1730081F4E6 /* LeftAxisOnOffFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95552C7F1EA7C1730081F4E6 /* LeftAxisOnOffFormatter.swift */; };
@@ -179,10 +189,20 @@
 		72A2D1E61E07EAD3006E76AE /* LineChart_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart_ViewController.swift; sourceTree = "<group>"; };
 		72D537D01E04483500F986A3 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		72F72FD51E4E0ADA0059E8CC /* Popup_MachinedetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popup_MachinedetailsViewController.swift; sourceTree = "<group>"; };
+		7805095A22C4A6F300BC4DE7 /* IBMPlexSans-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-SemiBold.otf"; sourceTree = "<group>"; };
 		7819A35E22BA57A50057546B /* IBMPlexSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Medium.otf"; sourceTree = "<group>"; };
 		7819A35F22BA57A70057546B /* IBMPlexSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Regular.otf"; sourceTree = "<group>"; };
 		781BC54E22BB5B2500B1B14A /* IBMPlexSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.otf"; sourceTree = "<group>"; };
+		7820D09822CCCF0E00539328 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		7820D09A22CCD00500539328 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		783BD08122CF6FB400668A3F /* PopupModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupModelClass.swift; sourceTree = "<group>"; };
 		7898E62622B90A18009226AD /* IBMPlexSerif-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSerif-Bold.otf"; sourceTree = "<group>"; };
+		78CB479422D476E500BEB700 /* QuickSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSettingViewController.swift; sourceTree = "<group>"; };
+		78CB479622D4975B00BEB700 /* QuickPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickPopUpTableViewCell.swift; sourceTree = "<group>"; };
+		78CB479822D498DA00BEB700 /* QuickPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickPopup.swift; sourceTree = "<group>"; };
+		78CB479A22D49DE300BEB700 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		78CB479C22D49DEC00BEB700 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		78CB479E22D4B07C00BEB700 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		7D8307B2DE9FA27A86A3B20A /* Pods-SA-ADMIN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SA-ADMIN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SA-ADMIN/Pods-SA-ADMIN.debug.xcconfig"; sourceTree = "<group>"; };
 		82786B791D3225F0663D92EF /* Pods-SA-ADMIN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SA-ADMIN.release.xcconfig"; path = "Pods/Target Support Files/Pods-SA-ADMIN/Pods-SA-ADMIN.release.xcconfig"; sourceTree = "<group>"; };
 		952570F21EB0BAB000F6EE65 /* ChartFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartFormatter.swift; sourceTree = "<group>"; };
@@ -216,7 +236,9 @@
 				490B1A741FBEC15600885307 /* StoppedDeviceListModel.swift */,
 				496FCF1D1FDE62E20012B26F /* QuickReportListModel.swift */,
 				496FCF1F1FDE7ECE0012B26F /* QuickReportChartModel.swift */,
+				78CB479822D498DA00BEB700 /* QuickPopup.swift */,
 				49806F7D1FE1541100EA6BBF /* CreatePartListModel.swift */,
+				783BD08122CF6FB400668A3F /* PopupModelClass.swift */,
 				4936B0A521A699A100A0B40C /* ScarpResponseModel.swift */,
 			);
 			path = "Model Class";
@@ -241,7 +263,10 @@
 			isa = PBXGroup;
 			children = (
 				0E2CBC861E083C5600D5C635 /* Global.swift */,
+				78CB479A22D49DE300BEB700 /* ConnectionManager.swift */,
+				78CB479C22D49DEC00BEB700 /* WebServices.swift */,
 				49DF78601F8797B700AE61B2 /* OrientationLock.swift */,
+				78CB479E22D4B07C00BEB700 /* ReachabilityManager.swift */,
 				490C88871FB4A94800EF2C9D /* Extension.swift */,
 				49E4CE8D1F9E0B3C00E1400F /* Constants.swift */,
 			);
@@ -304,6 +329,7 @@
 				49F5EA261F88F66B00534F80 /* NewUserVC.swift */,
 				49F5EA241F88F64F00534F80 /* UserListVC.swift */,
 				49F5EA281F88F6C500534F80 /* UpdateUserVC.swift */,
+				7820D09A22CCD00500539328 /* PopUpViewController.swift */,
 				49F5EA2A1F88F6F000534F80 /* PartAssignListVC.swift */,
 				49F5EA2C1F88F70A00534F80 /* UpdateAssignVC.swift */,
 				729255751E4860280015DF4B /* dashboard1_ViewController.swift */,
@@ -312,6 +338,7 @@
 				72F72FD51E4E0ADA0059E8CC /* Popup_MachinedetailsViewController.swift */,
 				72A2D1E61E07EAD3006E76AE /* LineChart_ViewController.swift */,
 				95552C7D1EA746510081F4E6 /* HighLowGraphView.swift */,
+				78CB479422D476E500BEB700 /* QuickSettingViewController.swift */,
 				49446A3F1F7B74DF002B46DE /* EfficiencyChartViewController.swift */,
 				49446A411F7B7503002B46DE /* BarChartViewController.swift */,
 				727AC4401E04416900CB767F /* PieChart_ViewController.swift */,
@@ -328,6 +355,7 @@
 				781BC54E22BB5B2500B1B14A /* IBMPlexSans-Bold.otf */,
 				7819A35E22BA57A50057546B /* IBMPlexSans-Medium.otf */,
 				7819A35F22BA57A70057546B /* IBMPlexSans-Regular.otf */,
+				7805095A22C4A6F300BC4DE7 /* IBMPlexSans-SemiBold.otf */,
 				7898E62622B90A18009226AD /* IBMPlexSerif-Bold.otf */,
 				49E4CE891F9DCEB200E1400F /* GothamMediumRegular-1.ttf */,
 			);
@@ -345,6 +373,8 @@
 				497320B11F8B5B7E003E668D /* UserListCollectionCell.swift */,
 				4929F6401FB5F39B0054742F /* SearchCell.swift */,
 				4929F6481FBB69790054742F /* PlannedShutdownCell.swift */,
+				7820D09822CCCF0E00539328 /* CustomCell.swift */,
+				78CB479622D4975B00BEB700 /* QuickPopUpTableViewCell.swift */,
 				4941068D1FBD7AD800C35300 /* ExpandCollapseCell.swift */,
 				4941068F1FBD813E00C35300 /* ExpandHeaderCell.swift */,
 				494106911FBDF58700C35300 /* OKCell.swift */,
@@ -496,6 +526,7 @@
 				7819A36022BA57A70057546B /* IBMPlexSans-Medium.otf in Resources */,
 				49E4CE881F9DCEAB00E1400F /* Regular.ttf in Resources */,
 				7819A36122BA57A70057546B /* IBMPlexSans-Regular.otf in Resources */,
+				7805095B22C4A6F400BC4DE7 /* IBMPlexSans-SemiBold.otf in Resources */,
 				7223312B1E02BB790085634B /* Assets.xcassets in Resources */,
 				722331291E02BB790085634B /* Main.storyboard in Resources */,
 			);
@@ -561,8 +592,11 @@
 				494106921FBDF58700C35300 /* OKCell.swift in Sources */,
 				728287BA1E0400F500DF7A75 /* dashboard2_ViewController.swift in Sources */,
 				496FCF221FDE97E20012B26F /* QuickReportChartTableCell.swift in Sources */,
+				7820D09B22CCD00500539328 /* PopUpViewController.swift in Sources */,
+				783BD08222CF6FB400668A3F /* PopupModelClass.swift in Sources */,
 				494D1E251F8631ED00CA7F23 /* KDCircularProgress.swift in Sources */,
 				495CF7BF1FB2012400BF73DA /* PartAssignModel.swift in Sources */,
+				78CB479722D4975B00BEB700 /* QuickPopUpTableViewCell.swift in Sources */,
 				49F5EA2D1F88F70A00534F80 /* UpdateAssignVC.swift in Sources */,
 				728287B81E03F02A00DF7A75 /* PieLegend_TableViewCell.swift in Sources */,
 				49E4CE8E1F9E0B3C00E1400F /* Constants.swift in Sources */,
@@ -583,14 +617,19 @@
 				49DF78611F8797B700AE61B2 /* OrientationLock.swift in Sources */,
 				729BCDB71E212BCB00D1C6F0 /* xAxisOnOffFormatter.swift in Sources */,
 				4922D4301FE498B60007517C /* CreatePartListHeaderTableCell.swift in Sources */,
+				78CB479522D476E500BEB700 /* QuickSettingViewController.swift in Sources */,
 				729255741E4860170015DF4B /* MachineDetails_ViewController.swift in Sources */,
 				728287BC1E04011000DF7A75 /* Dashboard2_CollectionViewCell.swift in Sources */,
 				4941068E1FBD7AD800C35300 /* ExpandCollapseCell.swift in Sources */,
+				78CB479922D498DA00BEB700 /* QuickPopup.swift in Sources */,
 				49E32B4F1FA8CDA7000F0AE5 /* BarChartModel.swift in Sources */,
 				4913D01021B6795C00EA9C60 /* ScarpVC1.swift in Sources */,
 				4936B0A621A699A100A0B40C /* ScarpResponseModel.swift in Sources */,
 				49806F7E1FE1541100EA6BBF /* CreatePartListModel.swift in Sources */,
 				4929F6451FB9E2660054742F /* PartAssignSearchListModel.swift in Sources */,
+				78CB479B22D49DE300BEB700 /* ConnectionManager.swift in Sources */,
+				78CB479F22D4B07D00BEB700 /* ReachabilityManager.swift in Sources */,
+				7820D09922CCCF0F00539328 /* CustomCell.swift in Sources */,
 				7282B4E81E0C1E2300C45591 /* Pulsator.swift in Sources */,
 				72F72FD61E4E0ADA0059E8CC /* Popup_MachinedetailsViewController.swift in Sources */,
 				494D1C331FD93CAC00A4B785 /* QuickReportListCell.swift in Sources */,
@@ -615,6 +654,7 @@
 				4929F6491FBB69790054742F /* PlannedShutdownCell.swift in Sources */,
 				491352FC21A591E500C6D08A /* ScarpTableCell.swift in Sources */,
 				4929F6411FB5F39B0054742F /* SearchCell.swift in Sources */,
+				78CB479D22D49DEC00BEB700 /* WebServices.swift in Sources */,
 				491352FA21A58B8B00C6D08A /* ScarpVC.swift in Sources */,
 				494D1C311FD93C3800A4B785 /* QuickReportHeaderCell.swift in Sources */,
 				496FCF1E1FDE62E20012B26F /* QuickReportListModel.swift in Sources */,

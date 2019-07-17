@@ -2,14 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>OpenSansRegular.ttf</string>
-		<string>IBMPlexSerif-Bold.otf</string>
-		<string>IBMPlexSans-Regular.otf</string>
-		<string>IBMPlexSans-Medium.otf</string>
-		<string>IBMPlexSans-Bold.otf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -38,7 +30,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>10</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -50,6 +42,15 @@
 	<string>Smart Attend needs Camera Access</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Smart Attend likes too access photo library</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>OpenSansRegular.ttf</string>
+		<string>IBMPlexSerif-Bold.otf</string>
+		<string>IBMPlexSans-Regular.otf</string>
+		<string>IBMPlexSans-Medium.otf</string>
+		<string>IBMPlexSans-Bold.otf</string>
+		<string>IBMPlexSans-SemiBold.otf</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

@@ -150,6 +150,6 @@ class ForgotPswd_ViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.email_textfield.addSubview(leftview(fortextfield: self.email_textfield,imagename: "user_icon"))
+        self.email_textfield.addSubview(leftview(fortextfield: self.email_textfield,imagename: "UserName"))
     }
 }

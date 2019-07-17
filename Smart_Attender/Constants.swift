@@ -12,7 +12,7 @@ let developmentBaseApi:String = "http://smartattend.colanonline.net/service/api/
 let preprodBaseApi:String = "http://preprod.smartattendtest.com//service/api/" //PreProduction
 let prodBaseApi:String = "http://smartattendtest.com/service/api/" // App Store live
 
-var BaseApi:String = preprodBaseApi
+var BaseApi:String = developmentBaseApi
 
 var isPreprodBaseURL:Bool = true {
     didSet {

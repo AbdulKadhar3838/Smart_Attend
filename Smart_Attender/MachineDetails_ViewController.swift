@@ -113,7 +113,7 @@ class MachineDetails_ViewController: UIViewController  {
     
     override func viewDidAppear(_ animated: Bool) {
         self.animate_view(initial: self.view.frame.size.height, final: 0)
-        self.anycolorborder(forview: self.close_butn, radius: 6, color: UIColor.white)
+      //  self.anycolorborder(forview: self.close_butn, radius: 6, color: UIColor.yellow)
         toSetTabelContentHeight(table: tableExpand)
         popup_view.layer.cornerRadius = 6
         popup_view.layer.masksToBounds = true
@@ -150,7 +150,7 @@ class MachineDetails_ViewController: UIViewController  {
             { completed in
                 if(completed){
                     self.view.removeFromSuperview()
-                    dfualts.setValue(true, forKey: "reload")
+                    dfualts.setValue(true, forKey: "r eload")
                 }
         })
     }

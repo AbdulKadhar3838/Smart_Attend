@@ -43,8 +43,8 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.email_textfield.addSubview(leftview(fortextfield: self.email_textfield,imagename: "user_icon"))
-        self.pswd_textfield.addSubview(leftview(fortextfield: self.pswd_textfield,imagename: "pswd_icon"))
+        self.email_textfield.addSubview(leftview(fortextfield: self.email_textfield,imagename: "UserName"))
+        self.pswd_textfield.addSubview(leftview(fortextfield: self.pswd_textfield,imagename: "padlock"))
     }
     
     override func didReceiveMemoryWarning() {

@@ -11,7 +11,14 @@ import IQKeyboardManagerSwift
 
 let theme_color:UIColor = UIColor.init(netHex: 0x23238E)
 let sky_Blue:UIColor = UIColor.init(netHex: 0x00B9F2)
+let newGray_color:UIColor = UIColor.init(netHex:0xEDEDED)
+let newDarkGray_color:UIColor = UIColor.init(netHex:0x525E6F)
 let nav_color:UIColor = UIColor.init(netHex: 0x222287)
+let SlidemenuNav_color:UIColor = UIColor.init(netHex: 0x2D2D2D)
+let Yellow_color:UIColor = UIColor.init(netHex: 0xE5A530)
+var currentShotdownId:Int?
+
+
 let dropdown_array = ["Last 24 Hours", "Last 12 Hours", "Last 8 Hours"]
 let alertTitle = "Smart Attend"
 let chart_colors:[UIColor]=[UIColor.init(netHex: 0x63FA23), 
@@ -494,12 +501,43 @@ extension UIViewController: UIGestureRecognizerDelegate
     }
     
     @objc func logoClicked(sender:UIButton) {
+
         if sender.tag == 0 {
             self.navigationController?.popToRootViewController(animated: true)
         } else {
             // Need to implement code for Dashboard
         }
     }
+    @objc func logoClicked1(sender:UIButton){
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
+                self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
+        
+    }
+    @objc func logoClickedSettings(sender:UIButton){
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ReportVC") as! QuickSettingViewController
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
+        
+        
+    }
+    func removeAnimate()
+    {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.view.alpha = 0.0;
+        }, completion:{(finished : Bool)  in
+            if (finished)
+            {
+                self.view.removeFromSuperview()
+            }
+        });
+    }
+    
     
     // MARK: - Alert Methods
     func alert(msgs: String)

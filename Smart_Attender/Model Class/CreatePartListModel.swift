@@ -20,7 +20,7 @@ class CreatePartListModel {
             createPartList.isSuccess = isSuccess as? Bool
         }
         if let responseList = jsonData["LstPartModel"] as? [AnyObject]  {
-            
+            print(responseList)
             createPartList.arrayList = responseList.map({PartList.valuePassing(dict: $0)})
         }
         

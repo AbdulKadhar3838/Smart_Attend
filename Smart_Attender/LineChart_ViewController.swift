@@ -94,7 +94,7 @@ class LineChart_ViewController: UIViewController,UITableViewDelegate,UITableView
     {
         self.marker_view.isHidden=true
         self.startloader(msg: "Loading.... ")
-        Global.server.Get(path: "EfficiencyMonitor/LineChart/\(device_id)/\(forhours)/\(chart_index)", jsonObj: nil, completionHandler: { (success,failure,noConnection) in
+        Global.server.Get(path: "EfficiencyMonitor/LineChart/\(device_id)/\(forhours)/\(chart_index)/\(currentShotdownId!)", jsonObj: nil, completionHandler: { (success,failure,noConnection) in
             self.stoploader()
             if(failure == nil && noConnection == nil)
             {

@@ -45,7 +45,7 @@ class CreatePartListVC: UIViewController,UITextFieldDelegate {
         self.title = passTitle
         
         let logoBtn = UIButton(type: .system)
-        logoBtn.setImage(#imageLiteral(resourceName: "LogoWhite"), for: .normal)
+        logoBtn.setImage(#imageLiteral(resourceName: "Dashboard"), for: .normal)
         logoBtn.addTarget(self, action: #selector(self.logoClicked(_:)) , for: .touchUpInside)
         logoBtn.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
         logoBtn.imageView?.contentMode = .scaleAspectFit

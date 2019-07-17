@@ -72,9 +72,9 @@ class ResetPswd_ViewController: UIViewController {
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.cnfrmpswd_textfield.addSubview(leftview(fortextfield: self.cnfrmpswd_textfield,imagename: "pswd_icon"))
-        self.newpswd_textfield.addSubview(leftview(fortextfield: self.newpswd_textfield,imagename: "pswd_icon"))
-        self.pswd_textfield.addSubview(leftview(fortextfield: self.pswd_textfield,imagename: "pswd_icon"))
+        self.cnfrmpswd_textfield.addSubview(leftview(fortextfield: self.cnfrmpswd_textfield,imagename: "padlock"))
+        self.newpswd_textfield.addSubview(leftview(fortextfield: self.newpswd_textfield,imagename: "padlock"))
+        self.pswd_textfield.addSubview(leftview(fortextfield: self.pswd_textfield,imagename: "padlock"))
     }
     
     override func didReceiveMemoryWarning() {
