@@ -134,7 +134,7 @@ class CreatePartListVC: UIViewController,UITextFieldDelegate {
            alert(msgs: "Fill the Part Number")
         } else if txtCavity.text == "" || txtCavity.text == nil {
             alert(msgs: "Fill the Cavity")
-        }  else if txtCavity.text == "0"  {
+        }  else if txtCavity.text == ""  {
             alert(msgs: "Fill the Cavity value greater than 0")
         } else if txtCycle.text == "" || txtCycle.text == nil {
             alert(msgs: "Fill the Cycle Time")
@@ -167,11 +167,13 @@ class CreatePartListVC: UIViewController,UITextFieldDelegate {
                     let groupID = txtGroupID.text,
                     let cavity = txtCavity.text,
                     let cycleTime = txtCycle.text,
-                    let decription = txtDecription.text{
+                    let decription = txtDecription.text
+                {
+                     let cavity1 = cavity.trimmingCharacters(in: .whitespacesAndNewlines)
                     let dict:NSMutableDictionary = [
                         "PartNumber": partNo,
                         "GroupID":groupID,
-                        "Cavity": Int(cavity) ?? 0,
+                        "Cavity": Int(cavity1) as Any,
                         "CycleTime":cycleTime,
                         "CustomerID":customer_id!,
                         "PartId" :passPartID,

@@ -38,6 +38,9 @@ var isNewVersionAvailable:Bool = false
 let appStoreAppID = "1210100664"
 var releaseVersion = ""
 var currentAppVersion = ""
+var img :UIImageView?
+var roundV:UIView?
+
 
 class Constants: NSObject {
     

@@ -21,13 +21,17 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         self.view.backgroundColor = UIColor.darkGray.withAlphaComponent(0.8)
         
         self.showAnimate()
-        self.api()
+        self.showPopupapi()
         // Do any additional setup after loading the view.
     }
     override func viewWillDisappear(_ animated: Bool) {
         viewPopup.isHidden = true
     }
     
+    @IBAction func markAllRead(_ sender: UIButton) {
+        //readNotificationAPI()
+      
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DeviceName.count
     }
@@ -42,7 +46,11 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         cell.statusLbl.text = DeviceMessage[indexPath.row]
         print(BtnColour)
         cell.viewBtn.tag = indexPath.row
-        
+//        let data_array:NSDictionary = machineNameArray.object(at: indexPath.row) as! NSDictionary
+//        cell.lblName.text =  data_array.value(forKey: "DeviceName") as? String
+//        cell.statusLbl.text =  data_array.value(forKey: "Message") as? String
+//        let status:NSNumber = data_array.value(forKey: "RunningStatus") as? NSNumber ?? 0
+//        
         cell.viewBtn.addTarget(self, action: #selector(viewActionBtn(_:)), for: .touchUpInside)
       //  cell.viewBtn.backgroundColor
         return cell
@@ -52,6 +60,34 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "dashboard1_ViewController") as! dashboard1_ViewController
         self.navigationController?.pushViewController(secondViewController, animated: true)
 }
+    func readNotificationAPI() {
+        //let jsonURL = "http://smartattend.colanonline.net/service/api/Dashboard/ReadAllNotification/121"
+        let jsonURL = (BaseApi + "Dashboard/ReadAllNotification/" + account_id)
+        let url = URL(string: jsonURL)
+        
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            guard error == nil else{
+                return
+            }
+            guard let dd = data else {
+                return
+            }
+            
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:Any]
+                {
+                    
+                    print(json)
+                    img!.image = UIImage.init(named: "Battery_icon-green")
+                    roundV?.isHidden = true
+                    
+                }
+            }
+            catch {
+                print("Error is : \n\(error)")
+            }
+            }.resume()
+    }
     func show_popup(indexpath: IndexPath, view: UITableView)
     {
         let selectedCell:Dashboard1_TableViewCell = view.cellForRow(at: indexpath)! as! Dashboard1_TableViewCell
@@ -90,7 +126,9 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     func post_notificinfo(indexpath: IndexPath,view: UITableView) {
         let data_array:NSDictionary = machineNameArray.object(at: indexpath.row) as! NSDictionary
+        print(data_array)
         let notific_id:NSNumber=data_array.value(forKey: "NotificationID") as? NSNumber ?? 0
+        print(notific_id)
         self.startloader(msg: "Loading.... ")
         let postdict:NSMutableDictionary=["NotificationID":notific_id]
         Global.server.Post(path: "Dashboard/NotificationRead/\(notific_id)", jsonObj: postdict, completionHandler: {
@@ -148,7 +186,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     
     
-    func api(){
+    func showPopupapi(){
         //let jsonURL = "http://smartattend.colanonline.net/service/api/Dashboard/NotificationCountByDeviceID/131"
     let jsonURL = (BaseApi + "Dashboard/NotificationCountByDeviceID/" + account_id)
         print(jsonURL)
@@ -172,7 +210,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                         if let ar1 = array as? [String: Any]
                         {
                             print("In Json ID :",ar1["ID"] as! Int)
-                            self.DeviceID.append(ar1["ID"] as! Int)
+                            self.DeviceID.append(ar1["Notifycount"] as! Int)
                             self.DeviceName.append(ar1["DeviceName"] as! String)
                             self.BtnColour.append(ar1["Color"] as! String)
                             self.DeviceMessage.append(ar1["Message"]as! String)
@@ -198,7 +236,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     @objc func viewActionBtn(_ sender: UIButton) {
         let tag = sender.tag
         let indexpath = NSIndexPath(row: tag, section: 0)
-        //self.post_notificinfo(indexpath:indexpath as IndexPath,view: tblViewPopup)
+        self.post_notificinfo(indexpath:indexpath as IndexPath,view: tblViewPopup)
       
 
         

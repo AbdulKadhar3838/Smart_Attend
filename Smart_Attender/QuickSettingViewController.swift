@@ -404,7 +404,7 @@ class QuickSettingViewController: UIViewController,UITableViewDelegate,UITableVi
     
     @IBAction func saveBtn(_ sender: Any) {
         startloader(msg: "Loading")
-        let parameters = ["UserID": self.userID, "Description": descrip, "ProductionHours" : prod, "PartsProduced": parts, "AvgCycle" : avg, "Target": targe,"NoOfIncidents": noi,"Scrap": scra,"TotalCost": totalCos,"TotalValue": totalValu,"CreatedDate": "2019-02-14T06:18:01.943"]
+        let parameters = ["UserID": self.userID!, "Description": descrip, "ProductionHours" : prod, "PartsProduced": parts, "AvgCycle" : avg, "Target": targe,"NoOfIncidents": noi,"Scrap": scra,"TotalCost": totalCos,"TotalValue": totalValu,"CreatedDate": "2019-02-14T06:18:01.943"]
             
             
 as [String : Any]

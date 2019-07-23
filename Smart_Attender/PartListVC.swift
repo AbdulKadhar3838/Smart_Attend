@@ -269,12 +269,28 @@ extension PartListVC:UITableViewDelegate,UITableViewDataSource {
         
         let remove = UITableViewRowAction(style: .destructive, title: "Remove") { (action, indexPath) in
             // Remove item at indexPath
-            print("remove part")
+           
             
             if let array = self.createPartListModel.arrayList {
-                self.partRemoveApi(PartID:  "\(array[indexPath.row].partID ?? 0)")
-            }
+               // self.partRemoveApi(PartID:  "\(array[indexPath.row].partID ?? 0)")
+                 print("remove part")
+                let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+                
+                // create an action
+                let firstAction: UIAlertAction = UIAlertAction(title: "Do you want remove PartID", style: .default) { action -> Void in
+                    self.partRemoveApi(PartID:  "\(array[indexPath.row].partID ?? 0)")
+                    print("First Action pressed")
+                }
+                
+                let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in }
+                
+                // add actions
+                actionSheetController.addAction(firstAction)
+                actionSheetController.addAction(cancelAction)
+                
+                self.present(actionSheetController, animated: true, completion: nil)
             
+            }
             
         }
         

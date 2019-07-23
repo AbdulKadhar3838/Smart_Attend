@@ -38,7 +38,6 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
     var Downtime:Bool!
     var NotificationData:String?
     
-    
     // TODO: - Need to Cache KDCircularProgress
     
     
@@ -153,13 +152,14 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         
         // notification image
         
-        let img = UIImageView.init(frame: CGRect.init(x: cusV.center.x-30, y: cusV.center.y-15, width: 30, height: 30))
-        img.image = UIImage.init(named: "Battery_icon")
-        img.tintColor = UIColor.white
-        cusV.addSubview(img)
+         img = UIImageView.init(frame: CGRect.init(x: cusV.center.x-30, y: cusV.center.y-15, width: 30, height: 30))
+        img!.image = UIImage.init(named: "Battery_icon")
+        img!.tintColor = UIColor.white
+        cusV.addSubview(img!)
         
         // badge counter round
-        let roundV = UIView.init(frame: CGRect.init(x: img.frame.origin.x+10, y:img.frame.origin.y-5, width: 35, height: 17.00))
+        let roundV = UIView.init(frame: CGRect.init(x: img!.frame.origin.x+10, y:img!.frame.origin.y-5, width: 35, height: 17.00))
+        print(roundV)
         roundV.layer.cornerRadius = 8
         roundV.layer.masksToBounds = true
         roundV.backgroundColor = UIColor.red
@@ -187,15 +187,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         
         self.view.bringSubview(toFront: btnName)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: cusV)
-        
-        
-        
-        
-        
-        
-      
-
-       
+   
     }
     @objc func Logo_Clicked()
     {
@@ -244,8 +236,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
             })
         }
     }
-    
-    
+
     // MARK: - Timer Method
     @objc func runTimedCode() {
         self.DeviceListBackgroudFetch(forhours: self.getSelectedHours())
@@ -392,16 +383,24 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
                 if let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:Any]
                 {
                     self.Notificationcount = json["NotifyCount"] as? Int
-                    print("Json Response :",json)
-                    if self.Notificationcount ?? 0 >= 99 {
-                        DispatchQueue.main.async {
-                            
-                            self.badgeLbl.text = "99+"
-                        }
-                    }
                     
-                    print("Count :",self.Notificationcount!)
-                   //let arr = String(self.NotificationData!)
+                    print(self.Notificationcount)
+                        DispatchQueue.main.async {
+                    if self.Notificationcount == 0 {
+                        img!.image = UIImage.init(named: "Battery_icon-green")
+                       self.badgeLbl.text = "0"
+                            }
+                    else if self.Notificationcount! > 0 && self.Notificationcount! <= 99
+                    {
+                         img!.image = UIImage.init(named: "Battery_icon-green")
+                        var notifyString = ""
+                        notifyString = "\(self.Notificationcount!)"
+                      self.badgeLbl.text = notifyString
+                    }
+                    else{
+                     self.badgeLbl.text = "99+"
+                }
+               }
                 }
                 
             }

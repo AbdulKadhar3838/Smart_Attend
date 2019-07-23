@@ -17,6 +17,15 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var scroll_view: UIScrollView!
     @IBOutlet weak var scrollHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet var dataApiTxtFld: UITextField!
+    
+    @IBOutlet var showhideImgBtn: UIButton!
+    
+    @IBOutlet var TickBtn: UIButton!
+    var FinalescapedStr :String!
+    var dataText:String = ""
+
+    
     // MARK: - Lifecycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +33,8 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.email_textfield.attributedPlaceholder=self.placeholder(text: "E-mail")
         self.pswd_textfield.attributedPlaceholder=self.placeholder(text: "Password")
+        self.dataApiTxtFld.attributedPlaceholder=self.placeholder(text: "Enter Client Code")
+
         
         self.email_textfield.returnKeyType = .next
         self.pswd_textfield.returnKeyType = .done
@@ -34,12 +45,20 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
         tapview.delegate=self
         self.view.addGestureRecognizer(tapview)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        var userName = UserDefaults.standard.string(forKey: "userName")
+        self.dataApiTxtFld.text = userName
+        print(userName)
+
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.blueborder(forview: self.email_textfield)
         self.blueborder(forview: self.pswd_textfield)
         self.blueborder(forview: self.Signi_button)
+        self.blueborder(forview: self.dataApiTxtFld)
+
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -55,6 +74,98 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         self.scrollHeightConstraint.constant = portraitHeight - 64
+    }
+    
+    func api(){
+        self.startloader(msg: "Loading....")
+        
+        
+        dataText = self.dataApiTxtFld.text ?? ""
+        dataText = dataText.trimmingCharacters(in: .whitespacesAndNewlines)
+        print(dataText)
+        
+        if let datatxt : String = dataText as String
+        {
+            let escapedString = datatxt.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+            print(escapedString!)
+            if escapedString == "usmfbsa" {
+                FinalescapedStr = escapedString?.uppercased()
+                
+            }else{
+                FinalescapedStr = escapedString
+            }
+            UserDefaults.standard.set(FinalescapedStr, forKey: "userName")
+            print(UserDefaults.standard.set(FinalescapedStr, forKey: "userName"))
+            //UserDefaults.set(self.dataCheck.text, forKey: "userName") //Sets the value of the specified default key in the standard application domain.
+            
+            let jsonURL = "http://smartattendtest.com/service/api/Account/LoginTypeUrl/\(FinalescapedStr!)"
+            
+            print(jsonURL)
+            let url = URL(string: jsonURL)
+            URLSession.shared.dataTask(with: url!) { (data, response, error) in
+                guard error == nil else{
+                    return
+                }
+                guard let dd = data else{
+                    return
+                }
+                
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:Any]
+                    {
+                        //let myData = json["LoginModel"] as! NSDictionary
+                        DispatchQueue.main.async {
+                            
+                            
+                            let dataJson = json["Url"] as! String
+                            BaseApi = dataJson
+                            print(BaseApi)
+                            self.dataApiTxtFld.isHidden = true
+                            self.TickBtn.isHidden = true
+                            self.stoploader()
+                        }
+                    }
+                }
+                catch {
+                    self.stoploader()
+                    
+                    print("Error is : \n\(error)")
+                }
+                
+                }.resume()
+            self.stoploader()
+            
+            
+        }
+        
+        
+    }
+    
+    @IBAction func showhideImgActBtn(_ sender: Any) {
+        if TickBtn.isHidden == false && self.dataApiTxtFld.isHidden == false {
+            TickBtn.isHidden = true
+            self.dataApiTxtFld.isHidden = true
+            
+        }
+        else {
+            TickBtn.isHidden = false
+            self.dataApiTxtFld.isHidden = false
+            
+        }
+
+    }
+    @IBAction func tickMarkBtn(_ sender: Any) {
+        if dataApiTxtFld.text?.isEmpty ?? false{
+            BaseApi = "http://smartattendtest.com/service/api/"
+            self.dataApiTxtFld.isHidden = true
+            self.TickBtn.isHidden = true
+        }else{
+            dataText = self.dataApiTxtFld.text ?? ""
+          //uncommand pannu  self.api()
+        }
+
+        
+        
     }
     
     @objc func viewTapped() {

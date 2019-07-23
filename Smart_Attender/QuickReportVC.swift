@@ -426,6 +426,7 @@ extension QuickReportVC: UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! QuickReportListCell
         if let array = quickReportListModel.arrayList{
             if  let machineName = array[indexPath.row].machineName {
+                print(machineName)
                 cell.lblMachineName.text = machineName
             }
             if  let partNo = array[indexPath.row].partNo {

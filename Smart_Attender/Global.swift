@@ -168,6 +168,7 @@ class Global: NSObject {
             if network.connectedToNetwork()
             {
                 let request = NSMutableURLRequest(url: NSURL(string: BaseApi + path) as! URL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 120)
+                print("requestURL",request)
                 request.httpMethod = "GET"
                 print("Request Url: \(request.url?.absoluteURL)")
                 request.setValue("application/json",forHTTPHeaderField: "Content-Type")
