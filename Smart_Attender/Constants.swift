@@ -12,13 +12,16 @@ let developmentBaseApi:String = "http://smartattend.colanonline.net/service/api/
 let preprodBaseApi:String = "http://preprod.smartattendtest.com//service/api/" //PreProduction
 let prodBaseApi:String = "http://smartattendtest.com/service/api/" // App Store live
 
-var BaseApi:String = developmentBaseApi
+var baseApiData = UserDefaults.standard.string(forKey: "BaseAPI")
 
-var isPreprodBaseURL:Bool = true {
-    didSet {
-        BaseApi = isPreprodBaseURL == true ? preprodBaseApi : prodBaseApi
-    }
-}
+var BaseApi:String = baseApiData ?? "http://smartattendtest.com/service/api/"
+//var BaseApi:String = developmentBaseApi
+//
+//var isPreprodBaseURL:Bool = true {
+//    didSet {
+//        BaseApi = isPreprodBaseURL == true ? preprodBaseApi : prodBaseApi
+//    }
+//}
 
 
 let navheight:CGFloat=62
@@ -40,6 +43,8 @@ var releaseVersion = ""
 var currentAppVersion = ""
 var img :UIImageView?
 var roundV:UIView?
+var userDefaultAPIBase:String?
+var partNO2:String?
 
 
 class Constants: NSObject {

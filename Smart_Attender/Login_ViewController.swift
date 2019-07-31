@@ -38,7 +38,9 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
         
         self.email_textfield.returnKeyType = .next
         self.pswd_textfield.returnKeyType = .done
+        self.dataApiTxtFld.returnKeyType = .done
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow_Hide(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow_Hide(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
         self.scrollHeightConstraint.constant = portraitHeight - 64
         let tapview: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.viewTapped))
@@ -47,10 +49,11 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
         var userName = UserDefaults.standard.string(forKey: "userName")
+        var baseApiData = UserDefaults.standard.string(forKey: "BaseAPI")
         self.dataApiTxtFld.text = userName
-        print(userName)
-
-    }
+        userDefaultAPIBase = baseApiData
+        print(userDefaultAPIBase)
+}
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -101,6 +104,8 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
             let jsonURL = "http://smartattendtest.com/service/api/Account/LoginTypeUrl/\(FinalescapedStr!)"
             
             print(jsonURL)
+
+            
             let url = URL(string: jsonURL)
             URLSession.shared.dataTask(with: url!) { (data, response, error) in
                 guard error == nil else{
@@ -120,6 +125,8 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
                             let dataJson = json["Url"] as! String
                             BaseApi = dataJson
                             print(BaseApi)
+                            UserDefaults.standard.set(dataJson, forKey: "BaseAPI")
+
                             self.dataApiTxtFld.isHidden = true
                             self.TickBtn.isHidden = true
                             self.stoploader()
@@ -161,7 +168,7 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
             self.TickBtn.isHidden = true
         }else{
             dataText = self.dataApiTxtFld.text ?? ""
-          //uncommand pannu  self.api()
+             self.api() //uncommand pannu
         }
 
         
@@ -409,6 +416,20 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
+        if textField == dataApiTxtFld {
+            
+            if dataApiTxtFld.text?.isEmpty ?? false{
+                BaseApi = "http://smartattendtest.com/service/api/"
+                self.dataApiTxtFld.isHidden = true
+                self.TickBtn.isHidden = true
+            }else{
+                dataText = self.dataApiTxtFld.text ?? ""
+                self.api() //uncommand pannu
+            }
+
+            
+        }
+        
         if textField==email_textfield {
             pswd_textfield.becomeFirstResponder()
         }
@@ -416,6 +437,8 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
         {
             self.signin_click( nil )
         }
+        
+        
         return true
     }
 

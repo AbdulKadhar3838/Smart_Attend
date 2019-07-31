@@ -21,7 +21,8 @@ class QuickReportVC: UIViewController,UITextFieldDelegate,ChartViewDelegate {
     @IBOutlet weak var btnSearch: UIButton!
     @IBOutlet weak var scrollParent: UIScrollView!
     @IBOutlet weak var tableList: UITableView!
-    
+    var headerCell:QuickReportHeaderCell?
+
     var arrayPicker:[String] = []
     var arrayDeviceID:[Int64] = []
     var pickerView = UIPickerView()
@@ -422,55 +423,68 @@ extension QuickReportVC: UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == tableList {
-        let cellIdentifier = "QuickReportListCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! QuickReportListCell
+        let cellIdentifier1 = "QuickReportListCell"
+        let cellIdentifier2 = "QuickReportHeaderCell"
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: cellIdentifier1, for: indexPath) as! QuickReportListCell
+        //let cell2 = tableView.dequeueReusableCell(withIdentifier: cellIdentifier2, for: indexPath) as! QuickReportHeaderCell
+            
         if let array = quickReportListModel.arrayList{
             if  let machineName = array[indexPath.row].machineName {
                 print(machineName)
-                cell.lblMachineName.text = machineName
+                cell1.lblMachineName.text = machineName //yes
             }
             if  let partNo = array[indexPath.row].partNo {
-                cell.lblPartNo.text = partNo
+                cell1.lblPartNo.text = partNo           //yes
             }
             if  let description = array[indexPath.row].description {
-                cell.lblDescription.text = description
-            }
-            if  let producedHrs = array[indexPath.row].producedHrs,let duration = array[indexPath.row].duration {
-                cell.lblProductionHrs.text = "\(duration)/\(producedHrs)"
-            }
-            if  let partsProduced = array[indexPath.row].partsProduced,let expected = array[indexPath.row].expectedProduced {
-                cell.lblPartsProduced.text = "\(partsProduced)/\(expected)"
-            }
-            if  let avgCycle = array[indexPath.row].avgCycle ,let cycle = array[indexPath.row].cycleTime{
-                cell.lblAvgCycle.text = "\(avgCycle)/\(cycle)"
-            }
-            if  let OEE = array[indexPath.row].OEE {
-                cell.lblOEE.text = "\(OEE)%"
-            }
-            if  let incidents = array[indexPath.row].incidents {
-                cell.btnIncident.setTitle("\(incidents)", for: .normal)
+                cell1.lblDescription.text = description  //yes
             }
             if  let startDate = array[indexPath.row].startDate {
-                cell.lblStartDate.text = startDate
+                cell1.lblStartDate.text = startDate     //yes
             }
             if  let endDate = array[indexPath.row].endDate {
-                cell.lblEnddate.text = endDate
+                cell1.lblEnddate.text = endDate         //yes
             }
+            
+            if  let producedHrs = array[indexPath.row].producedHrs,let duration = array[indexPath.row].duration {
+                cell1.lblProductionHrs.text = "\(duration)/\(producedHrs)" // yes
+            }
+            
+            if  let partsProduced = array[indexPath.row].partsProduced,let expected = array[indexPath.row].expectedProduced,let incidents = array[indexPath.row].incidents {
+               if expected == 0 && partsProduced == 0 && incidents == 0{
+                headerCell!.btnPartsProduced.isHidden = true
+                
+                }
+                cell1.lblPartsProduced.text = "\(partsProduced)/\(expected)"
+            }
+            if  let avgCycle = array[indexPath.row].avgCycle ,let cycle = array[indexPath.row].cycleTime{
+                cell1.lblAvgCycle.text = "\(avgCycle)/\(cycle)"
+            }
+            if  let OEE = array[indexPath.row].OEE {
+                cell1.lblOEE.text = "\(OEE)%"
+            }
+            if  let incidents = array[indexPath.row].incidents {
+                cell1.btnIncident.setTitle("\(incidents)", for: .normal)
+            }
+            
             if  let scarp = array[indexPath.row].scrap {
-                cell.lblScarp.text = "\(scarp)"
+                if scarp == 0 {
+                    headerCell?.btnScarp.isHidden = true
+                }
+                cell1.lblScarp.text = "\(scarp)"
             }
             if  let totalValue = array[indexPath.row].totalValue {
-                cell.lblTotalValue.text = "\(totalValue)"
+                cell1.lblTotalValue.text = "\(totalValue)"
             }
             if  let totalCost = array[indexPath.row].totalCost {
-                cell.lblTotalCost.text = "\(totalCost)"
+                cell1.lblTotalCost.text = "\(totalCost)"
             }
             
             
         }
-        cell.btnIncident.tag = indexPath.row
-        cell.layoutMargins = UIEdgeInsets.zero
-        return cell
+        cell1.btnIncident.tag = indexPath.row
+        cell1.layoutMargins = UIEdgeInsets.zero
+        return cell1
         } else {
             let cellIdentifier = "QuickReportChartTableCell"
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! QuickReportChartTableCell

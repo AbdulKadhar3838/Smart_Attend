@@ -72,7 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         account_id=dfualts.value(forKey: AccountID) as? String ?? ""
         customer_id=dfualts.value(forKey: CustomerID) as? String ?? ""
-        forceUpdate() //Force update new version
+        //forceUpdate() //Force update new version
         
         if (account_id.count > 0)
         {
@@ -528,8 +528,11 @@ extension UIViewController: UIGestureRecognizerDelegate
     func removeAnimate()
     {
         UIView.animate(withDuration: 0.25, animations: {
+             DispatchQueue.main.async {
             self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            
             self.view.alpha = 0.0;
+            }
         }, completion:{(finished : Bool)  in
             if (finished)
             {

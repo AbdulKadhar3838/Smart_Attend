@@ -158,7 +158,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         cusV.addSubview(img!)
         
         // badge counter round
-        let roundV = UIView.init(frame: CGRect.init(x: img!.frame.origin.x+10, y:img!.frame.origin.y-5, width: 35, height: 17.00))
+        let roundV = UIView.init(frame: CGRect.init(x: img!.frame.origin.x+15, y:img!.frame.origin.y-5, width: 35, height: 17.00))
         print(roundV)
         roundV.layer.cornerRadius = 8
         roundV.layer.masksToBounds = true
@@ -445,6 +445,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         if let partNO = data_array.value(forKey: "PartNumber") as? String, partNO != ""{
             
             cell.lblPartNumber.text = partNO
+            print(partNO)
             cell.lblCenterLine.isHidden = false
             cell.lblCycleTime.isHidden = false
             cell.imgvwDown.isHidden = false
@@ -595,6 +596,13 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let data_array:NSDictionary=machineNameArray.object(at: indexPath.row) as! NSDictionary
+        if let partNO = data_array.value(forKey: "PartNumber") as? String, partNO != ""{
+            partNO2 = partNO
+            print(partNO2)
+            
+        }
+        
         
         if Global.userType.isAdmin() ||  Global.userType.isManager()
         {

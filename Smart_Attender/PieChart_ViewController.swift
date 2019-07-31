@@ -69,13 +69,19 @@ class PieChart_ViewController: UIViewController,ChartViewDelegate,UITableViewDel
     var passStatus = ""
     var passCycletime = ""
     var passCompletedQty = ""
+    var partNO = ""
     var passColor:UIColor?
-
+    
+    @IBOutlet var partnoLbl: UILabel!
+    
 
     // MARK: - Lifecycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
-        toSetNavigationImagenTitle(titleString:"\(defalts.value(forKey: "Device_Name") as! String) - Pie Chart", isHamMenu: false)
+        print(partNO2)
+        self.partnoLbl.text = partNO2 
+        
+        toSetNavigationImagenTitle(titleString:"\(defalts.value(forKey: "Device_Name") as! String) - Analysis", isHamMenu: false)
         self.piechat_view.centerText = ""
         self.piechat_view.noDataText = ""
         self.navigationController?.setNavigationBarHidden(false, animated: true)

@@ -231,7 +231,7 @@ extension PartListVC:UITableViewDelegate,UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+   /* func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
     {
         let headerCell = tableView.dequeueReusableCell(withIdentifier: "CreatePartListTableCell") as! CreatePartListTableCell
         
@@ -253,7 +253,7 @@ extension PartListVC:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
-    }
+    }*/
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
@@ -303,7 +303,7 @@ extension PartListVC:UITableViewDelegate,UITableViewDataSource {
             if let array = self.createPartListModel.arrayList {
                 newPart.passPartNo = array[indexPath.row].partNo ?? ""
                 newPart.passGroupID = array[indexPath.row].groupID ?? ""
-                newPart.passCavity = "\(array[indexPath.row].cavity ?? 0) "
+                newPart.passCavity = "\(array[indexPath.row].cavity ?? 0)"
                 newPart.passCycleTime = array[indexPath.row].cycleTime ?? ""
                 newPart.passDescription = array[indexPath.row].description ?? ""
                 newPart.passPartID = array[indexPath.row].partID ?? 0

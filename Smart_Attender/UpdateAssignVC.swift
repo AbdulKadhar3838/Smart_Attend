@@ -95,6 +95,7 @@ class UpdateAssignVC: UIViewController,UITableViewDelegate,UITableViewDataSource
                 let range  = partNumber.lowercased().range(of: textfield.text!, options: .caseInsensitive, range: nil, locale: nil)
                 if range != nil {
                     arrayCombined.append(partNumber)
+                    print(partNumber)
                 }
             }
             
@@ -121,7 +122,7 @@ class UpdateAssignVC: UIViewController,UITableViewDelegate,UITableViewDataSource
             arraySearchPartNumber = arrayPartNumber
         }
         self.tableSearch.reloadData()
-        tableSearch.frame = CGRect(x: tableSearch.frame.origin.x, y: tableSearch.frame.origin.y, width: tableSearch.frame.size.width, height: tableSearch.contentSize.height)
+       // tableSearch.frame = CGRect(x: tableSearch.frame.origin.x, y: tableSearch.frame.origin.y, width: tableSearch.frame.size.width, height: tableSearch.contentSize.height)
         
     }
     
@@ -426,6 +427,7 @@ class UpdateAssignVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         let cellIdentifier = "SearchCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SearchCell
         cell.lblPartName.text = arraySearchPartNumber[indexPath.row]
+        print(arraySearchPartNumber[indexPath.row])
         cell.layoutMargins = .zero
         return cell
     }

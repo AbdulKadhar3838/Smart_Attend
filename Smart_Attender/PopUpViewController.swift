@@ -14,6 +14,8 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     var DeviceMessage = [String]()
     var machineNameArray:NSMutableArray=[]
 
+    @IBOutlet var noDataLbl: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     
     @IBAction func markAllRead(_ sender: UIButton) {
-        //readNotificationAPI()
+        readNotificationAPI()
       
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -194,9 +196,11 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             guard error == nil else{
+                print("abdul")
                 return
             }
             guard let dd = data else{
+                 print("abdul1")
                 return
             }
             
@@ -204,11 +208,19 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 if let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:Any]
                 {
                     let myarray = json["LstNotificationDeviceModel"] as! NSArray
+                    if myarray == []
+                    {
+                        self.noDataLbl.isHidden = false
+                    }
                     
                     for array in myarray
                     {
                         if let ar1 = array as? [String: Any]
                         {
+                            DispatchQueue.main.async {
+                                self.noDataLbl.isHidden = true
+                              }
+                             print("abdul33")
                             print("In Json ID :",ar1["ID"] as! Int)
                             self.DeviceID.append(ar1["Notifycount"] as! Int)
                             self.DeviceName.append(ar1["DeviceName"] as! String)
@@ -226,6 +238,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 
             }
             catch {
+                 print("abdul2")
                 print("Error is : \n\(error)")
             }
             }.resume()
