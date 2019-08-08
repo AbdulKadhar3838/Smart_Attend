@@ -34,7 +34,7 @@ class HighLowGraphView: UIViewController,UITableViewDelegate,UITableViewDataSour
         self.blueborder_dynamicradius(forview: self.build_Button, radius: 4)
         self.anycolorborder(forview: self.date_rangebtn, radius: 4,color: UIColor.lightGray)
         let screenTitle:String = defalts.value(forKey: "Device_Name") as? String ?? ""
-        toSetNavigationImagenTitle(titleString:"\(screenTitle) - High Low Report", isHamMenu: false)
+        toSetNavigationImagenTitle(titleString:"\(screenTitle) - Input Analysis", isHamMenu: false)
         
         self.linechart_view.isHidden=true
         let appdelegate = UIApplication.shared.delegate as! AppDelegate

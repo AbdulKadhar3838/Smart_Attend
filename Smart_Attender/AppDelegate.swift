@@ -240,12 +240,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         account_id=dfualts.value(forKey: AccountID) as? String ?? ""
         self.trigger()
         
-        forceUpdate()//Force update New Verison
+        //forceUpdate()//Force update New Verison
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        forceUpdate() //Force update New version
+      //  forceUpdate() //Force update New version
     }
     
     func applicationWillTerminate(_ application: UIApplication) {

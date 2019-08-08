@@ -277,7 +277,7 @@ extension PartListVC:UITableViewDelegate,UITableViewDataSource {
                 let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
                 
                 // create an action
-                let firstAction: UIAlertAction = UIAlertAction(title: "Do you want remove PartID", style: .default) { action -> Void in
+                let firstAction: UIAlertAction = UIAlertAction(title: "Do you want remove Part", style: .default) { action -> Void in
                     self.partRemoveApi(PartID:  "\(array[indexPath.row].partID ?? 0)")
                     print("First Action pressed")
                 }

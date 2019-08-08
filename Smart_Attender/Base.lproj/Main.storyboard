@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LMg-5S-4pj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LMg-5S-4pj">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -2807,7 +2807,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="23" id="308-vv-g0H"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -3093,6 +3093,7 @@
                                                     <constraint firstAttribute="width" secondItem="9mQ-O2-3Fg" secondAttribute="height" multiplier="1.3:1" id="b9z-SZ-QlN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="13"/>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
                                                 <state key="normal" title="Scrap" backgroundImage="btnred">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -3109,7 +3110,7 @@
                                                     <constraint firstAttribute="height" constant="33" id="PwL-yY-cvx"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="IBMPlexSans-SemiBold" family="IBM Plex Sans" pointSize="12"/>
-                                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="5"/>
                                                 <state key="normal" title="Input Analysis" backgroundImage="buttonicon">
                                                     <color key="titleColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -3123,7 +3124,7 @@
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kWP-Na-RMF">
                                                 <rect key="frame" x="26" y="463" width="131.5" height="33"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="12"/>
-                                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="5"/>
                                                 <state key="normal" title="Incident Analysis" backgroundImage="buttonicon">
                                                     <color key="titleColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -3137,7 +3138,7 @@
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="qEH-pH-j6m">
                                                 <rect key="frame" x="162.5" y="422" width="131.5" height="33"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="12"/>
-                                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="5"/>
                                                 <state key="normal" title="Target Analysis" backgroundImage="buttonicon">
                                                     <color key="titleColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -3151,7 +3152,7 @@
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jxw-8i-XHe">
                                                 <rect key="frame" x="162.5" y="463" width="131.5" height="33"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="12"/>
-                                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="5"/>
                                                 <state key="normal" title="Timeline Analysis" backgroundImage="buttonicon">
                                                     <color key="titleColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -4316,7 +4317,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMD-oC-kJx" userLabel="viewPopup">
-                                <rect key="frame" x="32" y="179.5" width="256" height="209"/>
+                                <rect key="frame" x="32" y="180.5" width="256" height="207"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uf3-AQ-YJY" userLabel="TopView">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="30"/>
@@ -4370,7 +4371,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNZ-fb-ed3">
-                                                            <rect key="frame" x="25.5" y="5" width="205" height="25"/>
+                                                            <rect key="frame" x="25.5" y="20" width="205" height="28"/>
                                                             <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                             <state key="normal">
@@ -4391,41 +4392,15 @@
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                                             </variation>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCO-4S-BRi">
-                                                            <rect key="frame" x="25.5" y="35" width="205" height="20"/>
-                                                            <color key="backgroundColor" red="0.40784313725490196" green="0.61568627450980395" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="20" id="fUh-4m-EiA"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <integer key="value" value="5"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="1.5"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" red="0.40784313729999999" green="0.61568627450000002" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </label>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="aNZ-fb-ed3" firstAttribute="width" secondItem="fmh-7o-bqs" secondAttribute="width" multiplier="0.8" id="58t-ew-szt"/>
-                                                        <constraint firstItem="GCO-4S-BRi" firstAttribute="leading" secondItem="aNZ-fb-ed3" secondAttribute="leading" id="6dB-2l-0Vz"/>
-                                                        <constraint firstItem="GCO-4S-BRi" firstAttribute="top" secondItem="aNZ-fb-ed3" secondAttribute="bottom" constant="5" id="HOR-Zk-eg8"/>
-                                                        <constraint firstItem="aNZ-fb-ed3" firstAttribute="top" secondItem="fmh-7o-bqs" secondAttribute="top" constant="5" id="grA-yN-L1E"/>
-                                                        <constraint firstAttribute="bottom" secondItem="GCO-4S-BRi" secondAttribute="bottom" constant="5" id="kgj-AJ-8ve"/>
+                                                        <constraint firstItem="aNZ-fb-ed3" firstAttribute="top" secondItem="fmh-7o-bqs" secondAttribute="top" constant="20" id="grA-yN-L1E"/>
                                                         <constraint firstItem="aNZ-fb-ed3" firstAttribute="centerX" secondItem="fmh-7o-bqs" secondAttribute="centerX" id="lF6-ze-TaI"/>
-                                                        <constraint firstItem="GCO-4S-BRi" firstAttribute="trailing" secondItem="aNZ-fb-ed3" secondAttribute="trailing" id="n6Y-Iu-dIJ"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="btnPartNo" destination="aNZ-fb-ed3" id="gYa-hc-B2a"/>
-                                                    <outlet property="descriptionLbl" destination="GCO-4S-BRi" id="srT-iS-7VA"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -4435,14 +4410,14 @@
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjP-yL-G2j">
-                                        <rect key="frame" x="0.0" y="81" width="256" height="68"/>
+                                        <rect key="frame" x="0.0" y="81" width="256" height="66"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7b9-70-pJ4">
-                                                <rect key="frame" x="25.5" y="23.5" width="205" height="20.5"/>
+                                                <rect key="frame" x="25.5" y="23" width="205" height="20"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Scrap Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBx-vp-GLa">
-                                                <rect key="frame" x="25.5" y="10" width="158.5" height="18"/>
+                                                <rect key="frame" x="25.5" y="8" width="158.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.34798514842987061" green="0.32553401589393616" blue="0.32541444897651672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -4451,7 +4426,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rc6-oE-2EC">
-                                                <rect key="frame" x="221" y="10" width="9.5" height="18"/>
+                                                <rect key="frame" x="221" y="8" width="9.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.3479851484" green="0.32553401589999997" blue="0.32541444899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -4460,7 +4435,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Scrap Quantity by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2n-8g-T7L">
-                                                <rect key="frame" x="25.5" y="42.5" width="160.5" height="16"/>
+                                                <rect key="frame" x="25.5" y="40.5" width="160.5" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" red="0.3479851484" green="0.32553401589999997" blue="0.32541444899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -4469,7 +4444,7 @@
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Rf0-Ne-Kyd">
-                                                <rect key="frame" x="179" y="38" width="51.5" height="25"/>
+                                                <rect key="frame" x="179" y="36" width="51.5" height="25"/>
                                                 <color key="textColor" red="0.3479851484" green="0.32553401589999997" blue="0.32541444899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad"/>
@@ -4503,7 +4478,7 @@
                                             <constraint firstItem="Rf0-Ne-Kyd" firstAttribute="centerY" secondItem="U2n-8g-T7L" secondAttribute="centerY" id="Thh-Q9-CtY"/>
                                             <constraint firstItem="7b9-70-pJ4" firstAttribute="centerX" secondItem="IjP-yL-G2j" secondAttribute="centerX" id="aFQ-Qb-6Jg"/>
                                             <constraint firstItem="DBx-vp-GLa" firstAttribute="leading" secondItem="7b9-70-pJ4" secondAttribute="leading" id="daP-gZ-r5b"/>
-                                            <constraint firstItem="DBx-vp-GLa" firstAttribute="top" secondItem="IjP-yL-G2j" secondAttribute="top" constant="10" id="jJC-GE-ND7"/>
+                                            <constraint firstItem="DBx-vp-GLa" firstAttribute="top" secondItem="IjP-yL-G2j" secondAttribute="top" constant="8" id="jJC-GE-ND7"/>
                                             <constraint firstItem="7b9-70-pJ4" firstAttribute="centerY" secondItem="IjP-yL-G2j" secondAttribute="centerY" id="l5E-DP-hWY"/>
                                             <constraint firstItem="Rf0-Ne-Kyd" firstAttribute="width" secondItem="IjP-yL-G2j" secondAttribute="width" multiplier="0.2" id="s9C-my-u1f"/>
                                             <constraint firstItem="Rf0-Ne-Kyd" firstAttribute="top" secondItem="Rc6-oE-2EC" secondAttribute="bottom" constant="10" id="zCB-mN-0Pk"/>
@@ -4511,7 +4486,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvP-mO-baI">
-                                        <rect key="frame" x="0.0" y="159" width="256" height="40"/>
+                                        <rect key="frame" x="0.0" y="157" width="256" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtD-Bg-iAE">
                                                 <rect key="frame" x="69.5" y="5" width="51" height="30"/>
@@ -8305,7 +8280,7 @@ These following devices cannot be shutdown due to running status</string>
         <image name="SA-1" width="32" height="32"/>
         <image name="Server_API" width="361" height="376"/>
         <image name="alert_icon" width="21" height="21"/>
-        <image name="btnred" width="31" height="16.5"/>
+        <image name="btnred" width="31" height="16"/>
         <image name="buttonicon" width="132" height="42"/>
         <image name="cancel-1" width="50" height="50"/>
         <image name="dot" width="32" height="32"/>
@@ -9656,8 +9631,8 @@ ATgnAAE4LAABODoAATg+AAE4RQABOEoAAThXAAE4WgABOGcAAThsAAE4dAABOHcAATh8AAE4hAABOIcA
 ATiZAAE4nAABOKEAAAAAAAAEAQAAAAAAAABtAAAAAAAAAAAAAAAAAAE4ow
 </mutableData>
         </image>
-        <image name="logo_withouttext" width="159.5" height="109.5"/>
-        <image name="menu_home" width="40.5" height="40.5"/>
+        <image name="logo_withouttext" width="159" height="109"/>
+        <image name="menu_home" width="40" height="40"/>
         <image name="uncheckbox" width="32" height="32"/>
         <image name="user-1" width="90" height="90"/>
     </resources>

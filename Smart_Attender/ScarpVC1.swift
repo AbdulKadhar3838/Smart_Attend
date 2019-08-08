@@ -97,8 +97,7 @@ class ScarpVC1: UIViewController {
        txtScrapEnter.text = arraytextfield[sender.tag]
         cell.btnPartNo.backgroundColor = UIColor.init(netHex: 0x459E87)
         
-        cell.descriptionLbl.backgroundColor = UIColor.init(netHex: 0x459E87)
-
+      
         
         cell.btnPartNo.setTitleColor(UIColor.white, for: .normal)
         cell.btnPartNo.layer.borderColor = cell.btnPartNo.backgroundColor?.cgColor
@@ -202,9 +201,8 @@ extension ScarpVC1 :UITableViewDelegate,UITableViewDataSource{
         let list = arrayScarpList[indexPath.row]
         cell.btnPartNo.setTitle(list.PartNumber, for: .normal)
         print(list.Description)
-        cell.descriptionLbl.text = list.Description
-        cell.descriptionLbl.backgroundColor = UIColor.init(netHex: 0x459E87)
-
+       
+        
         cell.btnPartNo.tag = indexPath.row
         
         if indexPath.row == selectedIndex{

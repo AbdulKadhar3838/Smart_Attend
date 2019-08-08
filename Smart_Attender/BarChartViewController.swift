@@ -78,7 +78,7 @@ class BarChartViewController: UIViewController{
         
         let screenTitle:String = defalts.value(forKey: "Device_Name") as! String
        
-        toSetNavigationImagenTitle(titleString:"\(screenTitle) - Bar Chart", isHamMenu: false)  // Set title for Navigation Title
+        toSetNavigationImagenTitle(titleString:"\(screenTitle) - Timeline Analysis", isHamMenu: false)  // Set title for Navigation Title
         self.blueborder_dynamicradius(forview: self.btnBuild, radius: 4)
         self.anycolorborder(forview: self.btnrange, radius: 4,color: UIColor.lightGray)
         

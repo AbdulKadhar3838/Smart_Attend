@@ -55,7 +55,7 @@ class LineChart_ViewController: UIViewController,UITableViewDelegate,UITableView
         if let reportName = Global.machineReport(rawValue: chart_legend) {
             self.lblTotalIncidentTime.text = reportName.reportValue
         }
-        toSetNavigationImagenTitle(titleString:"\(screenTitle) - Hourly Incident Report", isHamMenu: false)
+        toSetNavigationImagenTitle(titleString:"\(screenTitle) - Incident Analysis", isHamMenu: false)
         
         self.y_label.transform=CGAffineTransform(rotationAngle: -CGFloat.pi/2)
         self.y_label.text="\(chart_legend) - in Minutes"

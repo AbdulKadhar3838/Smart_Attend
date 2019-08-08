@@ -111,7 +111,7 @@ class CreatePartListVC: UIViewController,UITextFieldDelegate {
         keyboardFrame = self.view.convert(keyboardFrame, from: nil)
         if notification.name == NSNotification.Name.UIKeyboardWillShow {
             var contentInset:UIEdgeInsets = self.scrollParent.contentInset
-            contentInset.bottom = keyboardFrame.size.height+12 // 12
+            contentInset.bottom = keyboardFrame.size.height+12
             self.scrollParent.contentInset = contentInset
         }
         else {
