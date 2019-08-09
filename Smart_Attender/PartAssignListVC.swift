@@ -318,9 +318,9 @@ class PartAssignListVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         let cameraAction = UIAlertAction(title: "No", style: .default)
         {
             (result : UIAlertAction) -> Void in
-            if let id = list.id {
-                self.partResetApi(ID:id, subPath: "ResetPartNo") //No
-            }
+//            if let id = list.id {
+//                self.partResetApi(ID:id, subPath: "ResetPartNo") //No
+//            }
             print("You pressed No")
         }
         alertController.addAction(cameraAction)

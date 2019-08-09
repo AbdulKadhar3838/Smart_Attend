@@ -13,15 +13,14 @@ let preprodBaseApi:String = "http://preprod.smartattendtest.com//service/api/" /
 let prodBaseApi:String = "http://smartattendtest.com/service/api/" // App Store live
 
 var baseApiData = UserDefaults.standard.string(forKey: "BaseAPI")
+//var BaseApi:String = baseApiData ?? "http://smartattendtest.com/service/api/"
 
-var BaseApi:String = baseApiData ?? "http://smartattendtest.com/service/api/"
-//var BaseApi:String = developmentBaseApi
-//
-//var isPreprodBaseURL:Bool = true {
-//    didSet {
-//        BaseApi = isPreprodBaseURL == true ? preprodBaseApi : prodBaseApi
-//    }
-//}
+var BaseApi:String = developmentBaseApi
+var isPreprodBaseURL:Bool = true {
+    didSet {
+        BaseApi = isPreprodBaseURL == true ? preprodBaseApi : prodBaseApi
+    }
+}
 
 
 let navheight:CGFloat=62
