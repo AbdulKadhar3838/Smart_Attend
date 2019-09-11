@@ -24,7 +24,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
     var badgeLbl = UILabel()
     var Notificationcount:Int?
 
-    
+    var roundV = UIView()
     
     // MARK: - Variables
     var timer: Timer!
@@ -158,7 +158,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         cusV.addSubview(img!)
         
         // badge counter round
-        let roundV = UIView.init(frame: CGRect.init(x: img!.frame.origin.x+15, y:img!.frame.origin.y-5, width: 35, height: 17.00))
+        roundV = UIView.init(frame: CGRect.init(x: img!.frame.origin.x+15, y:img!.frame.origin.y-5, width: 35, height: 17.00))
         print(roundV)
         roundV.layer.cornerRadius = 8
         roundV.layer.masksToBounds = true
@@ -387,18 +387,21 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
                     print(self.Notificationcount)
                         DispatchQueue.main.async {
                     if self.Notificationcount == 0 {
+                        self.roundV.isHidden = true
                         img!.image = UIImage.init(named: "Battery_icon-green")
                        self.badgeLbl.text = "0"
+                        
                             }
                     else if self.Notificationcount! > 0 && self.Notificationcount! <= 99
                     {
-                         img!.image = UIImage.init(named: "Battery_icon-green")
+                         img!.image = UIImage.init(named: "Battery_icon")
                         var notifyString = ""
                         notifyString = "\(self.Notificationcount!)"
                       self.badgeLbl.text = notifyString
                     }
                     else{
                      self.badgeLbl.text = "99+"
+                     //self.roundV.isHidden = false
                 }
                }
                 }
@@ -497,8 +500,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
                 cell.imgvwDown.image = #imageLiteral(resourceName: "sortUp")
                 cell.lblDowntimeDuration.textColor = UIColor.init(netHex: 0x51C747)
             }
-            
-            
+
         }
         else{
             cell.lblDowntimeDuration.isHidden = true

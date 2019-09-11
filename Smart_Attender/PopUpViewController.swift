@@ -79,9 +79,12 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 if let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:Any]
                 {
                     
-                    print(json)
-                    img!.image = UIImage.init(named: "Battery_icon-green")
-                    roundV?.isHidden = true
+                    DispatchQueue.main.async {
+                        print(json)
+                        img!.image = UIImage.init(named: "Battery_icon-green")
+                        roundV?.isHidden = true
+                    }
+                  
                     
                 }
             }
@@ -92,7 +95,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     func show_popup(indexpath: IndexPath, view: UITableView)
     {
-        let selectedCell:Dashboard1_TableViewCell = view.cellForRow(at: indexpath)! as! Dashboard1_TableViewCell
+        let selectedCell:CustomCell = view.cellForRow(at: indexpath)! as! CustomCell
         selectedCell.contentView.backgroundColor = selectedCell.contentView.backgroundColor//UIColor.clear
         
         if indexpath.row<=self.machineNameArray.count
@@ -127,37 +130,43 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         return 70
     }
     func post_notificinfo(indexpath: IndexPath,view: UITableView) {
-        let data_array:NSDictionary = machineNameArray.object(at: indexpath.row) as! NSDictionary
-        print(data_array)
-        let notific_id:NSNumber=data_array.value(forKey: "NotificationID") as? NSNumber ?? 0
-        print(notific_id)
-        self.startloader(msg: "Loading.... ")
-        let postdict:NSMutableDictionary=["NotificationID":notific_id]
-        Global.server.Post(path: "Dashboard/NotificationRead/\(notific_id)", jsonObj: postdict, completionHandler: {
-            (success,failure ,noConnection) in
-            self.stoploader()
-            if(failure == nil && noConnection == nil)
-            {
-                let dict:NSDictionary=success as! NSDictionary
-                if(dict["Message"] != nil)
+        
+        if machineNameArray.count > 1 {
+            let data_array:NSDictionary = machineNameArray.object(at: indexpath.row) as! NSDictionary
+            print(data_array)
+            let notific_id:NSNumber=data_array.value(forKey: "ID") as? NSNumber ?? 0
+            print(notific_id)
+            self.startloader(msg: "Loading.... ")
+            let postdict:NSMutableDictionary=["NotificationID":notific_id]
+            Global.server.Post(path: "Dashboard/NotificationRead/\(notific_id)", jsonObj: postdict, completionHandler: {
+                (success,failure ,noConnection) in
+                self.stoploader()
+                if(failure == nil && noConnection == nil)
                 {
-                    let success=dict.value(forKey: "IsSuccess") as? Bool ?? false
-                    if (success)
+                    let dict:NSDictionary=success as! NSDictionary
+                    if(dict["Message"] != nil)
                     {
-                        defalts.setValue("\(indexpath.row)", forKey: "RemoveId")
-                        self.show_popup(indexpath: indexpath,view: view)
-                    }
-                    else
-                    {
-                        self.alert(msgs:dict.value(forKey: "Message") as? String ?? "")
+                        let success=dict.value(forKey: "IsSuccess") as? Bool ?? false
+                        if (success)
+                        {
+                            defalts.setValue("\(indexpath.row)", forKey: "RemoveId")
+                            self.show_popup(indexpath: indexpath,view: view)
+                        }
+                        else
+                        {
+                            self.alert(msgs:dict.value(forKey: "Message") as? String ?? "")
+                        }
                     }
                 }
-            }
-            else
-            {
-                self.alert(msgs: Global.network.redAlert(error: failure, noConnection: noConnection))
-            }
-        })
+                else
+                {
+                    self.alert(msgs: Global.network.redAlert(error: failure, noConnection: noConnection))
+                }
+            })
+        }else
+        {
+        }
+       
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -208,6 +217,9 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 if let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:Any]
                 {
                     let myarray = json["LstNotificationDeviceModel"] as! NSArray
+                    
+                     self.machineNameArray = myarray.mutableCopy() as? NSMutableArray ?? []
+                    
                     if myarray == []
                     {
                         self.noDataLbl.isHidden = false
@@ -250,9 +262,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let tag = sender.tag
         let indexpath = NSIndexPath(row: tag, section: 0)
         self.post_notificinfo(indexpath:indexpath as IndexPath,view: tblViewPopup)
-      
-
-        
+    
     }
     
    

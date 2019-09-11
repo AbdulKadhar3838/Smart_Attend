@@ -24,7 +24,7 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var TickBtn: UIButton!
     var FinalescapedStr :String!
     var dataText:String = ""
-
+    var dataSpace: String = ""
     
     // MARK: - Lifecycle Method
     override func viewDidLoad() {
@@ -63,6 +63,7 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
         self.blueborder(forview: self.dataApiTxtFld)
 
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.email_textfield.addSubview(leftview(fortextfield: self.email_textfield,imagename: "UserName"))
@@ -79,7 +80,7 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
         self.scrollHeightConstraint.constant = portraitHeight - 64
     }
     
-    func api(){
+   /* func api(){
         self.startloader(msg: "Loading....")
         
         
@@ -146,7 +147,7 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
         }
         
         
-    }
+    }*/
     
     @IBAction func showhideImgActBtn(_ sender: Any) {
         if TickBtn.isHidden == false && self.dataApiTxtFld.isHidden == false {
@@ -162,16 +163,63 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
 
     }
     @IBAction func tickMarkBtn(_ sender: Any) {
+//        if dataApiTxtFld.text?.isEmpty ?? false{
+//            BaseApi = "http://smartattendtest.com/service/api/"
+//            self.dataApiTxtFld.isHidden = true
+//            self.TickBtn.isHidden = true
+//        }else{
+//            dataText = self.dataApiTxtFld.text ?? ""
+//             //self.api() //uncommand pannu
+//        }
+
+        var baseApiData2:String?
+        
         if dataApiTxtFld.text?.isEmpty ?? false{
+            UserDefaults.standard.set(dataApiTxtFld.text, forKey: "userName")
             BaseApi = "http://smartattendtest.com/service/api/"
             self.dataApiTxtFld.isHidden = true
             self.TickBtn.isHidden = true
         }else{
             dataText = self.dataApiTxtFld.text ?? ""
-             self.api() //uncommand pannu
+            if dataApiTxtFld.text == "USMFBSA"  {
+                UserDefaults.standard.set(dataApiTxtFld.text, forKey: "userName")
+                baseApiData2 =  "http://10.31.239.31:82/service/api/"
+                UserDefaults.standard.set(baseApiData2, forKey: "baseApiDataF")
+                self.TickBtn.isHidden = true
+                self.dataApiTxtFld.isHidden = true
+            }
+            else if dataApiTxtFld.text == "usmfbsa"{
+                UserDefaults.standard.set(dataApiTxtFld.text, forKey: "userName")
+                baseApiData2 =  "http://10.31.239.31:82/service/api/"
+                UserDefaults.standard.set(baseApiData2, forKey: "baseApiDataF")
+                self.TickBtn.isHidden = true
+                self.dataApiTxtFld.isHidden = true
+            }
+            else if dataApiTxtFld.text == "preprod" ||  dataApiTxtFld.text == "preprod "  {
+                UserDefaults.standard.set(dataApiTxtFld.text, forKey: "userName")
+                dataApiTxtFld.text = dataSpace
+                var trimmedString = dataSpace.trimmingCharacters(in: .whitespacesAndNewlines)
+                trimmedString = "http://preprod.smartattendtest.com//service/api/"
+                UserDefaults.standard.set(trimmedString, forKey: "baseApiDataF")
+                print(trimmedString)
+                self.TickBtn.isHidden = true
+                self.dataApiTxtFld.isHidden = true
+                
+            }
+            else {
+                UserDefaults.standard.set(dataApiTxtFld.text, forKey: "userName")
+                baseApiData2 =  "http://smartattendtest.com/service/api/"
+                UserDefaults.standard.set(baseApiData2, forKey: "baseApiDataF")
+                self.TickBtn.isHidden = true
+                self.dataApiTxtFld.isHidden = true
+                // self.api()
+            }
+            let baseApiDataF = UserDefaults.standard.string(forKey: "baseApiDataF")
+            
+            BaseApi = baseApiDataF ?? "http://smartattendtest.com/service/api/"
+            
+            
         }
-
-        
         
     }
     
@@ -415,35 +463,95 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
     // MARK: - UITextField protocol
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
+//        textField.resignFirstResponder()
+//        if textField == dataApiTxtFld {
+//
+//            if dataApiTxtFld.text?.isEmpty ?? false{
+//                BaseApi = "http://smartattendtest.com/service/api/"
+//                self.dataApiTxtFld.isHidden = true
+//                self.TickBtn.isHidden = true
+//            }else{
+//                dataText = self.dataApiTxtFld.text ?? ""
+//               // self.api() //uncommand pannu
+//            }
+//
+//
+//        }
+//
+//        if textField==email_textfield {
+//            pswd_textfield.becomeFirstResponder()
+//        }
+//        else
+//        {
+//            self.signin_click( nil )
+//        }
+//
+//
+//        return true
         textField.resignFirstResponder()
-        if textField == dataApiTxtFld {
+        if textField == dataApiTxtFld{
+            var baseApiData2:String?
             
             if dataApiTxtFld.text?.isEmpty ?? false{
+                UserDefaults.standard.set(dataApiTxtFld.text, forKey: "userName")
                 BaseApi = "http://smartattendtest.com/service/api/"
                 self.dataApiTxtFld.isHidden = true
                 self.TickBtn.isHidden = true
             }else{
                 dataText = self.dataApiTxtFld.text ?? ""
-                self.api() //uncommand pannu
+                if dataApiTxtFld.text == "USMFBSA"  {
+                    UserDefaults.standard.set(dataApiTxtFld.text, forKey: "userName")
+                    baseApiData2 =  "http://10.31.239.31:82/service/api/"
+                    UserDefaults.standard.set(baseApiData2, forKey: "baseApiDataF")
+                    self.TickBtn.isHidden = true
+                    self.dataApiTxtFld.isHidden = true
+                }
+                else if dataApiTxtFld.text == "usmfbsa"{
+                    UserDefaults.standard.set(dataApiTxtFld.text, forKey: "userName")
+                    baseApiData2 =  "http://10.31.239.31:82/service/api/"
+                    UserDefaults.standard.set(baseApiData2, forKey: "baseApiDataF")
+                    self.TickBtn.isHidden = true
+                    self.dataApiTxtFld.isHidden = true
+                }
+                else if dataApiTxtFld.text == "preprod" ||  dataApiTxtFld.text == "preprod "  {
+                    UserDefaults.standard.set(dataApiTxtFld.text, forKey: "userName")
+                    dataApiTxtFld.text = dataSpace
+                    var trimmedString = dataSpace.trimmingCharacters(in: .whitespacesAndNewlines)
+                    trimmedString = "http://preprod.smartattendtest.com//service/api/"
+                    UserDefaults.standard.set(trimmedString, forKey: "baseApiDataF")
+                    print(trimmedString)
+                    self.TickBtn.isHidden = true
+                    self.dataApiTxtFld.isHidden = true
+                    
+                }
+                else {
+                    UserDefaults.standard.set(dataApiTxtFld.text, forKey: "userName")
+                    baseApiData2 =  "http://smartattendtest.com/service/api/"
+                    UserDefaults.standard.set(baseApiData2, forKey: "baseApiDataF")
+                    self.TickBtn.isHidden = true
+                    self.dataApiTxtFld.isHidden = true
+                    // self.api()
+                }
+                let baseApiDataF = UserDefaults.standard.string(forKey: "baseApiDataF")
+                
+                BaseApi = baseApiDataF ?? "http://smartattendtest.com/service/api/"
+                
+                
             }
-
             
         }
         
-        if textField==email_textfield {
+        else if textField == email_textfield {
             pswd_textfield.becomeFirstResponder()
         }
         else
         {
             self.signin_click( nil )
         }
-        
-        
         return true
     }
 
-    
-    
+
     @objc func keyboardWillShow_Hide(notification:NSNotification){
         var userInfo = notification.userInfo!
         var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
