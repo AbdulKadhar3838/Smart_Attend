@@ -127,10 +127,11 @@ class BarChartViewController: UIViewController{
             arrayColorActualETA.insert(.clear, at: 0)
             arrayActualETA.insert(convertdecimal(fromDate: deviceStartTime, toDate: arrayResponseList[0].startDate!), at: 0)
             isStartDateSame = false
+            print(deviceStartTime)
             
         } 
         arrayglobalTimestampETA = [etaTotalHrsStr]
-        
+      
         countBarAnimation = 0 // Chart Animation Turn On When count = 0
         
         
@@ -322,9 +323,6 @@ extension BarChartViewController: UITableViewDelegate,UITableViewDataSource,Char
         StackedBarHorizontalChart.plotChart(barChart: barChart, colorActualETA:  arrayColorActualETA,colorETA: arrayColorETA , yValuesETA: arrayETA as! [Double], yValuesActualETA: arrayActualETA,baseDate:deviceStartTime)
     }
 }
-
-
-
 
 
     

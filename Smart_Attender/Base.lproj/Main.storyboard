@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LMg-5S-4pj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LMg-5S-4pj">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -1117,7 +1117,7 @@
                                                     <outlet property="delegate" destination="9L9-Qo-mjp" id="BrQ-Qv-kcL"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cavity" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLG-Ei-Ol5">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cavity" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLG-Ei-Ol5">
                                                 <rect key="frame" x="20" y="121.5" width="280" height="43.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1129,7 +1129,7 @@
                                                     <outlet property="delegate" destination="9L9-Qo-mjp" id="hf2-zu-KHt"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cycle Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZV-4t-kWN">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cycle Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZV-4t-kWN">
                                                 <rect key="frame" x="20" y="185" width="280" height="43.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1141,7 +1141,7 @@
                                                     <outlet property="delegate" destination="9L9-Qo-mjp" id="rrN-ZV-uKh"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Accumulated Scrap" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PSA-o4-CBk">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Accumulated Scrap" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PSA-o4-CBk">
                                                 <rect key="frame" x="20" y="248.5" width="280" height="43.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -8280,7 +8280,7 @@ These following devices cannot be shutdown due to running status</string>
         <image name="SA-1" width="32" height="32"/>
         <image name="Server_API" width="361" height="376"/>
         <image name="alert_icon" width="21" height="21"/>
-        <image name="btnred" width="31" height="16"/>
+        <image name="btnred" width="31" height="16.5"/>
         <image name="buttonicon" width="132" height="42"/>
         <image name="cancel-1" width="50" height="50"/>
         <image name="dot" width="32" height="32"/>
@@ -9631,12 +9631,12 @@ ATgnAAE4LAABODoAATg+AAE4RQABOEoAAThXAAE4WgABOGcAAThsAAE4dAABOHcAATh8AAE4hAABOIcA
 ATiZAAE4nAABOKEAAAAAAAAEAQAAAAAAAABtAAAAAAAAAAAAAAAAAAE4ow
 </mutableData>
         </image>
-        <image name="logo_withouttext" width="159" height="109"/>
-        <image name="menu_home" width="40" height="40"/>
+        <image name="logo_withouttext" width="159.5" height="109.5"/>
+        <image name="menu_home" width="40.5" height="40.5"/>
         <image name="uncheckbox" width="32" height="32"/>
         <image name="user-1" width="90" height="90"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iij-2p-R9W"/>
+        <segue reference="qsc-7L-Hwb"/>
     </inferredMetricsTieBreakers>
 </document>

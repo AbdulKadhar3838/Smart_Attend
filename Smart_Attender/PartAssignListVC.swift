@@ -365,8 +365,10 @@ class PartAssignListVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         UpdateAssignVC.passLabelName = cell.lblDeviceName.text ?? ""
         UpdateAssignVC.passPartNo = cell.lblPartNumber.text ?? ""
         UpdateAssignVC.passCavity = cell.lblCavity.text ?? ""
+        print(UpdateAssignVC.passCavity)
         UpdateAssignVC.passCycleTime = cell.lblCycle.text ?? ""
         UpdateAssignVC.passScarp = cell.lblScarp.text ?? ""
+        print(UpdateAssignVC.passScarp )
         UpdateAssignVC.passQuantity = cell.lblReqQty.text ?? ""
         if let row = (tablePartsAssign.indexPath(for: cell))?.row {
             UpdateAssignVC.selectedIndex = row
@@ -530,13 +532,13 @@ class PartAssignListVC: UIViewController,UITableViewDelegate,UITableViewDataSour
             self.assignAction(cell)
         }
         
-//        let remove = UITableViewRowAction(style: .destructive, title: "Remove") { (action, indexPath) in
-//            // Remove item at indexPath
-//            print("remove part")
-//            self.removeAction(cell)
-//
-//        }
-//
+        let remove = UITableViewRowAction(style: .destructive, title: "Remove") { (action, indexPath) in
+            // Remove item at indexPath
+            print("remove part")
+            self.removeAction(cell)
+
+        }
+
         
         
         let reset = UITableViewRowAction(style: .normal, title: "Reset") { (action, indexPath) in
@@ -545,10 +547,10 @@ class PartAssignListVC: UIViewController,UITableViewDelegate,UITableViewDataSour
             
         }
         reset.backgroundColor = UIColor.init(netHex_String: "#9b59b6")
-       // remove.backgroundColor = UIColor.init(netHex_String: "#e74c3c")
+        remove.backgroundColor = UIColor.init(netHex_String: "#e74c3c")
         edit.backgroundColor = UIColor.init(netHex_String: "#e67e22")
-        return [reset, edit]
-      //  return [reset,remove, edit]
+      //  return [reset, edit]
+        return [reset,remove, edit]
         
     }
 }

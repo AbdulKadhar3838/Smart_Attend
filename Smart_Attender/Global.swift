@@ -167,7 +167,26 @@ class Global: NSObject {
         {
             if network.connectedToNetwork()
             {
-                let request = NSMutableURLRequest(url: NSURL(string: BaseApi + path) as! URL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 120)
+                var BaseURL = ""
+                
+                let urlKey = UserDefaults.standard.string(forKey: "userName")
+                
+                if urlKey == "preprod" || urlKey == "Preprod" || urlKey == "PREPROD" {
+                    
+                    BaseURL = "http://preprod.smartattendtest.com/service/api/"
+                }else if urlKey == "portal" {
+                    
+                    BaseURL = "http://smartattendtest.com/service/api/"
+                    
+                }else if urlKey == "usmfbsa" || urlKey == "USMFBSA" {
+                    
+                    BaseURL = "http://10.31.239.31:82/service/api/"
+                    
+                }else  {
+                    BaseURL = "http://smartattendtest.com/service/api/"
+                }
+                
+                let request = NSMutableURLRequest(url: NSURL(string: BaseURL + path) as! URL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 120)
                 print("requestURL",request)
                 request.httpMethod = "GET"
                 print("Request Url: \(request.url?.absoluteURL)")
@@ -235,7 +254,27 @@ class Global: NSObject {
             //URLCache.shared.removeAllCachedResponses();
             if network.connectedToNetwork()
             {
-                let request = NSMutableURLRequest(url: NSURL(string: BaseApi + path) as! URL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 15)
+                var BaseURL = ""
+                
+                
+                let urlKey = UserDefaults.standard.string(forKey: "userName")
+                
+                if urlKey == "preprod" || urlKey == "Preprod" || urlKey == "PREPROD" {
+                    
+                    BaseURL = "http://preprod.smartattendtest.com/service/api/"
+                }else if urlKey == "portal" {
+                    
+                    BaseURL = "http://smartattendtest.com/service/api/"
+                    
+                }else if urlKey == "usmfbsa" || urlKey == "USMFBSA" {
+                    
+                    BaseURL = "http://10.31.239.31:82/service/api/"
+                    
+                }else  {
+                    BaseURL = "http://smartattendtest.com/service/api/"
+                }
+                
+                let request = NSMutableURLRequest(url: NSURL(string: BaseURL + path) as! URL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 15)
                 request.httpMethod = "POST"
                 print("Request Url: \(request.url?.absoluteURL)")
                 request.httpBody = try! JSONSerialization.data(withJSONObject: jsonObj!, options: [])
@@ -294,7 +333,26 @@ class Global: NSObject {
             //URLCache.shared.removeAllCachedResponses();
             if network.connectedToNetwork()
             {
-                let request = NSMutableURLRequest(url: NSURL(string: BaseApi + path) as! URL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 15)
+                var BaseURL = ""
+                
+                
+                let urlKey = UserDefaults.standard.string(forKey: "userName")
+                
+                if urlKey == "preprod" || urlKey == "Preprod" || urlKey == "PREPROD" {
+                    
+                    BaseURL = "http://preprod.smartattendtest.com/service/api/"
+                }else if urlKey == "portal" {
+                    
+                    BaseURL = "http://smartattendtest.com/service/api/"
+                    
+                }else if urlKey == "usmfbsa" || urlKey == "USMFBSA" {
+                    
+                    BaseURL = "http://10.31.239.31:82/service/api/"
+                    
+                }else  {
+                    BaseURL = "http://smartattendtest.com/service/api/"
+                }
+                let request = NSMutableURLRequest(url: NSURL(string: BaseURL + path) as! URL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 15)
                 request.httpMethod = "POST"
                 print("Request Url: \(request.url?.absoluteURL)")
                 request.httpBody = try! JSONSerialization.data(withJSONObject: jsonObj!, options: [])

@@ -72,7 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         account_id=dfualts.value(forKey: AccountID) as? String ?? ""
         customer_id=dfualts.value(forKey: CustomerID) as? String ?? ""
-        //forceUpdate() //Force update new version
+        forceUpdate() //Force update new version
         
         if (account_id.count > 0)
         {
@@ -210,11 +210,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         print("its Works!!!")
                         
                         if #available(iOS 10.0, *) {
-                            UIApplication.shared.open((URL(string: "itms://itunes.apple.com/app/" + appStoreAppID)!), options:[:], completionHandler: nil)
+                            //  UIApplication.shared.open((URL(string: "itms://itunes.apple.com/app/" + appStoreAppID)!), options:[:], completionHandler: nil)
+                            
+                            UIApplication.shared.open((URL(string: "https://apps.apple.com/ca/app/smart-attend/id" + appStoreAppID)!), options:[:], completionHandler: nil)
                         } else {
                             // Fallback on earlier versions
-                            UIApplication.shared.openURL(URL(string: "itms-apps://itunes.apple.com/app/id" + appStoreAppID)!)
-                            
+                            //  UIApplication.shared.openURL(URL(string: "itms-apps://itunes.apple.com/app/id" + appStoreAppID)!)
+                            UIApplication.shared.openURL(URL(string: "https://apps.apple.com/ca/app/smart-attend/id" + appStoreAppID)!)
                         }
                         
                     }))
@@ -240,12 +242,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         account_id=dfualts.value(forKey: AccountID) as? String ?? ""
         self.trigger()
         
-        //forceUpdate()//Force update New Verison
+        forceUpdate()//Force update New Verison
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-      //  forceUpdate() //Force update New version
+        forceUpdate() //Force update New version
     }
     
     func applicationWillTerminate(_ application: UIApplication) {

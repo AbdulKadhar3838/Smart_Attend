@@ -928,6 +928,7 @@ extension PlannedShutdownVC:UITextFieldDelegate
             let UpdateAssignVC = self.storyboard?.instantiateViewController(withIdentifier: "UpdateAssignVC") as! UpdateAssignVC
             
             UpdateAssignVC.passLabelName =  self.selectedDeviceName
+            print(self.selectedDeviceName)
             UpdateAssignVC.istransitFromNotification = true
             self.navigationController?.pushViewController(UpdateAssignVC, animated: true)
         }

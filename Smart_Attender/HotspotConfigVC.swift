@@ -120,19 +120,31 @@ class HotspotConfigVC: UIViewController {
     
     // MARK: - Local Methods
     func manualConnection() {
-        UIApplication.shared.openURL(URL(string:"App-Prefs:root=WIFI")! as URL)
-     /*   if #available(iOS 10.0, *) {
-            UIApplication.shared.open(URL(string:"App-Prefs:root=WIFI")!, options: [:], completionHandler: {_ in
-                
-            })
-        } else {
-            // Fallback on earlier versions
-            UIApplication.shared.openURL(URL(string:"App-Prefs:root=WIFI")! as URL)
-        } */
-       // txtfdSSID.isHidden = true
-       // txtfdSSIDPassword.isHidden = true
-        navigateTcpandipConnectionVC()
+        guard URL(string: UIApplicationOpenSettingsURLString) != nil else {
+            return
+        }
         
+        if let url = URL(string:UIApplicationOpenSettingsURLString) {
+            if UIApplication.shared.canOpenURL(url) {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            }
+        }
+        //UIApplication.shared.openURL(URL(string:"App-Prefs:root=WIFI")! as URL)
+        /*   if #available(iOS 10.0, *) {
+         UIApplication.shared.open(URL(string:"App-Prefs:root=WIFI")!, options: [:], completionHandler: {_ in
+         
+         })
+         } else {
+         // Fallback on earlier versions
+         UIApplication.shared.openURL(URL(string:"App-Prefs:root=WIFI")! as URL)
+         } */
+        // txtfdSSID.isHidden = true
+        // txtfdSSIDPassword.isHidden = true
+        navigateTcpandipConnectionVC()
     }
     func callingViewDidload() {
         

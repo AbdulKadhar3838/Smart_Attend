@@ -6,14 +6,14 @@ import UIKit
 class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet var tblViewPopup: UITableView!
-
+    
     @IBOutlet var viewPopup: UIView!
     var DeviceID = [Int]()
     var DeviceName = [String]()
     var BtnColour = [String]()
     var DeviceMessage = [String]()
     var machineNameArray:NSMutableArray=[]
-
+    
     @IBOutlet var noDataLbl: UILabel!
     
     
@@ -32,7 +32,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     @IBAction func markAllRead(_ sender: UIButton) {
         readNotificationAPI()
-      
+        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DeviceName.count
@@ -48,20 +48,20 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         cell.statusLbl.text = DeviceMessage[indexPath.row]
         print(BtnColour)
         cell.viewBtn.tag = indexPath.row
-//        let data_array:NSDictionary = machineNameArray.object(at: indexPath.row) as! NSDictionary
-//        cell.lblName.text =  data_array.value(forKey: "DeviceName") as? String
-//        cell.statusLbl.text =  data_array.value(forKey: "Message") as? String
-//        let status:NSNumber = data_array.value(forKey: "RunningStatus") as? NSNumber ?? 0
-//        
+        //        let data_array:NSDictionary = machineNameArray.object(at: indexPath.row) as! NSDictionary
+        //        cell.lblName.text =  data_array.value(forKey: "DeviceName") as? String
+        //        cell.statusLbl.text =  data_array.value(forKey: "Message") as? String
+        //        let status:NSNumber = data_array.value(forKey: "RunningStatus") as? NSNumber ?? 0
+        //
         cell.viewBtn.addTarget(self, action: #selector(viewActionBtn(_:)), for: .touchUpInside)
-      //  cell.viewBtn.backgroundColor
+        //  cell.viewBtn.backgroundColor
         return cell
     }
     
     @IBAction func seeAllBtnAction(_ sender: Any) {
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "dashboard1_ViewController") as! dashboard1_ViewController
         self.navigationController?.pushViewController(secondViewController, animated: true)
-}
+    }
     func readNotificationAPI() {
         //let jsonURL = "http://smartattend.colanonline.net/service/api/Dashboard/ReadAllNotification/121"
         let jsonURL = (BaseApi + "Dashboard/ReadAllNotification/" + account_id)
@@ -84,14 +84,14 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                         img!.image = UIImage.init(named: "Battery_icon-green")
                         roundV?.isHidden = true
                     }
-                  
+                    
                     
                 }
             }
             catch {
                 print("Error is : \n\(error)")
             }
-            }.resume()
+        }.resume()
     }
     func show_popup(indexpath: IndexPath, view: UITableView)
     {
@@ -125,7 +125,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         }
     }
     
-   
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
@@ -166,9 +166,9 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         }else
         {
         }
-       
+        
     }
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         view.isHidden = true
@@ -199,7 +199,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     func showPopupapi(){
         //let jsonURL = "http://smartattend.colanonline.net/service/api/Dashboard/NotificationCountByDeviceID/131"
-    let jsonURL = (BaseApi + "Dashboard/NotificationCountByDeviceID/" + account_id)
+        let jsonURL = (BaseApi + "Dashboard/NotificationCountByDeviceID/" + account_id)
         print(jsonURL)
         let url = URL(string: jsonURL)
         
@@ -209,7 +209,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 return
             }
             guard let dd = data else{
-                 print("abdul1")
+                print("abdul1")
                 return
             }
             
@@ -218,11 +218,14 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 {
                     let myarray = json["LstNotificationDeviceModel"] as! NSArray
                     
-                     self.machineNameArray = myarray.mutableCopy() as? NSMutableArray ?? []
+                    self.machineNameArray = myarray.mutableCopy() as? NSMutableArray ?? []
                     
                     if myarray == []
                     {
-                        self.noDataLbl.isHidden = false
+                        DispatchQueue.main.async {
+                            self.noDataLbl.isHidden = false
+                        }
+                        
                     }
                     
                     for array in myarray
@@ -231,8 +234,8 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                         {
                             DispatchQueue.main.async {
                                 self.noDataLbl.isHidden = true
-                              }
-                             print("abdul33")
+                            }
+                            print("abdul33")
                             print("In Json ID :",ar1["ID"] as! Int)
                             self.DeviceID.append(ar1["Notifycount"] as! Int)
                             self.DeviceName.append(ar1["DeviceName"] as! String)
@@ -250,30 +253,30 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 
             }
             catch {
-                 print("abdul2")
+                print("abdul2")
                 print("Error is : \n\(error)")
             }
-            }.resume()
+        }.resume()
         
     }
     
-  
+    
     @objc func viewActionBtn(_ sender: UIButton) {
         let tag = sender.tag
         let indexpath = NSIndexPath(row: tag, section: 0)
         self.post_notificinfo(indexpath:indexpath as IndexPath,view: tblViewPopup)
-    
+        
     }
     
-   
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

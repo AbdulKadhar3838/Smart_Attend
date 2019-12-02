@@ -69,7 +69,7 @@ class UpdateAssignVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         txtCycleTime.text = passCycleTime
         txtScarp.text = "0"
         txtAccScrap.text = passScarp
-        
+        print(passScarp)
         
         if istransitFromNotification {
             partListApi()
@@ -351,7 +351,7 @@ class UpdateAssignVC: UIViewController,UITableViewDelegate,UITableViewDataSource
                     }
                 }
                 
-                print("inside notific")
+               
                 
             } else {
                 startDate = self.arrayAssignedList.startDate ?? ""

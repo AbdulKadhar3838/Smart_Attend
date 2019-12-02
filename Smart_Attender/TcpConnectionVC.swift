@@ -84,13 +84,25 @@ class TcpConnectionVC: UIViewController {
     @IBAction func serverUpdate(_ sender: UIButton) {
         if Global.network.connectedToNetwork()
         {
-                self.afterSendingServer()
+            self.afterSendingServer()
         } else {
             self.alert_handler(msgs: "No Internet access.Make sure that Wi-Fi or mobile data is turned on,then try again.", dismissed: {_ in
-                UIApplication.shared.openURL(URL(string:"App-Prefs:root=WIFI")! as URL)
+                guard URL(string: UIApplicationOpenSettingsURLString) != nil else {
+                    return
+                }
+                
+                if let url = URL(string:UIApplicationOpenSettingsURLString) {
+                    if UIApplication.shared.canOpenURL(url) {
+                        if #available(iOS 10.0, *) {
+                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        } else {
+                            UIApplication.shared.openURL(url)
+                        }
+                    }
+                }
+                //  UIApplication.shared.openURL(URL(string:"App-Prefs:root=WIFI")! as URL)
             })
         }
-        
         
     }
     // MARK: - Local Methods
@@ -279,7 +291,21 @@ extension TcpConnectionVC :UITextFieldDelegate{
     func alertMsg() {
         let alert = UIAlertController(title: "TCP/IP Connection", message: "Data send to the Machine successfully and please reconnect the wifi ", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default) {_ in
-            UIApplication.shared.openURL(URL(string:"App-Prefs:root=WIFI")! as URL)
+            guard URL(string: UIApplicationOpenSettingsURLString) != nil else {
+                return
+            }
+            
+            if let url = URL(string:UIApplicationOpenSettingsURLString) {
+                if UIApplication.shared.canOpenURL(url) {
+                    if #available(iOS 10.0, *) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    } else {
+                        UIApplication.shared.openURL(url)
+                    }
+                }
+            }
+            //  UIApplication.shared.openURL(URL(string:"App-Prefs:root=WIFI")! as URL)
+            
             self.btnServerUpdate.isHidden = false
         }
         alert.addAction(action)

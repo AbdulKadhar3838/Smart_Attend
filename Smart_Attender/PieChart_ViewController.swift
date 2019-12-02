@@ -773,6 +773,8 @@ class PieChart_ViewController: UIViewController,ChartViewDelegate,UITableViewDel
         SelectedIndex=highlighted
         let temp:NSDictionary=self.server_data[highlighted] as! NSDictionary
         var title:String=temp.value(forKey: "label") as? String ?? "" //For Btn Title
+        var CurrentShutdownMasterID = temp.value(forKey: "CurrentShutdownMasterID") as? Int
+        currentShotdownId = CurrentShutdownMasterID
         
         self.linechart_Button1.setTitle("Input Analysis", for: .normal)
         self.linechart_Button2.setTitle("Incident Analysis", for: .normal)
