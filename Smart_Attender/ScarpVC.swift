@@ -67,7 +67,7 @@ class ScarpVC: UIViewController {
     }
     // MARK: - Local Methods
     func initView() {
-        self.title = "Add Scarp "
+        self.title = "Add Scrap "
         tblScarp.tableFooterView = UIView(frame: CGRect.zero)
         footerView.isHidden = true
         let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.close(_:)))
@@ -269,7 +269,7 @@ extension ScarpVC {
                         else
                         {
                             
-                            self.alert_handler(msgs: "Scarp Added Succesfully", dismissed: {_ in
+                            self.alert_handler(msgs: "Scrap Added Succesfully", dismissed: {_ in
                                 self.postApiAction()
                             })
                         }
@@ -286,7 +286,7 @@ extension ScarpVC {
                         }
                         else
                         {
-                            self.alert_handler(msgs: "Unable to add scarp now", dismissed: {_ in
+                            self.alert_handler(msgs: "Unable to add scrap now", dismissed: {_ in
                                // self.postApiAction()
                             })
                         }

@@ -212,7 +212,12 @@ class Login_ViewController: UIViewController,UITextFieldDelegate {
                                 dfualts.setValue(true, forKey: "reload")
     
                                 let AccountId:NSNumber = data.value(forKey: "AccountID") as? NSNumber ?? 0
+                                
+                              //  print(dfualts.string(forKey: AccountId))
+                                
+                                
                                 let CustomerId:NSNumber = data.value(forKey: "CustomerID") as? NSNumber ?? 0
+                                
                                 Global.userType.storeDefaults(AccountId: AccountId,CustomerId: CustomerId)
     
                                 self.performSegue(withIdentifier: "Reveal_Adminmenu", sender: self)

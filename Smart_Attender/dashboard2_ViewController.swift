@@ -9,7 +9,9 @@
 import UIKit
 
 
+@available(iOS 11.0, *)
 class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource {
+    
     // MARK: - Connected Outlets
     @IBOutlet weak var hours_button: UIButton!
     @IBOutlet weak var logo_imageview: UIImageView!
@@ -23,7 +25,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
     @IBOutlet weak var dropdownHeightConstraint: NSLayoutConstraint!
     var badgeLbl = UILabel()
     var Notificationcount:Int?
-
+    
     var roundV = UIView()
     
     // MARK: - Variables
@@ -45,7 +47,8 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initView()
-        self.NotificationCountApi()
+       self.NotificationCountApi()
+      
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "IBMPlexSans-SemiBold", size: 20)! ,NSAttributedStringKey.foregroundColor: UIColor.white ]
         
     }
@@ -68,14 +71,14 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         }
         
         
-       
+        
     }
     
-   override func viewWillAppear(_ animated: Bool) {
-       // self.newUpdateAvailable()
-         //initView()
+    override func viewWillAppear(_ animated: Bool) {
+        // self.newUpdateAvailable()
+        //initView()
         isDashboardHomePage = true
-    
+        
     }
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
@@ -140,19 +143,19 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         if UIDevice.current.orientation.isLandscape {
             circleCount = 3.0
         }
-//        let logoBtn = UIButton(type: UIButton.ButtonType.custom)
-//        logoBtn.setImage(UIImage(named: "Battery_icon"), for: .normal)
-//        logoBtn.addTarget(self, action: #selector(self.logoClicked1) , for: .touchUpInside)
-//        logoBtn.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
-//        let barButton = UIBarButtonItem(customView: logoBtn)
-//        self.navigationItem.rightBarButtonItem = barButton
+        //        let logoBtn = UIButton(type: UIButton.ButtonType.custom)
+        //        logoBtn.setImage(UIImage(named: "Battery_icon"), for: .normal)
+        //        logoBtn.addTarget(self, action: #selector(self.logoClicked1) , for: .touchUpInside)
+        //        logoBtn.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        //        let barButton = UIBarButtonItem(customView: logoBtn)
+        //        self.navigationItem.rightBarButtonItem = barButton
         
         let cusV = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
         cusV.backgroundColor = UIColor.clear
         
         // notification image
         
-         img = UIImageView.init(frame: CGRect.init(x: cusV.center.x-30, y: cusV.center.y-15, width: 30, height: 30))
+        img = UIImageView.init(frame: CGRect.init(x: cusV.center.x-30, y: cusV.center.y-15, width: 30, height: 30))
         img!.image = UIImage.init(named: "Battery_icon")
         img!.tintColor = UIColor.white
         cusV.addSubview(img!)
@@ -164,14 +167,14 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         roundV.layer.masksToBounds = true
         roundV.backgroundColor = UIColor.red
         
-      self.badgeLbl = UILabel.init(frame: CGRect.init(x:7, y: 0, width: 20, height: 15.00))
-       // self.badgeLbl = UILabel()
+        self.badgeLbl = UILabel.init(frame: CGRect.init(x:7, y: 0, width: 20, height: 15.00))
+        // self.badgeLbl = UILabel()
         badgeLbl.font = UIFont.init(name: "IBMPlexSans-SemiBold", size: 10)
         badgeLbl.textAlignment = .center
         badgeLbl.textColor = UIColor.white
         badgeLbl.center = CGPoint(x: roundV.center.x, y: badgeLbl.center.y)
-
-       // badgeLbl.center = roundV.center
+        
+        // badgeLbl.center = roundV.center
         
         roundV.addSubview(badgeLbl)
         
@@ -187,7 +190,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         
         self.view.bringSubview(toFront: btnName)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: cusV)
-   
+        
     }
     @objc func Logo_Clicked()
     {
@@ -210,8 +213,8 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
         appdelegate.shouldRotate = true
         //self.dismiss(animated: true, completion: nil)
-       // removeAnimate()
-
+        // removeAnimate()
+        
         
     }
     override func viewDidDisappear(_ animated: Bool) {
@@ -226,20 +229,22 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
             alertOkCancel(msgs: "A new version of Smart Attend is available.Please update to version \(releaseVersion) now", handlerCancel: {_ in
                 
             }, handlerOk: {_ in
-                      if #available(iOS 10.0, *) {
-                 UIApplication.shared.open((URL(string: "itms://itunes.apple.com/app/" + appStoreAppID)!), options:[:], completionHandler: nil)
-                 } else {
-                 // Fallback on earlier versions
-                 UIApplication.shared.openURL(URL(string: "itms-apps://itunes.apple.com/app/id" + appStoreAppID)!)
-                 
-                 }
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open((URL(string: "itms://itunes.apple.com/app/" + appStoreAppID)!), options:[:], completionHandler: nil)
+                } else {
+                    // Fallback on earlier versions
+                    UIApplication.shared.openURL(URL(string: "itms-apps://itunes.apple.com/app/id" + appStoreAppID)!)
+                    
+                }
             })
         }
     }
-
+    
     // MARK: - Timer Method
     @objc func runTimedCode() {
         self.DeviceListBackgroudFetch(forhours: self.getSelectedHours())
+         self.NotificationCountApi()
+        
     }
     
     // MARK: - GetAll DeviceList Method
@@ -267,7 +272,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
                             let booldata = dict["DownTimeFlag"] as? Bool
                             print(booldata ?? false)
                             
-                          
+                            
                             self.Downtime = booldata
                             print(self.Downtime)
                             self.machineNameArray=data.mutableCopy() as? NSMutableArray ?? []
@@ -278,9 +283,9 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
                                 arrayGlobalDeviceIDwtfMachineName.removeAll()
                                 for i in 0 ..< self.machineNameArray.count {
                                     if  let dict = self.machineNameArray.object(at: i) as? NSDictionary{
-                                      arrayGlobalMachineName.append(dict.value(forKey: "DeviceName") as? String ?? "")
+                                        arrayGlobalMachineName.append(dict.value(forKey: "DeviceName") as? String ?? "")
                                         arrayGlobalDeviceIDwtfMachineName.append(dict.value(forKey: "DeviceID") as? Int64 ?? 0)
-                                        }
+                                    }
                                     
                                 }
                                 self.dashboard_Collectionview.isHidden=false
@@ -365,54 +370,54 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
             print("Already Loading")
         }
     }
+  
     func NotificationCountApi(){
-        //let jsonURL = "http://smartattend.colanonline.net/service/api/Dashboard/NotificationCountByDeviceID/131"
-        let jsonURL = (BaseApi + "Dashboard/NotificationCount/" + account_id)
-        print(jsonURL)
-        let url = URL(string: jsonURL)
         
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            guard error == nil else{
-                return
-            }
-            guard let dd = data else{
-                return
-            }
-            
-            do {
-                if let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:Any]
-                {
-                    self.Notificationcount = json["NotifyCount"] as? Int
-                    
-                    print(self.Notificationcount)
-                        DispatchQueue.main.async {
-                    if self.Notificationcount == 0 {
-                        self.roundV.isHidden = true
-                        img!.image = UIImage.init(named: "Battery_icon-green")
-                       self.badgeLbl.text = "0"
-                        
+        Global.server.Get(path: "Dashboard/NotificationCount/" + account_id, jsonObj: nil, completionHandler: { (success,failure,noConnection) in
+                       self.stoploader()
+                       
+                       if(failure == nil && noConnection == nil)
+                       {
+                           let dict:NSDictionary=success as! NSDictionary
+                           if(dict["IsSuccess"] != nil)
+                           {
+                               let success=dict.value(forKey: "IsSuccess") as? Bool ?? false
+                            print( dict["NotifyCount"] as? Int)
+                                self.Notificationcount = dict["NotifyCount"] as? Int
+                                
+                                DispatchQueue.main.async {
+                                    if self.Notificationcount == 0 {
+                                        self.roundV.isHidden = true
+                                        img!.image = UIImage.init(named: "Battery_icon-green")
+                                        self.badgeLbl.text = "0"
+                                        
+                                    }
+                                    else if self.Notificationcount! > 0 && self.Notificationcount! <= 99
+                                    {
+                                        self.roundV.isHidden = false
+                                        img!.image = UIImage.init(named: "Battery_icon")
+                                        var notifyString = ""
+                                        notifyString = "\(self.Notificationcount!)"
+                                        self.badgeLbl.text = notifyString
+                                        print(notifyString)
+                                    }
+                                    else{
+                                        self.badgeLbl.text = "99+"
+                                       
+                                    }
+                                
                             }
-                    else if self.Notificationcount! > 0 && self.Notificationcount! <= 99
-                    {
-                         img!.image = UIImage.init(named: "Battery_icon")
-                        var notifyString = ""
-                        notifyString = "\(self.Notificationcount!)"
-                      self.badgeLbl.text = notifyString
-                    }
-                    else{
-                     self.badgeLbl.text = "99+"
-                     //self.roundV.isHidden = false
-                }
-               }
-                }
-                
-            }
-            catch {
-                print("Error is : \n\(error)")
-            }
-            }.resume()
+                              
+                            print(dict)
+                           }
+                       }
+                   })
+        
+        
         
     }
+    
+    
     // MARK: - Button Actions
     @IBAction func retry_butn(_ sender: AnyObject) {
         self.DeviceList(forhours: self.getSelectedHours())
@@ -436,6 +441,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         return CGSize(width: picDimension,height: picDimension)
     }
     
+    @available(iOS 11.0, *)
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! Dashboard2_CollectionViewCell
@@ -461,7 +467,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
             cell.machine_statuslbl.isHidden = false
             cell.lblEfficiencyForNA.isHidden = true
             cell.circlenumberlblForNA.isHidden = true
-            cell.machineStatuslblForNA.isHidden = true
+            cell.machineStatuslblForNA.isHidden = true  //need to uncommand
             
         } else {
             cell.lblPartNumber.text = "Part No. NA"
@@ -479,6 +485,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
             cell.circlenumberlblForNA.isHidden = false
             cell.machineStatuslblForNA.isHidden = false
         }
+        print(data_array)
         cell.lblETA.text = data_array.value(forKey: "ETA") as? String
         cell.lblDowntimeDuration.text = data_array.value(forKey: "DowntimeDuration") as? String
         cell.lblEfficiency.text = "\(data_array.value(forKey: "Efficiency") as? NSNumber ?? 0)%"
@@ -500,7 +507,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
                 cell.imgvwDown.image = #imageLiteral(resourceName: "sortUp")
                 cell.lblDowntimeDuration.textColor = UIColor.init(netHex: 0x51C747)
             }
-
+            
         }
         else{
             cell.lblDowntimeDuration.isHidden = true
@@ -513,20 +520,29 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
         let isPlanned:NSNumber=data_array.value(forKey: "IsPlanned") as? NSNumber ?? 0
         let status:NSNumber=data_array.value(forKey: "RunningStatus") as? NSNumber ?? 0
         
-    
+        
         if let actionof = Global.machine_status(rawValue: Int(status))
         {
-            //            cell.machine_statuslbl.text =  actionof.stringvalue
-            //          statuscolor = actionof.color
             
             if status == 0 { //Not Running
                 if isPlanned == 0 && !isCommunicating {
                     
-                    statuscolor = UIColor.init(netHex: 0xf05254)
+                    var changeColour = data_array.value(forKey: "ChangeOverClr") as? String
+                    
+                    if changeColour == "" {
+                        statuscolor = UIColor.init(netHex: 0xf05254)
+                    }
+                    else{
+                        if let changeFinalColor = changeColour{
+                            statuscolor = UIColor.init(netHex_String: changeFinalColor)
+                        }
+                        
+                    }
+                    
                     cell.machine_statuslbl.text =  "STOPPED" //red
                     if  let descriptionId:Int=data_array.value(forKey: "DescriptionID") as? Int {
                         if descriptionId > 3 && descriptionId != 10{
-                        
+                            
                             if  let description:String = data_array.value(forKey: "Description") as? String {
                                 cell.machine_statuslbl.text = description.uppercased()
                                 
@@ -535,41 +551,118 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
                     }
                 } else if isPlanned == 2 && !isCommunicating {
                     
-                    statuscolor = UIColor.init(netHex: 0xA9A9A9) //gray
+                    var changeColour = data_array.value(forKey: "ChangeOverClr") as? String
+                    print(changeColour)
+                    if changeColour == ""{
+                        statuscolor = UIColor.init(netHex: 0xA9A9A9) //gray
+                    }
+                    else{
+                        if let changeFinalColor = changeColour{
+                            statuscolor = UIColor.init(netHex_String: changeFinalColor)
+                        }
+                        
+                    }
+                    
+                    
+                    
                     cell.machine_statuslbl.text = "PLANNED SHUTDOWN"
                     if  let descriptionId:Int=data_array.value(forKey: "DescriptionID") as? Int {
-                            if (descriptionId >= 1  && descriptionId <= 3) || descriptionId == 10 {
-                        
-                                if  let description:String = data_array.value(forKey: "Description") as? String {
-                                    cell.machine_statuslbl.text = description.uppercased()
-                                }
+                        if (descriptionId >= 1  && descriptionId <= 3) || descriptionId == 10 {
+                            
+                            if  let description:String = data_array.value(forKey: "Description") as? String {
+                                cell.machine_statuslbl.text = description.uppercased()
                             }
                         }
+                    }
                 } else {
                     if isCommunicating {
+                        
+                        var changeColour = data_array.value(forKey: "ChangeOverClr") as? String
+                        
+                        if changeColour == ""{
+                            
+                            statuscolor = UIColor.init(netHex: 0x00b9f2)
+                            print(statuscolor)
+                        }
+                        else{
+                            
+                            if let changeFinalColor = changeColour{
+                                
+                                statuscolor = UIColor.init(netHex_String: changeFinalColor)
+                                print(statuscolor)
+                            }
+                            
+                        }
+                        
                         cell.machine_statuslbl.text =  "COMM ERROR" //blue
-                        statuscolor = UIColor.init(netHex: 0x00b9f2)
+                        
                     }
                 }
                 
             } else { //Running
                 if isCommunicating {
-                    cell.machine_statuslbl.text =  "COMM ERROR" //blue
-                    statuscolor = UIColor.init(netHex: 0x00b9f2)
+                    cell.machine_statuslbl.text =  "COMM ERROR"
+                    //blue
+                    var changeColour = data_array.value(forKey: "ChangeOverClr") as? String
+                    
+                    if changeColour == "" {
+                        statuscolor = UIColor.init(netHex: 0x188DCA)//00b9f2
+                    }
+                    else{
+                        if let changeFinalColor = changeColour{
+                            statuscolor = UIColor.init(netHex_String: changeFinalColor)
+                            
+                        }
+                        
+                    }
+                    
+                    
+                    
                 } else if Alarmstatus == 1 {
                     cell.machine_statuslbl.text =  "ALARM" //yellow
-                    statuscolor = UIColor.init(netHex: 0xfaa61a)
+                    var changeColour = data_array.value(forKey: "ChangeOverClr") as? String
+                    
+                    if changeColour == "" {
+                        statuscolor = UIColor.init(netHex: 0xfaa61a)
+                    }
+                    else{
+                        if let changeFinalColor = changeColour{
+                            statuscolor = UIColor.init(netHex_String: changeFinalColor)
+                        }
+                        
+                    }
+                    
                     if  let description:String = data_array.value(forKey: "Description") as? String {
                         cell.machine_statuslbl.text = description.uppercased()
                     }
                 } else {
                     cell.machine_statuslbl.text =  "RUNNING" //green
-                    statuscolor = UIColor.init(netHex: 0x36B54A)
+                    var changeColour = data_array.value(forKey: "ChangeOverClr") as? String
+                    
+                    if changeColour == "" {
+                        statuscolor = UIColor.init(netHex: 0x36B54A)
+                    }
+                    else{
+                        if let changeFinalColor = changeColour{
+                            statuscolor = UIColor.init(netHex_String: changeFinalColor)
+                        }
+                        
+                    }
+                    
+                    
                 }
             }
+            print(statuscolor)
+            if  let description:String = data_array.value(forKey: "Description") as? String {
+                print(description)
+                                          cell.machineStatuslblForNA.text = description.uppercased() //check
+              
+                                          
+                                      }
             
             cell.machineStatuslblForNA.text = cell.machine_statuslbl.text
             cell.machineStatuslblForNA.textColor = statuscolor
+            print(statuscolor)
             cell.lblCompletedQuantity.textColor = statuscolor
             cell.lblEfficiency.textColor = statuscolor
             cell.lblEfficiencyForNA.textColor = statuscolor
@@ -578,7 +671,7 @@ class dashboard2_ViewController: UIViewController,UICollectionViewDataSource, UI
             cell.cellTopView.backgroundColor = statuscolor
             cell.lblCenterSeparator.backgroundColor = statuscolor
             cell.lblCenterLine.backgroundColor = statuscolor
-            cell.layer.borderColor = statuscolor.cgColor
+                cell.layer.borderColor = statuscolor.cgColor
             cell.layer.borderWidth = 1.0
             
             cell.layer.masksToBounds = true

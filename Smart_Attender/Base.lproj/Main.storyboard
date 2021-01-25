@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LMg-5S-4pj">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LMg-5S-4pj">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -159,7 +157,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="Wa4-jz-2Lj"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -256,7 +253,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LMg-5S-4pj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PS8-Sr-JPY">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="IBMPlexSerif-Bold" family="IBM Plex Serif" pointSize="20"/>
@@ -284,22 +281,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCf-xK-PBn">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <subviews>
                                     <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VhT-lv-ffG">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                         <subviews>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjJ-Xm-sKe">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no history" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA8-QG-rdh">
-                                                        <rect key="frame" x="32" y="211.5" width="256" height="37"/>
+                                                        <rect key="frame" x="32" y="209.5" width="256" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djf-cE-XHF">
-                                                        <rect key="frame" x="141" y="254.5" width="38" height="38.5"/>
+                                                        <rect key="frame" x="141" y="251.5" width="38" height="38.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Djf-cE-XHF" secondAttribute="height" multiplier="1:1" id="bkV-0N-gxi"/>
                                                         </constraints>
@@ -350,7 +347,7 @@
                                                 </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qpd-Kd-GhK">
-                                                <rect key="frame" x="0.0" y="10" width="320" height="448"/>
+                                                <rect key="frame" x="0.0" y="10" width="320" height="443"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="OWV-FG-NgS" customClass="custom_layout" customModule="SA_ADMIN" customModuleProvider="target">
                                                     <size key="itemSize" width="180" height="186"/>
@@ -494,7 +491,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N95-Jr-anx">
-                                                                    <rect key="frame" x="6" y="94.5" width="31" height="15.5"/>
+                                                                    <rect key="frame" x="7.5" y="96" width="28" height="13"/>
                                                                     <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="11"/>
                                                                     <color key="textColor" red="0.39534562829999997" green="0.74137651920000003" blue="0.36246460679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -533,8 +530,8 @@
                                                                                 <fontDescription key="fontDescription" name="GothamMedium" family="Gotham Medium" pointSize="15.5"/>
                                                                             </variation>
                                                                         </label>
-                                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUNNING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPg-dt-UB1">
-                                                                            <rect key="frame" x="67" y="6.5" width="46" height="13"/>
+                                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPg-dt-UB1">
+                                                                            <rect key="frame" x="90" y="13" width="0.0" height="0.0"/>
                                                                             <fontDescription key="fontDescription" name="IBMPlexSans-Medium" family="IBM Plex Sans" pointSize="10"/>
                                                                             <color key="textColor" red="0.39545071129999998" green="0.76311743259999998" blue="0.50210016970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -746,7 +743,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="omo-dn-r2u">
-                                <rect key="frame" x="0.0" y="40" width="320" height="528"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.20404285189999999" green="0.71288454530000001" blue="0.92159330839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -819,7 +816,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yBu-sd-o30" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="neP-0I-We9">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="IBMPlexSerif-Bold" family="IBM Plex Serif" pointSize="23"/>
@@ -851,7 +848,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hA-kZ-xAB">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTy-g3-6Pd">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1024"/>
@@ -1080,7 +1077,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3s-a0-R7C">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDU-1X-d15" userLabel="ScrollContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="748"/>
@@ -1099,7 +1096,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Ro6-tb-7aN"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <variation key="default">
@@ -1117,9 +1113,8 @@
                                                     <outlet property="delegate" destination="9L9-Qo-mjp" id="BrQ-Qv-kcL"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cavity" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLG-Ei-Ol5">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cavity" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLG-Ei-Ol5">
                                                 <rect key="frame" x="20" y="121.5" width="280" height="43.5"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -1129,9 +1124,8 @@
                                                     <outlet property="delegate" destination="9L9-Qo-mjp" id="hf2-zu-KHt"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cycle Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZV-4t-kWN">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cycle Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZV-4t-kWN">
                                                 <rect key="frame" x="20" y="185" width="280" height="43.5"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -1143,7 +1137,6 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Accumulated Scrap" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PSA-o4-CBk">
                                                 <rect key="frame" x="20" y="248.5" width="280" height="43.5"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -1155,7 +1148,6 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Scrap" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qjl-SR-5GV">
                                                 <rect key="frame" x="20" y="312" width="280" height="43.5"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -1167,7 +1159,6 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantity" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-lR-7E6">
                                                 <rect key="frame" x="20" y="375.5" width="280" height="43"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -1191,6 +1182,9 @@
                                                     <action selector="updateAction:" destination="9L9-Qo-mjp" eventType="touchUpInside" id="1sa-o7-gMr"/>
                                                 </connections>
                                             </button>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ksG-Kp-LP9">
+                                                <rect key="frame" x="35" y="453.5" width="51" height="33.5"/>
+                                            </switch>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kJF-QE-w5b">
                                                 <rect key="frame" x="20" y="102" width="280" height="418"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1199,17 +1193,17 @@
                                                         <rect key="frame" x="0.0" y="28" width="280" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="zS3-7N-guN" id="W1Z-4w-ZoQ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSK-Hb-o2R">
-                                                                    <rect key="frame" x="119" y="11.5" width="42" height="20.5"/>
+                                                                    <rect key="frame" x="119" y="12" width="42" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWc-ME-hkR">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <connections>
@@ -1258,6 +1252,7 @@
                                             <constraint firstItem="3Q1-om-VJL" firstAttribute="top" secondItem="zcY-jX-eIh" secondAttribute="bottom" constant="20" id="8rf-Ku-zv1"/>
                                             <constraint firstItem="PSA-o4-CBk" firstAttribute="width" secondItem="TZV-4t-kWN" secondAttribute="width" id="93I-U9-2lb"/>
                                             <constraint firstItem="3Q1-om-VJL" firstAttribute="height" secondItem="bDU-1X-d15" secondAttribute="height" multiplier="33:414" id="A5W-cz-5lg"/>
+                                            <constraint firstItem="ksG-Kp-LP9" firstAttribute="centerY" secondItem="Oo4-Sp-hY1" secondAttribute="centerY" id="BAq-FI-U2S"/>
                                             <constraint firstAttribute="height" constant="748" id="DRS-vy-Ytv"/>
                                             <constraint firstItem="gTV-lR-7E6" firstAttribute="centerX" secondItem="TZV-4t-kWN" secondAttribute="centerX" id="Gq7-bH-LbS"/>
                                             <constraint firstItem="TZV-4t-kWN" firstAttribute="height" secondItem="aLG-Ei-Ol5" secondAttribute="height" id="Hd4-Do-cfv"/>
@@ -1282,7 +1277,9 @@
                                             <constraint firstItem="aLG-Ei-Ol5" firstAttribute="centerX" secondItem="3Q1-om-VJL" secondAttribute="centerX" id="eUt-sK-GMP"/>
                                             <constraint firstItem="qjl-SR-5GV" firstAttribute="width" secondItem="TZV-4t-kWN" secondAttribute="width" id="exu-N8-fsd"/>
                                             <constraint firstAttribute="trailing" secondItem="dpw-59-4rX" secondAttribute="trailing" id="f55-WI-vjB"/>
+                                            <constraint firstItem="ksG-Kp-LP9" firstAttribute="top" secondItem="Oo4-Sp-hY1" secondAttribute="top" constant="5" id="fYa-h8-Z38"/>
                                             <constraint firstItem="qjl-SR-5GV" firstAttribute="top" secondItem="PSA-o4-CBk" secondAttribute="bottom" constant="20" id="fsr-Rg-QG6"/>
+                                            <constraint firstItem="Oo4-Sp-hY1" firstAttribute="leading" secondItem="ksG-Kp-LP9" secondAttribute="trailing" constant="20" id="lAV-0P-nms"/>
                                             <constraint firstItem="Oo4-Sp-hY1" firstAttribute="top" secondItem="gTV-lR-7E6" secondAttribute="bottom" constant="30" id="lzM-tR-Z6w"/>
                                             <constraint firstItem="PSA-o4-CBk" firstAttribute="height" secondItem="TZV-4t-kWN" secondAttribute="height" id="qBn-NJ-cUx"/>
                                             <constraint firstItem="Oo4-Sp-hY1" firstAttribute="height" secondItem="gTV-lR-7E6" secondAttribute="height" id="s3F-EU-HIy"/>
@@ -1337,6 +1334,7 @@
                         <outlet property="btnUpdate" destination="Oo4-Sp-hY1" id="tIv-ad-qpQ"/>
                         <outlet property="lblDeviceName" destination="zcY-jX-eIh" id="qkH-uU-Csx"/>
                         <outlet property="scrollParent" destination="T3s-a0-R7C" id="Yhb-tF-6Az"/>
+                        <outlet property="switchBtn" destination="ksG-Kp-LP9" id="FFe-Ju-rwe"/>
                         <outlet property="tableSearch" destination="kJF-QE-w5b" id="0vs-hS-d5L"/>
                         <outlet property="txtAccScrap" destination="PSA-o4-CBk" id="CUH-Oq-umC"/>
                         <outlet property="txtCavity" destination="aLG-Ei-Ol5" id="Qys-HO-i4Y"/>
@@ -1363,21 +1361,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zZh-JJ-Z6s">
-                                <rect key="frame" x="0.0" y="69" width="320" height="499"/>
+                                <rect key="frame" x="0.0" y="49" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell2" id="5Ha-TO-btr">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="5Ha-TO-btr" id="GAn-XF-p5S">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5N-Mg-Klm" userLabel="HeaderView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part No" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WC-lx-OlE">
-                                                            <rect key="frame" x="2.5" y="0.0" width="60.5" height="43.5"/>
+                                                            <rect key="frame" x="2.5" y="0.0" width="60.5" height="44"/>
                                                             <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1387,7 +1385,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QA-yS-vHw">
-                                                            <rect key="frame" x="65.5" y="0.0" width="75.5" height="43.5"/>
+                                                            <rect key="frame" x="65.5" y="0.0" width="75.5" height="44"/>
                                                             <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1397,7 +1395,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cavity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDC-Bh-iVj">
-                                                            <rect key="frame" x="143.5" y="0.0" width="29" height="43.5"/>
+                                                            <rect key="frame" x="143.5" y="0.0" width="29" height="44"/>
                                                             <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1407,7 +1405,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cycle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiE-SE-gxr">
-                                                            <rect key="frame" x="175" y="0.0" width="26" height="43.5"/>
+                                                            <rect key="frame" x="175" y="0.0" width="26" height="44"/>
                                                             <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1417,7 +1415,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scrap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNS-Ac-Cpe">
-                                                            <rect key="frame" x="203.5" y="0.0" width="27" height="43.5"/>
+                                                            <rect key="frame" x="203.5" y="0.0" width="27" height="44"/>
                                                             <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1427,7 +1425,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmR-Pg-3nO">
-                                                            <rect key="frame" x="233" y="0.0" width="49.5" height="43.5"/>
+                                                            <rect key="frame" x="233" y="0.0" width="49.5" height="44"/>
                                                             <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1437,7 +1435,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Req" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMU-q6-XBF">
-                                                            <rect key="frame" x="285" y="0.0" width="20" height="43.5"/>
+                                                            <rect key="frame" x="285" y="0.0" width="20" height="44"/>
                                                             <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1447,7 +1445,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcj-KZ-RKa">
-                                                            <rect key="frame" x="305" y="0.0" width="15" height="43.5"/>
+                                                            <rect key="frame" x="305" y="0.0" width="15" height="44"/>
                                                             <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1508,11 +1506,11 @@
                                         <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZKT-Kd-xXH" id="jfc-O7-6EB">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M-682772332COLH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAj-X1-i7B">
-                                                    <rect key="frame" x="2.5" y="0.0" width="60.5" height="43.5"/>
+                                                    <rect key="frame" x="2.5" y="0.0" width="60.5" height="44"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                     <nil key="highlightedColor"/>
@@ -1521,7 +1519,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HURCO VMX42SRTi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9F-pF-lu0">
-                                                    <rect key="frame" x="65.5" y="0.0" width="75.5" height="43.5"/>
+                                                    <rect key="frame" x="65.5" y="0.0" width="75.5" height="44"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                     <nil key="highlightedColor"/>
@@ -1530,7 +1528,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zr-7I-3D1">
-                                                    <rect key="frame" x="143.5" y="0.0" width="29" height="43.5"/>
+                                                    <rect key="frame" x="143.5" y="0.0" width="29" height="44"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                     <nil key="highlightedColor"/>
@@ -1539,7 +1537,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbC-gM-j7h">
-                                                    <rect key="frame" x="175" y="0.0" width="26" height="43.5"/>
+                                                    <rect key="frame" x="175" y="0.0" width="26" height="44"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                     <nil key="highlightedColor"/>
@@ -1548,7 +1546,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfh-Yu-hqN" userLabel="lblScarp">
-                                                    <rect key="frame" x="203.5" y="0.0" width="27" height="43.5"/>
+                                                    <rect key="frame" x="203.5" y="0.0" width="27" height="44"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                     <nil key="highlightedColor"/>
@@ -1557,7 +1555,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000-00-00 00:00:00" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxe-TC-H7z">
-                                                    <rect key="frame" x="233" y="0.0" width="49.5" height="43.5"/>
+                                                    <rect key="frame" x="233" y="0.0" width="49.5" height="44"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                     <nil key="highlightedColor"/>
@@ -1566,7 +1564,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqd-b2-Tg3">
-                                                    <rect key="frame" x="285" y="0.0" width="20" height="43.5"/>
+                                                    <rect key="frame" x="285" y="0.0" width="20" height="44"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                                     <nil key="highlightedColor"/>
@@ -1575,10 +1573,10 @@
                                                     </variation>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiT-T4-nPd" userLabel="ViewBtnAction">
-                                                    <rect key="frame" x="305" y="6.5" width="15" height="30.5"/>
+                                                    <rect key="frame" x="305" y="6.5" width="15" height="31"/>
                                                     <subviews>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cm1-38-NfI">
-                                                            <rect key="frame" x="4" y="11.5" width="7.5" height="7.5"/>
+                                                            <rect key="frame" x="4" y="12" width="7.5" height="7.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Cm1-38-NfI" secondAttribute="height" id="w9U-yt-Vkp"/>
                                                             </constraints>
@@ -1601,10 +1599,10 @@
                                                     </constraints>
                                                 </view>
                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4z-bM-xxf">
-                                                    <rect key="frame" x="180" y="5.5" width="120" height="32.5"/>
+                                                    <rect key="frame" x="180" y="5.5" width="120" height="33"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyU-yj-fWm">
-                                                            <rect key="frame" x="4" y="6.5" width="45" height="19.5"/>
+                                                            <rect key="frame" x="4" y="6.5" width="45" height="20"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="8"/>
                                                             <state key="normal" title="Assign/Edit">
@@ -1615,7 +1613,7 @@
                                                             </variation>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPt-VM-Pfo">
-                                                            <rect key="frame" x="50" y="7.5" width="1" height="17.5"/>
+                                                            <rect key="frame" x="50" y="7.5" width="1" height="18"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="1" id="8Af-X9-O2C"/>
@@ -1625,7 +1623,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HA0-77-IDC">
-                                                            <rect key="frame" x="54" y="6.5" width="33" height="19.5"/>
+                                                            <rect key="frame" x="54" y="6.5" width="33" height="20"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="8"/>
                                                             <state key="normal" title="Remove">
@@ -1636,14 +1634,14 @@
                                                             </variation>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPP-pd-zJb">
-                                                            <rect key="frame" x="88" y="7.5" width="1" height="17.5"/>
+                                                            <rect key="frame" x="88" y="7.5" width="1" height="18"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsM-3E-IYX">
-                                                            <rect key="frame" x="92" y="6.5" width="27" height="19.5"/>
+                                                            <rect key="frame" x="92" y="6.5" width="27" height="20"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="8"/>
                                                             <state key="normal" title="Reset">
@@ -1788,7 +1786,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PGc-eO-wsn">
-                                <rect key="frame" x="0.0" y="74" width="320" height="494"/>
+                                <rect key="frame" x="0.0" y="54" width="320" height="514"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tj8-rs-UyI" customClass="custom_layout" customModule="SA_ADMIN" customModuleProvider="target">
                                     <size key="itemSize" width="180" height="186"/>
@@ -1930,7 +1928,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhe-5f-FjQ">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ch-IY-7YV">
                                         <rect key="frame" x="0.0" y="25" width="320" height="80"/>
@@ -1959,7 +1957,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="iG4-qt-InN"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                         <variation key="default">
@@ -1979,7 +1976,6 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S14-vE-Oxt">
                                         <rect key="frame" x="25" y="183" width="270" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -1991,7 +1987,6 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Role" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4tf-MG-aHU">
                                         <rect key="frame" x="25" y="236" width="270" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -2003,7 +1998,6 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PN4-wk-U8Y">
                                         <rect key="frame" x="25" y="289" width="270" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -2015,7 +2009,6 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Urn-bc-W0q">
                                         <rect key="frame" x="25" y="342" width="270" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -2040,7 +2033,6 @@
                                     </switch>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beN-ap-m6k">
                                         <rect key="frame" x="25" y="456" width="270" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -2065,7 +2057,6 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vacation From" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hhn-gL-u33">
                                         <rect key="frame" x="25" y="570" width="129.5" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -2078,7 +2069,6 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vacation To Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hii-IC-jPr">
                                         <rect key="frame" x="165.5" y="570" width="129.5" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -2267,7 +2257,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="unC-va-0C1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eux-Nx-22A">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="0.35686274509999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -2296,7 +2286,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnT-OK-ml5">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="-20" width="320" height="588"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.61603213030000004" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -2461,7 +2451,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2li-7E-dVj" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="42" width="320" height="51.5"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="51.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hourly Incident Report" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tba-Ey-dBx">
                                         <rect key="frame" x="51.5" y="19" width="128" height="14.5"/>
@@ -2526,14 +2516,14 @@
                                 </constraints>
                             </view>
                             <imageView hidden="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_withouttext" translatesAutoresizingMaskIntoConstraints="NO" id="YMM-7x-pyI">
-                                <rect key="frame" x="18" y="22.5" width="31.5" height="90.5"/>
+                                <rect key="frame" x="18" y="2.5" width="31.5" height="90.5"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vne-er-oWF" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="57" width="304" height="363.5"/>
+                                <rect key="frame" x="16" y="37" width="304" height="363.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2is-QK-rqu">
-                                <rect key="frame" x="69" y="424.5" width="182" height="52"/>
+                                <rect key="frame" x="69" y="404.5" width="182" height="52"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 2017-03-27 04:00 To 2017-03-27 02:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZx-Dy-mXW">
                                         <rect key="frame" x="0.0" y="6" width="182" height="19"/>
@@ -2567,7 +2557,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAa-ht-99C">
-                                <rect key="frame" x="99" y="403.5" width="122" height="17"/>
+                                <rect key="frame" x="99" y="383.5" width="122" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2587,7 +2577,7 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFF-8l-pu3">
-                                <rect key="frame" x="0.0" y="25" width="320" height="27"/>
+                                <rect key="frame" x="0.0" y="5" width="320" height="27"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWu-hP-Pke" userLabel="lblBG">
                                         <rect key="frame" x="-60.5" y="0.0" width="127" height="27"/>
@@ -2963,7 +2953,7 @@
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23.5"/>
                                                         </variation>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCARP QTY :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lde-FN-PrP">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCRAP QTY :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lde-FN-PrP">
                                                         <rect key="frame" x="40.5" y="62" width="82" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                         <color key="textColor" red="0.30196078430000001" green="0.72114986179999996" blue="0.38034296039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3484,7 +3474,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iff-Ny-pKt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gq7-7s-RN6">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3708,7 +3698,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q65-q4-3Sc">
-                                <rect key="frame" x="0.0" y="42" width="320" height="51.5"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="51.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Low Report" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUh-FE-xB4">
                                         <rect key="frame" x="51.5" y="19" width="94" height="14.5"/>
@@ -3773,10 +3763,10 @@
                                 </constraints>
                             </view>
                             <imageView hidden="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_withouttext" translatesAutoresizingMaskIntoConstraints="NO" id="Mue-UF-TeD">
-                                <rect key="frame" x="18" y="22.5" width="31.5" height="90.5"/>
+                                <rect key="frame" x="18" y="2.5" width="31.5" height="90.5"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MS-fb-jaV" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -3822,7 +3812,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9d-Ks-zHd" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="42" width="320" height="51.5"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="51.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall Efficiency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7S-vq-qTY">
                                         <rect key="frame" x="51.5" y="19" width="99" height="14.5"/>
@@ -3881,14 +3871,14 @@
                                 </constraints>
                             </view>
                             <imageView hidden="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_withouttext" translatesAutoresizingMaskIntoConstraints="NO" id="6ky-FE-bcU">
-                                <rect key="frame" x="18" y="22.5" width="31.5" height="90.5"/>
+                                <rect key="frame" x="18" y="2.5" width="31.5" height="90.5"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSB-Vk-DUK" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="10" y="20" width="310" height="548"/>
+                                <rect key="frame" x="10" y="0.0" width="310" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FD-s8-gEu">
-                                <rect key="frame" x="-20" y="285.5" width="74" height="17"/>
+                                <rect key="frame" x="-20" y="275.5" width="74" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -3946,7 +3936,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bv9-4s-Tcz" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="42" width="320" height="51.5"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="51.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETC VS Actual ETC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEp-lX-J5E">
                                         <rect key="frame" x="51.5" y="19" width="107.5" height="14.5"/>
@@ -4008,10 +3998,10 @@
                                 </constraints>
                             </view>
                             <imageView hidden="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_withouttext" translatesAutoresizingMaskIntoConstraints="NO" id="tBJ-52-rb5">
-                                <rect key="frame" x="18" y="22.5" width="31.5" height="90.5"/>
+                                <rect key="frame" x="18" y="2.5" width="31.5" height="90.5"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfR-S6-jYV" customClass="HorizontalBarChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="20" width="298" height="543"/>
+                                <rect key="frame" x="16" y="0.0" width="298" height="563"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -4146,11 +4136,11 @@
                                                 <rect key="frame" x="0.0" y="28" width="304" height="40"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z0Y-ef-FiQ" id="cfG-ol-466">
-                                                    <rect key="frame" x="0.0" y="0.0" width="304" height="39.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="304" height="40"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxy-FU-jH4">
-                                                            <rect key="frame" x="2" y="0.0" width="112" height="39.5"/>
+                                                            <rect key="frame" x="2" y="0.0" width="112" height="40"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -4159,7 +4149,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIL-Ot-oHS">
-                                                            <rect key="frame" x="118" y="0.0" width="114" height="39.5"/>
+                                                            <rect key="frame" x="118" y="0.0" width="114" height="40"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -4168,8 +4158,7 @@
                                                             </variation>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="K41-7o-Pc4">
-                                                            <rect key="frame" x="236" y="4" width="64.5" height="31.5"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="236" y="4" width="64.5" height="32"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
@@ -4364,7 +4353,7 @@
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScarpCell" rowHeight="60" id="hmj-Um-qEU" customClass="ScarpCell" customModule="SA_ADMIN" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1" width="256" height="60"/>
+                                                <rect key="frame" x="0.0" y="28" width="256" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hmj-Um-qEU" id="fmh-7o-bqs">
                                                     <rect key="frame" x="0.0" y="0.0" width="256" height="60"/>
@@ -4663,7 +4652,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pgt-iT-rUz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iT1-ek-HgN">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4681,7 +4670,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dl0-Yq-vEU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sgs-Kc-F3y">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4706,7 +4695,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxo-on-tAA">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IK1-FQ-L8o">
                                         <rect key="frame" x="0.0" y="25" width="320" height="80"/>
@@ -4735,7 +4724,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="miR-RF-BFZ"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                         <variation key="default">
@@ -4755,7 +4743,6 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9lp-Mb-bEd">
                                         <rect key="frame" x="25" y="183" width="270" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -4767,7 +4754,6 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Role" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RIk-vT-X7u">
                                         <rect key="frame" x="25" y="236" width="270" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -4779,7 +4765,6 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xRz-sy-nEE">
                                         <rect key="frame" x="25" y="289" width="270" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -4804,7 +4789,6 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S1n-R5-S2J">
                                         <rect key="frame" x="25" y="403" width="270" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -4829,7 +4813,6 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vacation From Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ijq-5v-C5d">
                                         <rect key="frame" x="25" y="517" width="129.5" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -4842,7 +4825,6 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vacation To Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7WD-Pd-c0v">
                                         <rect key="frame" x="165.5" y="517" width="129.5" height="33"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -5032,7 +5014,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is Planned Shutdown for all Machines?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NK-3e-Vef">
-                                <rect key="frame" x="26" y="88.5" width="217" height="14"/>
+                                <rect key="frame" x="26" y="68.5" width="217" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -5041,7 +5023,7 @@
                                 </variation>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uTg-Ss-dHi">
-                                <rect key="frame" x="251" y="80" width="51" height="31"/>
+                                <rect key="frame" x="251" y="60" width="51" height="31"/>
                                 <color key="onTintColor" red="0.3356200755" green="0.66609573359999996" blue="0.88356596229999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="isAllMachineShutsown:" destination="p0L-c1-Wdj" eventType="valueChanged" id="SSp-iK-g3V"/>
@@ -5057,7 +5039,7 @@
                                 </variation>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oJm-Tg-1s3">
-                                <rect key="frame" x="0.0" y="127" width="320" height="397"/>
+                                <rect key="frame" x="0.0" y="107" width="320" height="412"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="YYu-ZF-hhD">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
@@ -5115,11 +5097,11 @@
                                         <rect key="frame" x="0.0" y="69" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="Noe-Qn-6kq" id="XL4-hS-vn7">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6Y-ZG-X2a">
-                                                    <rect key="frame" x="0.0" y="0.0" width="102.5" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="102.5" height="44"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -5129,7 +5111,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machine 002" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="ppA-ZX-Hlo">
-                                                    <rect key="frame" x="102.5" y="0.0" width="110" height="43.5"/>
+                                                    <rect key="frame" x="102.5" y="0.0" width="110" height="44"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -5139,7 +5121,7 @@
                                                     </variation>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtG-gO-stK">
-                                                    <rect key="frame" x="212.5" y="5.5" width="102.5" height="32.5"/>
+                                                    <rect key="frame" x="212.5" y="5.5" width="102.5" height="33"/>
                                                     <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <state key="normal" title="Downtime Reason">
@@ -5547,7 +5529,6 @@ These following devices cannot be shutdown due to running status</string>
                                                         </button>
                                                         <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gx-oJ-nfC">
                                                             <rect key="frame" x="57" y="23" width="179" height="42"/>
-                                                            <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                             <connections>
@@ -5668,7 +5649,7 @@ These following devices cannot be shutdown due to running status</string>
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Hp-Ff-eeZ" userLabel="ScrollContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="870" height="504"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="870" height="524"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7p-d9-RpK" userLabel="SpacerView">
                                                 <rect key="frame" x="0.0" y="0.0" width="870" height="2"/>
@@ -5678,18 +5659,17 @@ These following devices cannot be shutdown due to running status</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lou-zB-Cy8" userLabel="TopView">
-                                                <rect key="frame" x="0.0" y="2" width="870" height="35.5"/>
+                                                <rect key="frame" x="0.0" y="2" width="870" height="37"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8r-3T-vSn" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="7" height="35.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="7" height="37"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--Select--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F6D-vV-hsl">
-                                                        <rect key="frame" x="7" y="3.5" width="207" height="28.5"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="7" y="3.5" width="207" height="29.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
@@ -5700,15 +5680,14 @@ These following devices cannot be shutdown due to running status</string>
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rai-b1-Z9Z" userLabel="Spacer">
-                                                        <rect key="frame" x="214" y="0.0" width="7" height="35.5"/>
+                                                        <rect key="frame" x="214" y="0.0" width="7" height="37"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZg-1g-a3f">
-                                                        <rect key="frame" x="221" y="3.5" width="207" height="28.5"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="221" y="3.5" width="207" height="29.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
@@ -5720,15 +5699,14 @@ These following devices cannot be shutdown due to running status</string>
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c72-Gb-nVX" userLabel="Spacer">
-                                                        <rect key="frame" x="428" y="0.0" width="7" height="35.5"/>
+                                                        <rect key="frame" x="428" y="0.0" width="7" height="37"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4H3-Aj-cra">
-                                                        <rect key="frame" x="440" y="3.5" width="207.5" height="28.5"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="440" y="3.5" width="207.5" height="29.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
@@ -5740,11 +5718,11 @@ These following devices cannot be shutdown due to running status</string>
                                                         </connections>
                                                     </textField>
                                                     <view hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5R-Hh-s40" userLabel="viewSearchBG">
-                                                        <rect key="frame" x="667.5" y="5" width="145" height="25.5"/>
+                                                        <rect key="frame" x="667.5" y="5" width="145" height="26.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lI-pN-a1g">
-                                                        <rect key="frame" x="667.5" y="5" width="145" height="25.5"/>
+                                                        <rect key="frame" x="667.5" y="5" width="145" height="26.5"/>
                                                         <color key="backgroundColor" red="0.90690434644670048" green="0.90690434644670048" blue="0.90690434644670048" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <state key="normal" title="Search">
@@ -5814,25 +5792,25 @@ These following devices cannot be shutdown due to running status</string>
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3L-Xb-bly" userLabel="SpacerView">
-                                                <rect key="frame" x="0.0" y="37.5" width="870" height="1"/>
+                                                <rect key="frame" x="0.0" y="39" width="870" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="OI0-JD-AzY"/>
                                                 </constraints>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="URO-Sx-clc">
-                                                <rect key="frame" x="0.0" y="38.5" width="870" height="465.5"/>
+                                                <rect key="frame" x="0.0" y="40" width="870" height="484"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuickReportHeaderCell" id="2WG-DJ-FpK" customClass="QuickReportHeaderCell" customModule="SA_ADMIN" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="870" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="2WG-DJ-FpK" id="CRK-bh-BYQ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="870" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="870" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="iZP-5f-e9D">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="43.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="Machine Name">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5842,7 +5820,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7Z-ps-Ykc">
-                                                                    <rect key="frame" x="71" y="0.0" width="70.5" height="43.5"/>
+                                                                    <rect key="frame" x="71" y="0.0" width="70.5" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="Part No.">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5852,7 +5830,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zt9-4V-Hb1">
-                                                                    <rect key="frame" x="141.5" y="0.0" width="79" height="43.5"/>
+                                                                    <rect key="frame" x="141.5" y="0.0" width="79" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="Description">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5862,7 +5840,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Etk-hm-Qi4">
-                                                                    <rect key="frame" x="220.5" y="0.0" width="71" height="43.5"/>
+                                                                    <rect key="frame" x="220.5" y="0.0" width="71" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="Production Hrs">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5872,7 +5850,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="d8m-YL-F5w">
-                                                                    <rect key="frame" x="291.5" y="0.0" width="60.5" height="43.5"/>
+                                                                    <rect key="frame" x="291.5" y="0.0" width="60.5" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="    Parts Produced">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5882,7 +5860,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LS2-AB-w52">
-                                                                    <rect key="frame" x="354" y="0.0" width="50.5" height="43.5"/>
+                                                                    <rect key="frame" x="354" y="0.0" width="50.5" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title=" AVG  Cycle">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5892,7 +5870,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzJ-h4-ISm">
-                                                                    <rect key="frame" x="404.5" y="0.0" width="40.5" height="43.5"/>
+                                                                    <rect key="frame" x="404.5" y="0.0" width="40.5" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="OEE">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5902,7 +5880,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cl-7h-pif">
-                                                                    <rect key="frame" x="445" y="0.0" width="61" height="43.5"/>
+                                                                    <rect key="frame" x="445" y="0.0" width="61" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="Incidents">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5912,7 +5890,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkJ-RR-ciE" userLabel="BtnScarp">
-                                                                    <rect key="frame" x="506" y="0.0" width="70.5" height="43.5"/>
+                                                                    <rect key="frame" x="506" y="0.0" width="70.5" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="Scrap">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5922,7 +5900,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeH-bA-Tr9" userLabel="BtnTotalCost">
-                                                                    <rect key="frame" x="576.5" y="0.0" width="76" height="43.5"/>
+                                                                    <rect key="frame" x="576.5" y="0.0" width="76" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="Total Cost">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5932,7 +5910,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec1-F3-Jao" userLabel="BtnTotalValue">
-                                                                    <rect key="frame" x="652.5" y="0.0" width="76" height="43.5"/>
+                                                                    <rect key="frame" x="652.5" y="0.0" width="76" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="Total Value">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5942,7 +5920,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj9-Hu-S7I">
-                                                                    <rect key="frame" x="728.5" y="0.0" width="70.5" height="43.5"/>
+                                                                    <rect key="frame" x="728.5" y="0.0" width="70.5" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="Start Date">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5952,7 +5930,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cJ-tN-S6D">
-                                                                    <rect key="frame" x="799" y="0.0" width="71" height="43.5"/>
+                                                                    <rect key="frame" x="799" y="0.0" width="71" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="End Date">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -6036,11 +6014,11 @@ These following devices cannot be shutdown due to running status</string>
                                                         <rect key="frame" x="0.0" y="72" width="870" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="zfH-q5-7OS" id="2uX-8L-Sja">
-                                                            <rect key="frame" x="0.0" y="0.0" width="870" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="870" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrJ-cZ-1J0">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="43.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -6049,7 +6027,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1l-QF-h3z">
-                                                                    <rect key="frame" x="71" y="0.0" width="70.5" height="43.5"/>
+                                                                    <rect key="frame" x="71" y="0.0" width="70.5" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -6058,7 +6036,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPd-eu-MDa">
-                                                                    <rect key="frame" x="141.5" y="0.0" width="79" height="43.5"/>
+                                                                    <rect key="frame" x="141.5" y="0.0" width="79" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -6067,7 +6045,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DO-RP-9OQ">
-                                                                    <rect key="frame" x="220.5" y="0.0" width="71" height="43.5"/>
+                                                                    <rect key="frame" x="220.5" y="0.0" width="71" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -6076,7 +6054,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5h-KM-k7y">
-                                                                    <rect key="frame" x="296.5" y="0.0" width="60.5" height="43.5"/>
+                                                                    <rect key="frame" x="296.5" y="0.0" width="60.5" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -6085,7 +6063,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fan-uQ-Y74">
-                                                                    <rect key="frame" x="357" y="0.0" width="50.5" height="43.5"/>
+                                                                    <rect key="frame" x="357" y="0.0" width="50.5" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -6094,7 +6072,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ll-EC-7Sd">
-                                                                    <rect key="frame" x="407.5" y="0.0" width="40.5" height="43.5"/>
+                                                                    <rect key="frame" x="407.5" y="0.0" width="40.5" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -6103,7 +6081,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWA-SB-Ucw">
-                                                                    <rect key="frame" x="448" y="0.0" width="61" height="43.5"/>
+                                                                    <rect key="frame" x="448" y="0.0" width="61" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <state key="normal" title="0"/>
                                                                     <variation key="heightClass=regular-widthClass=regular">
@@ -6114,7 +6092,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts4-2w-qXn">
-                                                                    <rect key="frame" x="509" y="0.0" width="70.5" height="43.5"/>
+                                                                    <rect key="frame" x="509" y="0.0" width="70.5" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -6123,7 +6101,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbD-zf-rf5" userLabel="lblTotalCost">
-                                                                    <rect key="frame" x="579.5" y="0.0" width="76" height="43.5"/>
+                                                                    <rect key="frame" x="579.5" y="0.0" width="76" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -6132,7 +6110,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXL-dx-MNT" userLabel="lblTotalValue">
-                                                                    <rect key="frame" x="655.5" y="0.0" width="76" height="43.5"/>
+                                                                    <rect key="frame" x="655.5" y="0.0" width="76" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -6141,7 +6119,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTg-eM-uDx">
-                                                                    <rect key="frame" x="731.5" y="0.0" width="70.5" height="43.5"/>
+                                                                    <rect key="frame" x="731.5" y="0.0" width="70.5" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -6150,7 +6128,7 @@ These following devices cannot be shutdown due to running status</string>
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M37-Id-qTR">
-                                                                    <rect key="frame" x="802" y="0.0" width="71" height="43.5"/>
+                                                                    <rect key="frame" x="802" y="0.0" width="71" height="44"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -6471,11 +6449,11 @@ These following devices cannot be shutdown due to running status</string>
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="3ZJ-oC-6DE" id="ckI-67-djn">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIY-09-V8N">
-                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="44"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular">
@@ -6483,7 +6461,7 @@ These following devices cannot be shutdown due to running status</string>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part No." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khz-m8-pLP">
-                                                    <rect key="frame" x="55" y="0.0" width="80" height="43.5"/>
+                                                    <rect key="frame" x="55" y="0.0" width="80" height="44"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular">
@@ -6491,7 +6469,7 @@ These following devices cannot be shutdown due to running status</string>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cavity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAo-YH-6po">
-                                                    <rect key="frame" x="135" y="0.0" width="40" height="43.5"/>
+                                                    <rect key="frame" x="135" y="0.0" width="40" height="44"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular">
@@ -6499,7 +6477,7 @@ These following devices cannot be shutdown due to running status</string>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cycle Time" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQb-GX-S6R">
-                                                    <rect key="frame" x="175" y="0.0" width="35" height="43.5"/>
+                                                    <rect key="frame" x="175" y="0.0" width="35" height="44"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular">
@@ -6507,7 +6485,7 @@ These following devices cannot be shutdown due to running status</string>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rE-yT-QHO">
-                                                    <rect key="frame" x="210" y="0.0" width="85" height="43.5"/>
+                                                    <rect key="frame" x="210" y="0.0" width="84.5" height="44"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular">
@@ -6515,7 +6493,7 @@ These following devices cannot be shutdown due to running status</string>
                                                     </variation>
                                                 </label>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLh-sB-gWH">
-                                                    <rect key="frame" x="295" y="14" width="15" height="15.5"/>
+                                                    <rect key="frame" x="294.5" y="14.5" width="15.5" height="15"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="CLh-sB-gWH" secondAttribute="height" id="xwE-yg-qpa"/>
@@ -6603,7 +6581,7 @@ These following devices cannot be shutdown due to running status</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MtL-2h-s0A" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qOA-2o-IvH">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -6814,7 +6792,6 @@ These following devices cannot be shutdown due to running status</string>
                                                         </button>
                                                         <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ken-YP-q5T">
                                                             <rect key="frame" x="62.5" y="23" width="206" height="42"/>
-                                                            <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                             <connections>
@@ -6986,7 +6963,7 @@ These following devices cannot be shutdown due to running status</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="um6-ZU-zxa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pak-Vb-uNd">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -7004,7 +6981,7 @@ These following devices cannot be shutdown due to running status</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cTs-by-1MM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kHZ-2L-xaS">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -7029,7 +7006,7 @@ These following devices cannot be shutdown due to running status</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjg-sm-v19">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4b-3D-AIe" userLabel="ScrollContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
@@ -7039,7 +7016,6 @@ These following devices cannot be shutdown due to running status</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="KHc-pY-SnX"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 <variation key="default">
@@ -7059,7 +7035,6 @@ These following devices cannot be shutdown due to running status</string>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkY-xK-fyk">
                                                 <rect key="frame" x="20" y="80.5" width="280" height="41"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -7071,7 +7046,6 @@ These following devices cannot be shutdown due to running status</string>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cavity" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RM2-mT-Ntr">
                                                 <rect key="frame" x="20" y="141.5" width="280" height="40.5"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -7083,7 +7057,6 @@ These following devices cannot be shutdown due to running status</string>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cycle Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ln-WE-HhX">
                                                 <rect key="frame" x="20" y="202" width="280" height="40.5"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -7095,7 +7068,6 @@ These following devices cannot be shutdown due to running status</string>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Decription" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abi-pb-NU6">
                                                 <rect key="frame" x="20" y="262.5" width="280" height="41"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -7251,7 +7223,6 @@ These following devices cannot be shutdown due to running status</string>
                                                         <variation key="heightClass=regular-widthClass=regular" constant="75"/>
                                                     </constraint>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -7274,7 +7245,6 @@ These following devices cannot be shutdown due to running status</string>
                                             </textField>
                                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bDq-pu-LMC">
                                                 <rect key="frame" x="40" y="178" width="240" height="40"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -7429,7 +7399,6 @@ These following devices cannot be shutdown due to running status</string>
                                                         <variation key="heightClass=regular-widthClass=regular" constant="75"/>
                                                     </constraint>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -7457,7 +7426,6 @@ These following devices cannot be shutdown due to running status</string>
                                                         <variation key="heightClass=regular-widthClass=regular" constant="75"/>
                                                     </constraint>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -7480,7 +7448,6 @@ These following devices cannot be shutdown due to running status</string>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GiJ-5N-O0o">
                                                 <rect key="frame" x="40" y="170" width="240" height="40"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -7503,7 +7470,6 @@ These following devices cannot be shutdown due to running status</string>
                                             </textField>
                                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IP Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m2l-ya-WMA">
                                                 <rect key="frame" x="40" y="235" width="240" height="40"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -7633,7 +7599,7 @@ These following devices cannot be shutdown due to running status</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ymp-SG-7fQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cPL-3e-JvD">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -7658,13 +7624,13 @@ These following devices cannot be shutdown due to running status</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDq-lp-fj5">
-                                <rect key="frame" x="10" y="84" width="300" height="400"/>
+                                <rect key="frame" x="30" y="50" width="260" height="468"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fZ-rd-LQZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFx-VP-ybJ">
-                                                <rect key="frame" x="15" y="10" width="134" height="25"/>
+                                                <rect key="frame" x="15" y="10" width="114" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="dze-GE-9pE"/>
                                                 </constraints>
@@ -7673,7 +7639,7 @@ These following devices cannot be shutdown due to running status</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxo-K9-WLZ">
-                                                <rect key="frame" x="159" y="10" width="134" height="25"/>
+                                                <rect key="frame" x="139" y="10" width="114" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="CMc-iB-pVM"/>
                                                 </constraints>
@@ -7698,14 +7664,14 @@ These following devices cannot be shutdown due to running status</string>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fFV-3e-guP">
-                                        <rect key="frame" x="0.0" y="50" width="300" height="310"/>
+                                        <rect key="frame" x="0.0" y="50" width="260" height="378"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="90" id="Cr1-hv-mfH" customClass="CustomCell" customModule="SA_ADMIN" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="300" height="90"/>
+                                                <rect key="frame" x="0.0" y="28" width="260" height="90"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cr1-hv-mfH" id="Gq5-Pe-WPI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="90"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="90"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machine 027" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvE-2e-U7d">
@@ -7727,7 +7693,7 @@ These following devices cannot be shutdown due to running status</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aA-IH-rnb">
-                                                            <rect key="frame" x="230" y="16" width="60" height="30"/>
+                                                            <rect key="frame" x="190" y="16" width="60" height="30"/>
                                                             <color key="backgroundColor" red="0.2015776038" green="0.31073120240000002" blue="0.71293240790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="cqH-Gj-B0L"/>
@@ -7738,7 +7704,7 @@ These following devices cannot be shutdown due to running status</string>
                                                             </state>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(1319)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxP-5d-M5s">
-                                                            <rect key="frame" x="139.5" y="21" width="85.5" height="20"/>
+                                                            <rect key="frame" x="139.5" y="21" width="45.5" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="JKU-wX-NlC"/>
                                                             </constraints>
@@ -7785,10 +7751,10 @@ These following devices cannot be shutdown due to running status</string>
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMV-8T-VOt">
-                                        <rect key="frame" x="0.0" y="360" width="300" height="40"/>
+                                        <rect key="frame" x="0.0" y="428" width="260" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4q-6y-XrR">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
                                                 <color key="backgroundColor" red="0.8980392157" green="0.64705882349999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="17"/>
                                                 <state key="normal" title="See all">
@@ -7815,30 +7781,23 @@ These following devices cannot be shutdown due to running status</string>
                                     <constraint firstItem="fFV-3e-guP" firstAttribute="leading" secondItem="pDq-lp-fj5" secondAttribute="leading" id="7zs-eP-BQr"/>
                                     <constraint firstAttribute="height" constant="300" id="Cpp-jU-bGu"/>
                                     <constraint firstAttribute="trailing" secondItem="1fZ-rd-LQZ" secondAttribute="trailing" id="Dgk-ZT-Iya"/>
+                                    <constraint firstItem="bMV-8T-VOt" firstAttribute="top" secondItem="fFV-3e-guP" secondAttribute="bottom" id="Edc-Cc-U8v"/>
                                     <constraint firstItem="1fZ-rd-LQZ" firstAttribute="top" secondItem="pDq-lp-fj5" secondAttribute="top" id="Hwh-sZ-H4t"/>
                                     <constraint firstItem="1fZ-rd-LQZ" firstAttribute="leading" secondItem="pDq-lp-fj5" secondAttribute="leading" id="KRk-pw-47W"/>
                                     <constraint firstItem="t4q-6y-XrR" firstAttribute="top" secondItem="fFV-3e-guP" secondAttribute="bottom" id="Ke7-C1-lh6"/>
                                     <constraint firstAttribute="bottom" secondItem="bMV-8T-VOt" secondAttribute="bottom" id="Uk1-Nl-XuP"/>
                                     <constraint firstItem="bMV-8T-VOt" firstAttribute="leading" secondItem="pDq-lp-fj5" secondAttribute="leading" id="YUh-fI-ram"/>
                                     <constraint firstAttribute="trailing" secondItem="bMV-8T-VOt" secondAttribute="trailing" id="eZP-0M-YqZ"/>
-                                    <constraint firstAttribute="width" constant="300" id="n0Z-eO-IPb"/>
-                                    <constraint firstAttribute="height" constant="400" id="q2H-y8-ciy"/>
                                     <constraint firstAttribute="trailing" secondItem="fFV-3e-guP" secondAttribute="trailing" id="tyD-B6-wHk"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Cpp-jU-bGu"/>
-                                        <exclude reference="q2H-y8-ciy"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="Cpp-jU-bGu"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="q2H-y8-ciy"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -7858,6 +7817,7 @@ These following devices cannot be shutdown due to running status</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="pDq-lp-fj5" firstAttribute="top" secondItem="VY9-Ll-F6J" secondAttribute="bottom" constant="50" id="5OK-fi-0k1"/>
                             <constraint firstItem="YLL-at-75o" firstAttribute="centerY" secondItem="fFV-3e-guP" secondAttribute="centerY" id="6wQ-3Y-SX3"/>
                             <constraint firstItem="YLL-at-75o" firstAttribute="leading" secondItem="uKy-1o-jPL" secondAttribute="leadingMargin" constant="10" id="9G5-Fz-COU"/>
                             <constraint firstItem="pDq-lp-fj5" firstAttribute="centerX" secondItem="uKy-1o-jPL" secondAttribute="centerX" id="GJa-dm-zoy"/>
@@ -7954,7 +7914,7 @@ These following devices cannot be shutdown due to running status</string>
                                                 <rect key="frame" x="0.0" y="28" width="300" height="45"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MWq-6P-hUn" id="IJs-bc-Bz0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="44.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiJ-rP-zY9">
@@ -8040,7 +8000,7 @@ These following devices cannot be shutdown due to running status</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTk-Ti-aev">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nhe-su-OUb">
                                         <rect key="frame" x="0.0" y="10" width="320" height="50"/>
@@ -8099,18 +8059,18 @@ These following devices cannot be shutdown due to running status</string>
                                         </variation>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2aA-AO-Dk3">
-                                        <rect key="frame" x="0.0" y="57" width="320" height="447"/>
+                                        <rect key="frame" x="0.0" y="57" width="320" height="467"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CreatePartListTableCell" id="rgP-zc-vDb" customClass="CreatePartListTableCell" customModule="SA_ADMIN" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                                <rect key="frame" x="0.0" y="28" width="320" height="97.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="rgP-zc-vDb" id="86k-9k-EUX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="97.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNl-jC-hL6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="55" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="55" height="97.5"/>
                                                             <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="11"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
@@ -8118,7 +8078,7 @@ These following devices cannot be shutdown due to running status</string>
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part No." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRh-EB-pPe">
-                                                            <rect key="frame" x="55" y="0.0" width="80" height="43.5"/>
+                                                            <rect key="frame" x="55" y="0.0" width="80" height="97.5"/>
                                                             <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="11"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
@@ -8126,7 +8086,7 @@ These following devices cannot be shutdown due to running status</string>
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cavity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWT-JA-97h">
-                                                            <rect key="frame" x="135" y="0.0" width="40" height="43.5"/>
+                                                            <rect key="frame" x="135" y="0.0" width="40" height="97.5"/>
                                                             <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="11"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
@@ -8134,7 +8094,7 @@ These following devices cannot be shutdown due to running status</string>
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cycle Time" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfc-cY-K9C">
-                                                            <rect key="frame" x="175" y="0.0" width="35" height="43.5"/>
+                                                            <rect key="frame" x="175" y="0.0" width="35" height="97.5"/>
                                                             <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="11"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
@@ -8142,7 +8102,7 @@ These following devices cannot be shutdown due to running status</string>
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vC-rE-JaC">
-                                                            <rect key="frame" x="210" y="0.0" width="85" height="43.5"/>
+                                                            <rect key="frame" x="210" y="0.0" width="66" height="97.5"/>
                                                             <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="11"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
@@ -8150,7 +8110,7 @@ These following devices cannot be shutdown due to running status</string>
                                                             </variation>
                                                         </label>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npd-2y-her">
-                                                            <rect key="frame" x="295" y="14" width="15" height="15.5"/>
+                                                            <rect key="frame" x="276" y="31.5" width="34" height="34.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="npd-2y-her" secondAttribute="height" id="4Cl-4K-ss7"/>

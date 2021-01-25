@@ -25,7 +25,7 @@ class PartAssignListVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         callingViewDidload()
         
         let logoBtn = UIButton(type: UIButton.ButtonType.custom)
-
+        
         logoBtn.setImage(UIImage(named: "Dashboard"), for: .normal)
         logoBtn.addTarget(self, action: #selector(self.logoClicked) , for: .touchUpInside)
         logoBtn.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
@@ -318,9 +318,9 @@ class PartAssignListVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         let cameraAction = UIAlertAction(title: "No", style: .default)
         {
             (result : UIAlertAction) -> Void in
-//            if let id = list.id {
-//                self.partResetApi(ID:id, subPath: "ResetPartNo") //No
-//            }
+            //            if let id = list.id {
+            //                self.partResetApi(ID:id, subPath: "ResetPartNo") //No
+            //            }
             print("You pressed No")
         }
         alertController.addAction(cameraAction)
@@ -370,7 +370,9 @@ class PartAssignListVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         UpdateAssignVC.passScarp = cell.lblScarp.text ?? ""
         print(UpdateAssignVC.passScarp )
         UpdateAssignVC.passQuantity = cell.lblReqQty.text ?? ""
+        
         if let row = (tablePartsAssign.indexPath(for: cell))?.row {
+            
             UpdateAssignVC.selectedIndex = row
             if let partAssign = partAssignModel.arrayAssignedList?[row] {
                 UpdateAssignVC.arrayAssignedList = partAssign
@@ -536,9 +538,9 @@ class PartAssignListVC: UIViewController,UITableViewDelegate,UITableViewDataSour
             // Remove item at indexPath
             print("remove part")
             self.removeAction(cell)
-
+            
         }
-
+        
         
         
         let reset = UITableViewRowAction(style: .normal, title: "Reset") { (action, indexPath) in
@@ -549,7 +551,7 @@ class PartAssignListVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         reset.backgroundColor = UIColor.init(netHex_String: "#9b59b6")
         remove.backgroundColor = UIColor.init(netHex_String: "#e74c3c")
         edit.backgroundColor = UIColor.init(netHex_String: "#e67e22")
-      //  return [reset, edit]
+        //  return [reset, edit]
         return [reset,remove, edit]
         
     }

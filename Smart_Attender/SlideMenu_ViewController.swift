@@ -47,9 +47,9 @@ class SlideMenu_ViewController: UIViewController,UITableViewDelegate,UITableView
     // MARK: - Local Function
     func roleBasedMenuSettings() {
         if Global.userType.isManager(){
-            arrayMenuName = ["Device Dashboard","Incident Notification","Part No. Database","User Settings","Planned Shutdown Settings","Reset Password","Logout"]
-            arrayMenuImage = [#imageLiteral(resourceName: "menu_home"),#imageLiteral(resourceName: "notification"),#imageLiteral(resourceName: "PartList"),#imageLiteral(resourceName: "UserMenu"),#imageLiteral(resourceName: "Setting"),#imageLiteral(resourceName: "Setting"),#imageLiteral(resourceName: "reset"),#imageLiteral(resourceName: "loggout")]
-            arrayViewController = ["dashboard2_ViewController","dashboard1_ViewController","PartListVC","UserListVC","PlannedShutdownVC","HotspotConfigVC","ResetPswd_ViewController","Login_ViewController"]
+            arrayMenuName = ["Device Dashboard","Incident Notification","Part No. Database","Quick Report","Planned Shutdown Settings","Reset Password","Logout"]
+            arrayMenuImage = [#imageLiteral(resourceName: "menu_home"),#imageLiteral(resourceName: "notification"),#imageLiteral(resourceName: "PartList"),#imageLiteral(resourceName: "growth"),#imageLiteral(resourceName: "Setting"),#imageLiteral(resourceName: "Setting"),#imageLiteral(resourceName: "reset"),#imageLiteral(resourceName: "loggout")]
+            arrayViewController = ["dashboard2_ViewController","dashboard1_ViewController","PartListVC","QuickReportVC","PlannedShutdownVC","ResetPswd_ViewController","Login_ViewController"]
         }
         if Global.userType.isOperator() {
             arrayMenuName = ["Device Dashboard","Incident Notification","Reset Password","Logout"]

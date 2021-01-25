@@ -409,7 +409,6 @@ class QuickSettingViewController: UIViewController,UITableViewDelegate,UITableVi
             
 as [String : Any]
         print(parameters)
-          //let jsonURL = (BaseApi + "Dashboard/NotificationCountByDeviceID/" + account_id)
         let url = URL(string: (BaseApi + "Part/SaveQuickReportSetting"))
         let session = URLSession.shared
         var request = URLRequest(url: url!)

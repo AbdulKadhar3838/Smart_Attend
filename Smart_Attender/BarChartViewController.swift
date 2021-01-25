@@ -144,7 +144,7 @@ class BarChartViewController: UIViewController{
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let baseDate:Date = formatter.date(from: fromDate)!
-        let since1970 = formatter.date(from: toDate)?.timeIntervalSince(baseDate)
+        let since1970 = formatter.date(from:      toDate)?.timeIntervalSince(baseDate)
         return since1970!
     }
 

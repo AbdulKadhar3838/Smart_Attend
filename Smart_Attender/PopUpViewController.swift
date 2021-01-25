@@ -107,6 +107,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             if (usertype.lowercased() == "admin") || Global.userType.isManager()
             {
                 let popview = self.storyboard?.instantiateViewController(withIdentifier: "MachineDetails_ViewController") as! MachineDetails_ViewController
+                print(data_dict)
                 popview.data_dict=data_dict
                 self.addChildViewController(popview)
                 popview.view.frame=self.view.frame
@@ -131,7 +132,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     func post_notificinfo(indexpath: IndexPath,view: UITableView) {
         
-        if machineNameArray.count > 1 {
+       //need to do if else conditionits a top of the page if machineNameArray.count > 1 {
             let data_array:NSDictionary = machineNameArray.object(at: indexpath.row) as! NSDictionary
             print(data_array)
             let notific_id:NSNumber=data_array.value(forKey: "ID") as? NSNumber ?? 0
@@ -150,6 +151,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                         if (success)
                         {
                             defalts.setValue("\(indexpath.row)", forKey: "RemoveId")
+                            
                             self.show_popup(indexpath: indexpath,view: view)
                         }
                         else
@@ -163,9 +165,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                     self.alert(msgs: Global.network.redAlert(error: failure, noConnection: noConnection))
                 }
             })
-        }else
-        {
-        }
+       // need to do if else condition its a bottom
         
     }
     
@@ -196,9 +196,67 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     
     
-    
     func showPopupapi(){
-        //let jsonURL = "http://smartattend.colanonline.net/service/api/Dashboard/NotificationCountByDeviceID/131"
+        
+        Global.server.Get(path: "Dashboard/NotificationCountByDeviceID/" + account_id, jsonObj: nil, completionHandler: { (success,failure,noConnection) in
+                       self.stoploader()
+                       
+                       if(failure == nil && noConnection == nil)
+                       {
+                           let dict:NSDictionary=success as! NSDictionary
+                           if(dict["IsSuccess"] != nil)
+                           {
+                               let success=dict.value(forKey: "IsSuccess") as? Bool ?? false
+                           
+                                
+                                let myarray = dict["LstNotificationDeviceModel"] as! NSArray
+                                print(myarray)
+                                self.machineNameArray = myarray.mutableCopy() as? NSMutableArray ?? []
+                                
+                                if myarray == []
+                                {
+                                    DispatchQueue.main.async {
+                                        self.noDataLbl.isHidden = false
+                                    }
+                                    
+                                }
+                                
+                                for array in myarray
+                                {
+                                    if let ar1 = array as? [String: Any]
+                                    {
+                                        DispatchQueue.main.async {
+                                            self.noDataLbl.isHidden = true
+                                        }
+                                        print("abdul33")
+                                        print("In Json ID :",ar1["ID"] as! Int)
+                                        self.DeviceID.append(ar1["Notifycount"] as! Int)
+                                        self.DeviceName.append(ar1["DeviceName"] as! String)
+                                        self.BtnColour.append(ar1["Color"] as! String)
+                                        self.DeviceMessage.append(ar1["Message"]as! String)
+                                        
+                                        print("In Json Device Name :",ar1["DeviceName"] as! String)
+                                    }
+                                }
+                                DispatchQueue.main.async
+                                    {
+                                        self.tblViewPopup.reloadData()
+                                }
+                            }
+
+                              
+                            print(dict)
+                           }
+                       }
+                
+        
+        
+        
+    )}
+    
+    
+   /* func showPopupapi(){
+       
         let jsonURL = (BaseApi + "Dashboard/NotificationCountByDeviceID/" + account_id)
         print(jsonURL)
         let url = URL(string: jsonURL)
@@ -258,7 +316,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             }
         }.resume()
         
-    }
+    }*/
     
     
     @objc func viewActionBtn(_ sender: UIButton) {
@@ -269,14 +327,7 @@ class PopUpViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    
     
 }

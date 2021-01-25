@@ -25,6 +25,7 @@ class UpdateAssignVC: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var scrollParent: UIScrollView!
     @IBOutlet weak var btnLogoBuffer: UIButton!
     
+    @IBOutlet weak var switchBtn: UISwitch!
     
     var arrayPartNumber:[String] = []
     var arraySearchPartNumber:[String] = []
@@ -312,6 +313,63 @@ class UpdateAssignVC: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         
     }
+    //MARK: - SwichPost Api
+    func callingPostforSwitch(dictPost:NSMutableDictionary) {
+           self.startloader(msg: "Loading.... ")
+           Global.server.Post(path: "Part/UpdatePartSwitchON", jsonObj: dictPost , completionHandler: {
+               (success,failure,noConnection) in
+               self.stoploader()
+               if(failure == nil && noConnection == nil)
+               {
+                   let dict:NSDictionary=success as! NSDictionary
+                   if(dict["IsSuccess"] != nil)
+                   {
+                       let msgs:String!=dict.value(forKey: "Message") as? String
+                       
+                       let success=dict.value(forKey: "IsSuccess") as? Bool ?? false
+                       if (success)
+                       {
+                           if(msgs.characters.count>0)
+                           {
+                               
+                               self.alert_handler(msgs: (dict.value(forKey: "Message") as? String ?? ""), dismissed: {_ in
+                                   self.postApiAction()
+                               })
+                           }
+                           else
+                           {
+                               
+                               self.alert_handler(msgs: "Part Number Updated Successfully", dismissed: {_ in
+                                   self.postApiAction()
+                               })
+                           }
+                           
+                       }
+                       else
+                       {
+                           if(msgs.characters.count>0)
+                           {
+                               self.alert_handler(msgs: (dict.value(forKey: "Message") as? String ?? ""), dismissed: {_ in
+                                   
+                               })
+                           }
+                           else
+                           {
+                               self.alert_handler(msgs: "Unable to Update Part Number now", dismissed: {_ in
+                                   
+                               })
+                           }
+                       }
+                   }
+               }
+               else
+               {
+                   self.alert(msgs: Global.network.redAlert(error: failure, noConnection: noConnection))
+               }
+           })
+           
+           
+       }
     
    func postApiAction() {
     for case let textField as UITextField in self.view.subviews {
@@ -335,7 +393,7 @@ class UpdateAssignVC: UIViewController,UITableViewDelegate,UITableViewDataSource
             self.alert(msgs: "Fill the Cycle Time")
             
         } else if txtScarp.text == "" {
-            self.alert(msgs: "Fill the Current Scarp")
+            self.alert(msgs: "Fill the Current Scrap")
         }else {
             var startDate = ""
             var id:Int64 = 0
@@ -378,8 +436,14 @@ class UpdateAssignVC: UIViewController,UITableViewDelegate,UITableViewDataSource
                         "DeviceName": passLabelName,
                         "CurrentScrap":currentScarp
                         ]
-                    print(dict)
-                    self.callingPost(dictPost: dict)
+                    
+                    if switchBtn.isOn{
+                         self.callingPostforSwitch(dictPost: dict)
+                        }
+                    else{
+                        self.callingPost(dictPost: dict)
+                    }
+                   
                 }
                 
                 

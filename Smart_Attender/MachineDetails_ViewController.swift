@@ -59,6 +59,8 @@ class MachineDetails_ViewController: UIViewController  {
     var popExpandHeight:CGFloat = 0
     var isFirstTimePopExpand = true
     var otherCellHeight:CGFloat = 30
+    var accountId:String?
+    var inputId:NSNumber?
     
     // MARK: - Lifecycle Method
     override func viewDidLoad() {
@@ -68,6 +70,7 @@ class MachineDetails_ViewController: UIViewController  {
         self.popup_yvalue.constant=self.view.frame.size.height
         self.view.backgroundColor = UIColor.clear
         self.view.isOpaque = true
+        print()
         
         //self.btnOK.layer.cornerRadius = 4
         self.title_label.text=data_dict.value(forKey: "DeviceName") as? String
@@ -91,7 +94,7 @@ class MachineDetails_ViewController: UIViewController  {
         else
         {
             // Need to hide 2 Checkbox
-            actualSectionNo = 1
+            actualSectionNo = 3
         }
         
         if let id = data_dict.value(forKey: "DeviceID") as? Int64 {
@@ -199,8 +202,22 @@ class MachineDetails_ViewController: UIViewController  {
                 subCheckboxValue =  arrayUnplannedID[0]
             }
         }
-        
-        let postdict:NSMutableDictionary=["InputID": data_dict.value(forKey: "InputID") as? NSNumber ?? 0,
+        if let account_id =  dfualts.value(forKey: AccountID) as? String {
+           accountId = account_id
+        }
+        else{
+          accountId   = data_dict.value(forKey: "AccountID") as? String
+        }
+        if let input_id  = data_dict.value(forKey: "DeviceDataUserMapID") as? NSNumber {
+            inputId = input_id
+            
+        }
+        else {
+            inputId = data_dict.value(forKey: "InputID") as? NSNumber 
+        }
+       
+       
+        let postdict:NSMutableDictionary=["InputID": inputId,
                                           "InputNotification": checkbox_value != 1 ? 0 : 1,
                                           "MachineShutdown": checkbox_value != 2 ? 0 : 2,
                                           "MachineDowntime": checkbox_value != 3 ? 0: 3 ,
@@ -208,7 +225,7 @@ class MachineDetails_ViewController: UIViewController  {
                                           "OtherDowntime": otherDowntime,
                                            "OtherShutdown":otherShutdown,
                                           "DeviceID": data_dict.value(forKey: "DeviceID") as? NSNumber ?? 0,
-                                          "AccountID": data_dict.value(forKey: "AccountID") as? NSNumber ?? 0,
+                                          "AccountID": accountId ?? "",
                                           "InputName": data_dict.value(forKey: "InputName") as? String ?? ""]
         Global.server.Post(path: "Dashboard/NotificationOff", jsonObj: postdict, completionHandler: {
             (success,failure,noConnection) in

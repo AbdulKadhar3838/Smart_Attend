@@ -319,7 +319,7 @@ extension ScarpVC1 {
                         else
                         {
                             
-                            self.alert_handler(msgs: "Scarp Added Succesfully", dismissed: {_ in
+                            self.alert_handler(msgs: "Scrap Added Succesfully", dismissed: {_ in
                                 self.postApiAction()
                             })
                         }
@@ -336,7 +336,7 @@ extension ScarpVC1 {
                         }
                         else
                         {
-                            self.alert_handler(msgs: "Unable to add scarp now", dismissed: {_ in
+                            self.alert_handler(msgs: "Unable to add scrap now", dismissed: {_ in
                                 // self.postApiAction()
                             })
                         }
